@@ -3,12 +3,14 @@ import DgfAcceuil from '../views/DgfAcceuil.vue'
 import ArticleDetail from '../views/ArticleDetail.vue'
 import Mission from '../views/Mission.vue'
 import Accualite from '../views/Actualite.vue'
-
+import ComingSoon from '../views/ComingSoon.vue'
+import Organigramme from '../views/Organigramme.vue'
 
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+
     {
       path: '/',
       name: 'home',
@@ -38,11 +40,11 @@ const router = createRouter({
           component: Mission
         },
 
-        // {
-        //   path: 'organigramme',
-        //   name: 'organigamme',
-        //   component: Mission
-        // },
+        {
+          path: 'organigramme',
+          name: 'organigramme',
+          component: Organigramme
+        },
 
         // {
         //   path: 'anciens-directeurs',
@@ -119,6 +121,12 @@ const router = createRouter({
         },
 
       ]
+    },
+
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'ComingSoon',
+      component: ComingSoon
     },
 
 

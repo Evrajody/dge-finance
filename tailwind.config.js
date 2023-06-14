@@ -12,7 +12,8 @@ module.exports = {
         'bj-red': "",
         'finance-gray': "#f2f2f2",
         'finance-blue': "#0E406E",
-        'finance-plot': '#283344'
+        'finance-plot': '#283344',
+        'finance-late': '#484848'
       }
     },
   },

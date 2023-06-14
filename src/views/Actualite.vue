@@ -1,5 +1,6 @@
 <script setup>
 import ArticleBox from '../components/partials/ArticleBox.vue';
+import PageBanner from '../components/partials/PageBanner.vue';
 
 
 </script>
@@ -7,29 +8,21 @@ import ArticleBox from '../components/partials/ArticleBox.vue';
 <template>
   <div class="min-h-screen">
 
-    <div
-      class="w-full bg-center bg-black bg-opacity-30 bg-blend-overlay bg-cover bg-no-repeat bg-[url('https://presidence.bj/upload/images/articles/473860782565001684770264.jpeg')] ">
-      <div class="flex flex-col justify-center container mx-auto py-10 px-2">
-        <p class="text-sm font-semibold text-white">
-            présentation >> Actualités
-          </p>
-        </div>
-      </div>
-
+    <PageBanner title="Actualités"/>
 
     <div class="container mx-auto">
-      <div class="w-full gap-8 flex flex-col space-y-4 sm:flex-row justify-between sm:space-y-0 py-5">
-        <ArticleBox/>
-        <ArticleBox/>
-        <ArticleBox/>
+      <div class="w-full gap-8 grid grid-cols-1 items-center place-items-center sm:grid-cols-2 md:grid-cols-3 mt-12 py-5">
+
+          <ArticleBox  v-for="i in 6" />
+
       </div>
+
     </div>
 
   </div>
+
 </template>
 
 <style>
-.mask {
-  background-image: linear-gradient(91.18deg, #023E79 0%, #0E6258 100%);
-  opacity: 0.8667689732142857;
-}</style>
+ 
+</style>

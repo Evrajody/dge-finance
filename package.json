@@ -8,9 +8,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "primevue": "^3.29.2",
     "swiper": "^9.4.0",
     "vue": "^3.3.2",
-    "vue-router": "^4.2.0"
+    "vue-router": "^4.2.0",
+    "vue3-blocks-tree": "^0.6.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
