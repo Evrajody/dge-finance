@@ -35,7 +35,7 @@ const mission = ref([
         <OcticonQuote />
       </div>
 
-      <div class="bg-gray-900 rounded-none sm:rounded-lg px-5 sm:px-12 py-10 w-full">
+      <div class="bg-finance-blue rounded-none sm:rounded-lg px-5 sm:px-12 py-10 w-full">
         <span class=" text-sm md:text-lg text-white font-semibold leading-normal">
           Conformément aux dispositions de l’article n°24 du décret n° 2021-757 du 09 juin 2021 portant attributions,
           organisation et fonctionnement du Ministère de l’Economie et des Finances , la Direction Générale de l’Economie
@@ -87,8 +87,8 @@ const mission = ref([
   width: 15px;
   height: 50%;
   position: absolute;
-  border-left: 2.5px solid rgb(17, 26, 39);
-  border-bottom: 2.5px solid rgb(17, 26, 39);
+  border-left: 2.5px solid #0E406E;
+  border-bottom: 2.5px solid #0E406E;
   border-bottom-left-radius: 4px;
  }
 
@@ -99,11 +99,7 @@ const mission = ref([
   bottom: 0;
   width: 15px;
   height: 52%;
-  border-left: 2.5px solid rgb(17, 26, 39);
- }
-
- .mission-item:first {
-  background-color: red;
+  border-left: 2.5px solid #0E406E;
  }
 
 </style>

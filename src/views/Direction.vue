@@ -22,7 +22,7 @@ import PageBanner from '../components/partials/PageBanner.vue';
 
       <div class="">
         <div class="">
-          <div class="bg-gray-900 rounded-none sm:rounded-lg px-5 sm:px-10 py-5 w-full">
+          <div class="bg-finance-blue rounded-none sm:rounded-lg px-5 sm:px-10 py-5 w-full">
             <span class=" text-sm md:text-lg text-white font-semibold leading-normal">
               La Direction de la Promotion et de la Coopération Économiques est chargée :
             </span>
@@ -68,3 +68,4 @@ import PageBanner from '../components/partials/PageBanner.vue';
 </main>
 
 </template>
+

@@ -100,7 +100,7 @@ const route = useRouter()
             <a href="" class="font-medium">Opportunités</a>
             <div
               class="hidden absolute group-hover:block mt-3 -ml-2 py-2 w-72 bg-white shadow-lg z-10 transition-all opacity-0 group-hover:opacity-100">
-              <a href="" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> Offre de stage </a>
+              <a href="/opportunites/offre-de-stage" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> Offre de stage </a>
               <a href="" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> Appel à candidature </a>
             </div>
           </div>

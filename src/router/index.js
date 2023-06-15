@@ -8,137 +8,149 @@ import Organigramme from '../views/Organigramme.vue'
 import AnciensDirecteur from '../views/AnciensDirecteur.vue'
 import Direction from '../views/Direction.vue'
 import Jseb from '../views/Jseb.vue'
-
+import OffreStage from "../views/OffreStage.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-
     {
-      path: '/',
-      name: 'home',
-      component: DgfAcceuil
+      path: "/",
+      name: "home",
+      component: DgfAcceuil,
     },
 
     {
-      path: '/articles',
-      name: 'detail',
-      component: ArticleDetail
+      path: "/articles",
+      name: "detail",
+      component: ArticleDetail,
     },
 
     {
-      path: '/presentation',
-      name: 'presentation',
+      path: "/presentation",
+      name: "presentation",
       children: [
         {
-          path: 'actualites',
-          name: 'actualites',
+          path: "actualites",
+          name: "actualites",
           component: Accualite,
         },
 
         {
-          path: 'mission',
-          name: 'mission',
-          component: Mission
+          path: "mission",
+          name: "mission",
+          component: Mission,
         },
 
         {
-          path: 'organigramme',
-          name: 'organigramme',
-          component: Organigramme
+          path: "organigramme",
+          name: "organigramme",
+          component: Organigramme,
         },
 
         {
-          path: 'anciens-directeurs',
-          name: 'anciens-directeurs',
-          component: AnciensDirecteur
+          path: "anciens-directeurs",
+          name: "anciens-directeurs",
+          component: AnciensDirecteur,
         },
 
         {
-          path: 'directions',
-          name: 'directions',
-          component: Direction
+          path: "directions",
+          name: "directions",
+          component: Direction,
         },
-      ]
+      ],
     },
 
-
     {
-      path: '/publication',
-      name: 'publication',
+      path: "/publication",
+      name: "publication",
       children: [
         {
-          path: 'documents-budgetaires',
-          name: 'documents-budgetaires',
+          path: "documents-budgetaires",
+          name: "documents-budgetaires",
           component: Accualite,
         },
 
         {
-          path: 'documents-politique-nationale',
-          name: 'dpn',
-          component: Mission
+          path: "documents-politique-nationale",
+          name: "dpn",
+          component: Mission,
         },
 
         {
-          path: 'documents-travails',
-          name: 'documents-travails',
-          component: Mission
+          path: "documents-travails",
+          name: "documents-travails",
+          component: Mission,
         },
 
         {
-          path: 'infra-annuels',
-          name: 'infra-annuel',
-          component: Mission
+          path: "infra-annuels",
+          name: "infra-annuel",
+          component: Mission,
         },
 
         {
-          path: 'rapef',
-          name: 'rapef',
-          component: Mission
+          path: "rapef",
+          name: "rapef",
+          component: Mission,
         },
-      ]
+      ],
     },
 
     {
-      path: '/seminaire-conference',
-      name: 'seminaire-conference',
+      path: "/seminaire-conference",
+      name: "seminaire-conference",
       children: [
         {
           path: 'jseb',
           name: 'jseb',
           component: Jseb,
         },
-      ]
+      ],
     },
 
-
     {
-      path: '/opportunites',
-      name: 'opportunites',
+      path: "/opportunites",
+      name: "opportunites",
       children: [
         {
-          path: 'offre-stage',
-          name: 'offre-stage',
+          path: "offre-stage",
+          name: "offre-stage",
           component: Accualite,
         },
 
         {
-          path: 'appel-candidature',
-          name: 'appel-candidature',
+          path: "appel-candidature",
+          name: "appel-candidature",
           component: Accualite,
         },
-
-      ]
+      ],
     },
 
     {
-      path: '/:pathMatch(.*)*',
-      name: 'ComingSoon',
-      component: ComingSoon
+      path: "/:pathMatch(.*)*",
+      name: "ComingSoon",
+      component: ComingSoon,
     },
 
+    {
+      path: "/opportunites",
+      name: "opportunites",
+      children: [
+        {
+          path: "offre-de-stage",
+          name: "offre-de-stage",
+          component: OffreStage,
+        },
 
-  ]
-})
+        {
+          path: "appel-a-candidature",
+          name: "appel-a-candidature",
+          component: Mission,
+        },
+      ],
+    },
+  ],
+});
 
-export default router
+export default router;

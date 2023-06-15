@@ -1,8 +1,22 @@
 <script setup>
+import { onMounted, ref } from 'vue';
 import IcOutlineFileDownload from '../assets/images/IcOutlineFileDownload.vue';
 import ArticleBox from '../components/partials/ArticleBox.vue';
 import PageBanner from '../components/partials/PageBanner.vue';
 import VueMultiselect from 'vue-multiselect'
+
+const fakeArticle = ref([]);
+
+
+function loadFakeArticles() {
+  fetch('https://jsonplaceholder.typicode.com/photos?_start=6&_limit=12')
+  .then((response) => response.json())
+  .then((json) => fakeArticle.value = json);
+}
+
+onMounted(() => {
+  loadFakeArticles()
+})
 
 </script>
 
@@ -17,7 +31,7 @@ import VueMultiselect from 'vue-multiselect'
 
         <div class="flex items-center justify-end">
           <div class="w-1/3 pr-8">
-            <VueMultiselect :options="['data', 'options']" placeholder="Filtrer par année" />
+            <VueMultiselect :options="['2022', '2023']" placeholder="Filtrer par année" />
           </div>
         </div>
 
@@ -29,7 +43,7 @@ import VueMultiselect from 'vue-multiselect'
 
       <div class="w-full gap-8 grid grid-cols-1 items-center place-items-center md:grid-cols-2 lg:grid-cols-3 py-5 px-8">
 
-        <ArticleBox v-for="i in 6">
+        <ArticleBox :article="item" v-for="item in fakeArticle">
 
           <template #download>
             <a href="#"
@@ -38,7 +52,6 @@ import VueMultiselect from 'vue-multiselect'
               Télecharger
             </a>
           </template>
-
 
         </ArticleBox>
 

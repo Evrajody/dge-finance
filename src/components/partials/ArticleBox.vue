@@ -1,5 +1,9 @@
 <script setup>
 
+  const props = defineProps({
+    article: Object,
+  })
+
 </script>
 
 <template>
@@ -7,7 +11,7 @@
     <img src="https://tourisme.gouv.bj/storage/media/posts/POST_633409789db3a633409789db3c.jpg" alt="Aperçu de l'article"
       class="w-full h-48 object-cover object-center">
     <div class="px-4 py-4 mask">
-      <h2 class="text-xl font-bold text-white">Titre de l'article</h2>
+      <h2 class="text-xl font-bold text-white line-clamp-2" v-text="article.title"></h2>
       <p class="text-white text-sm leading-6 line-clamp-3 mt-2"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ut
         inventore facilis iste incidunt culpa amet molestias non dolores quam. </p>
       <p class="text-white text-sm italic mt-2"> 12 Juin 2023 </p>
