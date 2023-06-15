@@ -3,6 +3,140 @@
 
 import { ref } from "vue";
 import PageBanner from "../components/partials/PageBanner.vue";
+import IcOutlineFileDownload from "../assets/images/IcOutlineFileDownload.vue";
+import organigramme from "../assets/images/organigramme.pdf";
+
+const sigles = ref([
+  {
+    abbr: "DGE",
+    definition: "Directeur Général de l’Économie;"
+  },
+
+  {
+    abbr: "DGAE",
+    definition: "Directeur Général Adjoint de l’Économie;"
+  },
+
+
+  {
+    abbr: "SP/DGE",
+    definition: "Secrétariat Particulier du Directeur Général de l’Économie;"
+  },
+
+  {
+    abbr: "SA/DGE",
+    definition: "Secrétariat Administratif du Directeur Général de l’Économie;"
+  },
+
+  {
+    abbr: "DGAE",
+    definition: "Directeur Général Adjoint de l’Économie;"
+  },
+
+  {
+    abbr: "DIER",
+    definition: "Direction de l’Intégration Économique Régionale;"
+  },
+
+  {
+    abbr: "DSPSSEL",
+    definition: "Direction du Suivi des Politiques Sectorielles, Sociales et des Économies Locales;"
+  },
+
+  {
+    abbr: "DPC",
+    definition: "Direction de la Prévision et de la Conjoncture;"
+  },
+
+  {
+    abbr: "DPCE",
+    definition: "Direction de la Promotion et de la Coopération Economiques;"
+  },
+
+  {
+    abbr: "DRES",
+    definition: "Direction de la Recherche et des Études Stratégiques;"
+  },
+
+  {
+    abbr: "DGR",
+    definition: "Direction de la Gestion des Ressources;"
+  },
+  {
+    abbr: "SES",
+    definition: "Service des Études Stratégiques;"
+  },
+  {
+    abbr: "SMR",
+    definition: "Service de la Modélisation et de la Recherche;"
+  },
+
+  {
+    abbr: "SSAPS",
+    definition: "Service de Suivi et d’Analyse des Performances Sectorielles;"
+  },
+
+  {
+    abbr: "SSPEL",
+    definition: "Service de Suivi des politiques Économiques Locales;"
+  },
+
+  {
+    abbr: "SSPS",
+    definition: "Service de Suivi des Politiques Sociales;"
+  },
+
+  {
+    abbr: "SPSC",
+    definition: "Service des Politiques Sectorielles Communautaires;"
+  },
+
+  {
+    abbr: "SEC",
+    definition: "Service des Échanges Commerciaux;"
+  },
+  {
+    abbr: "SSIC",
+    definition: "Service de Suivi des Institutions Communautaires;"
+  },
+
+  {
+    abbr: "SRH",
+    definition: "Service des Ressources Humaines"
+  },
+  {
+    abbr: "SRFM",
+    definition: "Service des Ressources Financières et du Matériel;"
+  },
+  {
+    abbr: "SSI",
+    definition: "Services des Systèmes de l’Information;"
+  },
+  {
+    abbr: "SPEF",
+    definition: "Service de la Programmation Économique et Financière;"
+  },
+  {
+    abbr: "SSBAC",
+    definition: "Service du Suivi Budgétaire et de l’Analyse Conjoncturelle;"
+  },
+  {
+    abbr: "SSSSM",
+    definition: "Service des Statistiques et du Suivi de la Surveillance Multilatérale;"
+  },
+  {
+    abbr: "SSASP",
+    definition: "Service du Suivi et d’Accompagnement du Secteur Privé;"
+  },
+  {
+    abbr: "SRSAI",
+    definition: "Service de la Réglementation et du Suivi des Accords Internationaux;"
+  },
+  {
+    abbr: "SAPE",
+    definition: "Service des Actions de Promotion Économique;"
+  }
+])
 
 const orgData = ref({
   label: 'DGE',
@@ -137,308 +271,85 @@ const orgData = ref({
     <PageBanner title="Organigramme" />
 
     <div class="mx-auto container">
-      <div class="flex flex-col lg:flex-row py-28">
-        <div class="card w-full ">
-          <img src="@/assets/images/organigramme-dge.jpg" class="" alt="" srcset="">
+      <div class="flex flex-col items-center justify-center py-28">
+
+
+
+        <div class="card w-full grid place-content-center ">
+          <img src="@/assets/images/organigramme.png"  class="" alt="" srcset="">
         </div>
-  
+
+        <div class=" grid place-content-center pb-3 w-full rounded">
+           <a download :href="organigramme" class="bg-finance-blue items-center font-medium rounded flex gap-3 text-white p-3">
+              <IcOutlineFileDownload/>
+              <span class="text-sm">Télecharger l'organigramme</span>
+           </a>
+        </div>
+
+    
         <div class="organigramme-legend h-full bg-finance-gray w-full mt-8 lg:mt-0 py-4 px-5 rounded">
-  
-          <h3 class="text-lg font-semibold text-finance-blue">  Légende </h3>
-  
+
+          <h3 class="text-lg lg:text-2xl font-semibold text-finance-blue "> Légendes </h3>
+
+          <div class="w-full h-0.5 my-3 bg-finance-blue"></div>
+
+          <div class="legends-item">
+            <ol class="gradient-list" v-for="item in sigles">
+              <li class="flex items-center gap-3">
+                <span class="w-36 text-xs items-stretch sm:text-sm md:text-lg font-medium text-white mask py-2 px-5"> {{ item.abbr }}
+                </span>
+                <span class="flex-1 font-medium text-xs sm:text-sm md:text-lg leading-normal text-finance-late"> {{ item.definition }} </span>
+              </li>
+            </ol>
+          </div>
+
           <hr>
-  
+
         </div>
-  
+
       </div>
     </div>
 
 
   </main>
-
 </template>
 
 <style>
+ol.gradient-list {
+  list-style: none;
+  margin: 1rem 0;
 
-.org-tree-container {
-  display: inline-block;
-  padding: 15px;
-  background-color: #fff
 }
 
-.org-tree {
+ol.gradient-list>li {
+  background: white;
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
+  /* margin-top: 1rem;
+  min-height: 3rem; */
+  /* padding: 1rem 1rem 1rem 3rem; */
+  position: relative;
+}
+
+/* ol.gradient-list > span {
+  background: linear-gradient(135deg, #83e4e2 0%, #a2ed56 100%);
+  border-radius: 1rem 1rem 0 1rem;
+  content: "";
+  height: 3rem;
+  left: -1rem;
+  overflow: hidden;
+  position: absolute;
+  top: -1rem;
+  width: 3rem;
+}
+ol.gradient-list > li::before {
+  align-items: flex-end;
+  content: "counter(gradient-counter)";
+  color: #1d1f20;
   display: flex;
-  text-align: center
-}
-
-.org-tree:after,
-.org-tree:before {
-  content: "";
-  display: table
-}
-
-.org-tree:after {
-  clear: both
-}
-
-.org-tree-node,
-.org-tree-node-children {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  list-style-type: none
-}
-
-.org-tree-node-children:after,
-.org-tree-node-children:before,
-.org-tree-node:after,
-.org-tree-node:before {
-  -webkit-transition: all .35s;
-  transition: all .35s
-}
-
-.org-tree-node-label {
-  position: relative;
-  display: inline-block
-}
-
-.org-tree-node-label .org-tree-node-label-inner {
-  padding: 10px 15px;
-  text-align: center;
-  border-radius: 3px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, .15)
-}
-
-.org-tree-node-btn {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  z-index: 10;
-  margin-left: -11px;
-  margin-top: 9px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 50%;
-  box-shadow: 0 0 2px rgba(0, 0, 0, .15);
-  cursor: pointer;
-  -webkit-transition: all .35s ease;
-  transition: all .35s ease
-}
-
-.org-tree-node-btn:hover {
-  background-color: #e7e8e9;
-  -webkit-transform: scale(1.15);
-  transform: scale(1.15)
-}
-
-.org-tree-node-btn:after,
-.org-tree-node-btn:before {
-  content: "";
-  position: absolute
-}
-
-.org-tree-node-btn:before {
-  top: 50%;
-  left: 4px;
-  right: 4px;
-  height: 0;
-  border-top: 2px solid red
-}
-
-.org-tree-node-btn:after {
-  top: 4px;
-  left: 50%;
-  bottom: 4px;
-  width: 0;
-  border-left: 1px solid #ccc
-}
-
-.org-tree-node-btn.expanded:after {
-  border: none
-}
-
-.org-tree-node {
-  padding-top: 20px;
-  display: table-cell;
-  vertical-align: top
-}
-
-.org-tree-node.collapsed,
-.org-tree-node.is-leaf {
-  padding-left: 10px;
-  padding-right: 10px
-}
-
-.org-tree-node:after,
-.org-tree-node:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 19px
-}
-
-.org-tree-node:after {
-  left: 50%;
-  border-left: 1px solid #ddd
-}
-
-.org-tree-node:not(:first-child):before,
-.org-tree-node:not(:last-child):after {
-  border-top: 1px solid #ddd
-}
-
-.collapsable .org-tree-node.collapsed {
-  padding-bottom: 30px
-}
-
-.collapsable .org-tree-node.collapsed .org-tree-node-label:after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 50%;
-  height: 20px;
-  border-right: 1px solid #ddd
-}
-
-.org-tree>.org-tree-node {
-  padding-top: 0
-}
-
-.org-tree>.org-tree-node:after {
-  border-left: 0
-}
-
-.org-tree-node-children {
-  padding-top: 20px
-}
-
-.org-tree-node-children:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 0;
-  height: 20px;
-  border-left: 1px solid #ddd
-}
-
-.org-tree-node-children:after {
-  content: "";
-  display: table;
-  clear: both
-}
-
-.horizontal .org-tree-node {
-  display: table-cell;
-  float: none;
-  padding-top: 0;
-  padding-left: 20px
-}
-
-.horizontal .org-tree-node.collapsed,
-.horizontal .org-tree-node.is-leaf {
-  padding-top: 10px;
-  padding-bottom: 10px
-}
-
-.horizontal .org-tree-node:after,
-.horizontal .org-tree-node:before {
-  width: 19px;
-  height: 50%
-}
-
-.horizontal .org-tree-node:after {
-  top: 50%;
-  left: 0;
-  border-left: 0
-}
-
-.horizontal .org-tree-node:only-child:before {
-  top: 1px;
-  border-bottom: 1px solid #ddd
-}
-
-.horizontal .org-tree-node:not(:first-child):before,
-.horizontal .org-tree-node:not(:last-child):after {
-  border-top: 0;
-  border-left: 1px solid #ddd
-}
-
-.horizontal .org-tree-node:not(:only-child):after {
-  border-top: 1px solid #ddd
-}
-
-.horizontal .org-tree-node .org-tree-node-inner {
-  display: table
-}
-
-.horizontal .org-tree-node-label {
-  display: table-cell;
-  vertical-align: middle
-}
-
-.horizontal.collapsable .org-tree-node.collapsed {
-  padding-right: 30px
-}
-
-.horizontal.collapsable .org-tree-node.collapsed .org-tree-node-label:after {
-  top: 0;
-  left: 100%;
-  width: 20px;
-  height: 50%;
-  border-right: 0;
-  border-bottom: 1px solid #ddd
-}
-
-.horizontal .org-tree-node-btn {
-  top: 50%;
-  left: 100%;
-  margin-top: -11px;
-  margin-left: 9px
-}
-
-.horizontal>.org-tree-node:only-child:before {
-  border-bottom: 0
-}
-
-.horizontal .org-tree-node-children {
-  display: table-cell;
-  padding-top: 0;
-  padding-left: 20px
-}
-
-.horizontal .org-tree-node-children:before {
-  top: 50%;
-  left: 0;
-  width: 20px;
-  height: 0;
-  border-left: 0;
-  border-top: 1px solid #ddd
-}
-
-.horizontal .org-tree-node-children:after {
-  display: none
-}
-
-.horizontal .org-tree-node-children>.org-tree-node {
-  display: block
-}
-
-.expand-enter-active,
-.expand-leave-active {
-  -webkit-transition: height .2s ease;
-  transition: height .2s ease;
-  overflow: hidden
-}
-
-.expand-enter,
-.expand-leave-to {
-  height: 0
-}
+  font: 900 1.5em/1 "Montserrat";
+  justify-content: flex-end;
+  padding: 0.125em 0.25em;
+  z-index: 1;
+} */
 </style>
 

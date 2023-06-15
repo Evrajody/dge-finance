@@ -7,16 +7,16 @@ import PageBanner from '../components/partials/PageBanner.vue';
 </script>
 
 <template>
-  <main class="min-h-screen">
+  <main class="overflow-hidden">
 
     <PageBanner title="Direction des Ressources humaines" />
 
 
-    <div class="flex flex-col justify-center items-center lg:flex-row lg:items-start gap-12 my-20 lg:container mx-auto px-6 md:p-8 lg:px-12">
+    <div
+      class="flex flex-col justify-center items-center lg:flex-row lg:items-start gap-12 my-20 lg:container mx-auto px-6 md:p-8 lg:px-12">
 
-           
-      <div class="w-full lg:w-1/2 grid place-items-center ">
-        <DirecteurBox class="" />
+      <div class="lg:w-1/2 grid place-items-center ">
+        <DirecteurBox image="https://www.dge.finances.bj/storage/2021/05/DGAE.jpg" class="" />
       </div>
 
 
@@ -31,7 +31,7 @@ import PageBanner from '../components/partials/PageBanner.vue';
 
 
         <div class="">
-          
+
           <div class="">
 
             <div class="flex justify-center">
@@ -44,7 +44,9 @@ import PageBanner from '../components/partials/PageBanner.vue';
                     <header
                       class="bg-white flex-col sm:flex-row sm:items-center p-5 px-8 cursor-pointer hover:bg-finance-gray transition">
                       <span class="text-indigo text-sm text-finance-plot text-justify font-medium text-md">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet cum incidunt ipsa debitis optio aspernatur assumenda fugit, quidem odio tempora dicta consectetur inventore dolores blanditiis vel aliquid, officiis voluptatibus. Corporis!
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet cum incidunt ipsa debitis optio
+                        aspernatur assumenda fugit, quidem odio tempora dicta consectetur inventore dolores blanditiis vel
+                        aliquid, officiis voluptatibus. Corporis!
                       </span>
                     </header>
 
@@ -60,10 +62,9 @@ import PageBanner from '../components/partials/PageBanner.vue';
         </div>
       </div>
 
-
-
     </div>
 
 
-  </main>
+</main>
+
 </template>

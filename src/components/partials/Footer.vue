@@ -4,13 +4,13 @@
 
 
 <template>
-  <footer class="bg-[#F4F5F7] footer relative w-full">
+  <footer class="bg-[#F4F5F7] footer relative  w-full">
     <div class="mx-auto lg:container px-4 py-8 sm:px-6 lg:px-5">
     
       <div class="w-full">
 
 
-        <div class="flex flex-col space-y-7 md:flex-row md:space-y-0 w-full pb-8 justify-evenly">
+        <div class="flex flex-col space-y-7 lg:flex-row lg:space-y-0 w-full pb-8 justify-evenly">
 
           <div class="col-span-2 sm:col-span-1">
 
@@ -46,6 +46,7 @@
                   Directions
                 </a>
               </li>
+              
             </ul>
           </div>
 
@@ -116,10 +117,10 @@
 
 
 
-        <div class="col-span-5 flex justify-between items-center w-full">
-          <div class="official-logo hidden lg:block w-60">
+        <div class="col-span-5 flex justify-end items-center w-full">
+          <!-- <div class="official-logo hidden lg:block w-60">
             <img src="@/assets/images/logo_dge_benin.png" class="h-15" alt="" srcset="">
-          </div>
+          </div> -->
 
           <ul class="flex justify-start space-x-5">
             <li>

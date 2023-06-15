@@ -11,7 +11,7 @@
       <Navbar />
    </div>
 
-   <main>
+   <main class="w-full">
       <RouterView></RouterView>
    </main>
 

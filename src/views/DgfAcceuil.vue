@@ -23,7 +23,7 @@ import Partenaire from '../components/partials/Partenaire.vue';
   </div>
 
   <div class="fin-actualites bg-finance-gray py-8">
-    <div class="sm:container mx-auto flex flex-col px-3 md:flex-row gap-5">
+    <div class="sm:container mx-auto flex items-center flex-col px-3 md:flex-row gap-5">
       <ArticleBox />
       <ArticleBox />
       <ArticleBox />

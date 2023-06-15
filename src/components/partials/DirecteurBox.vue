@@ -1,10 +1,14 @@
 <script setup>
 
+  const props = defineProps({
+    image: String,
+  })
+
 </script>
 
 <template>
   <div class="w-[340px] h-[380px] mask max-w-md rounded shadow overflow-hidden hover:shadow-lg transition-shadow duration-300">
-    <img src="https://www.dge.finances.bj/storage/2021/05/WhatsApp-Image-2019-02-25-at-09.51.49-300x300-1.jpeg" alt="Aperçu de l'article"
+    <img :src="props.image" alt="Aperçu de l'article"
       class="w-full h-full hover:transform hover:scale-95 rounded transition duration-300">
     <!-- <div class="px-4 py-4 mask mx-3">
       <h2 class="text-xl font-bold text-white">Titre de l'article</h2>

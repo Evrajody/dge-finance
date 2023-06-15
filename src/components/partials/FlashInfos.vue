@@ -41,7 +41,7 @@ const services = ref([
             <!-- translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 :breakpoints="[{ width: '1380' }]" -->
             <div class="h-full">
 
-              <swiper loop auto-height a11y autoplay :modules="[A11y, Autoplay, Navigation]" set-wrapper-size
+              <swiper loop auto-height a11y autoplay :breakpoints="[{ width:640, slidesPerView: 1 }, { width: 1024, slidesPerView:2 }, { slidesPerView: 3, width: 1280 }]" :modules="[A11y, Autoplay, Navigation]" set-wrapper-size
                 :slides-per-view="3" :space-between="15">
                 <swiper-slide v-for="item, index in services" :key="index">
                   <div class="c-services__item">
@@ -53,6 +53,7 @@ const services = ref([
                   </div>
                 </swiper-slide>
               </swiper>
+              
 
             </div>
           </div>

@@ -89,9 +89,8 @@ const route = useRouter()
         <div class="relative group">
           <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-2">
             <a href="" class="font-medium">Séminaires et Conférences</a>
-            <div
-              class="hidden absolute group-hover:block mt-3 -ml-2 py-2 w-72 bg-white shadow-lg z-10 transition-all opacity-0 group-hover:opacity-100">
-              <a href="" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> JSEB </a>
+            <div class="hidden absolute group-hover:block mt-3 -ml-2 py-2 w-72 bg-white shadow-lg z-10 transition-all opacity-0 group-hover:opacity-100">
+              <a href="/seminaire-conference/jseb" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> JSEB </a>
             </div>
           </div>
         </div>

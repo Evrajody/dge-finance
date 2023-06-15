@@ -7,6 +7,7 @@ import ComingSoon from '../views/ComingSoon.vue'
 import Organigramme from '../views/Organigramme.vue'
 import AnciensDirecteur from '../views/AnciensDirecteur.vue'
 import Direction from '../views/Direction.vue'
+import Jseb from '../views/Jseb.vue'
 
 
 const router = createRouter({
@@ -24,7 +25,6 @@ const router = createRouter({
       name: 'detail',
       component: ArticleDetail
     },
-
 
     {
       path: '/presentation',
@@ -106,7 +106,7 @@ const router = createRouter({
         {
           path: 'jseb',
           name: 'jseb',
-          component: Accualite,
+          component: Jseb,
         },
       ]
     },

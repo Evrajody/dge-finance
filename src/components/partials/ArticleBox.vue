@@ -11,9 +11,13 @@
       <p class="text-white text-sm leading-6 line-clamp-3 mt-2"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ut
         inventore facilis iste incidunt culpa amet molestias non dolores quam. </p>
       <p class="text-white text-sm italic mt-2"> 12 Juin 2023 </p>
-      <div class="mt-4">
+      <div class="mt-4 flex justify-between items-center">
         <a href="#" class="bg-bj-yellow text-black text-sm font-medium px-4 py-2 rounded-md hover:bg-yellow-600 transition-colors duration-300">Lire
-          plus</a>
+          plus
+        </a>
+
+        <slot name="download"/>
+
       </div>
     </div>
     <!-- <div class="mask h-1 w-full transition-all duration-300"></div> -->
