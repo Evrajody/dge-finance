@@ -8,12 +8,12 @@ import FlashInfos from '../components/partials/FlashInfos.vue';
 import NewletterAction from '../components/partials/NewletterAction.vue';
 import ArticleBox from '../components/partials/ArticleBox.vue';
 import Partenaire from '../components/partials/Partenaire.vue';
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
 const fakeArticle = ref([])
 
 function loadFakeArticles(params) {
-  fetch('https://jsonplaceholder.typicode.com/photos?_start=8&_limit=12')
+  fetch('https://jsonplaceholder.typicode.com/photos?_start=13&_limit=3')
   .then((response) => response.json())
   .then((json) => fakeArticle.value = json);
 }
@@ -35,7 +35,7 @@ onMounted(() => {
   </div>
 
   <div class="fin-actualites bg-finance-gray py-8">
-    <div class="sm:container mx-auto flex items-center flex-col px-3 md:flex-row gap-5">
+    <div class="sm:container mx-auto w-full gap-8 grid grid-cols-1 items-center place-items-center md:grid-cols-2 lg:grid-cols-3 mt-12 py-5 px-8">
       <ArticleBox :article="item" v-for="item in fakeArticle" />
     </div>
   </div>

@@ -11,22 +11,22 @@ const route = useRouter()
   <header class="bg-white transition-all duration-150 w-full border-b border-slate-100">
     <div class="xl:container mx-auto">
 
-      <div class="flex items-center justify-between gap-4 px-5">
+      <div class="flex items-center justify-between px-5">
 
         <a href="/">
-          <div class="official-logo hidden lg:block w-60">
+          <div class="official-logo hidden lg:block w-60 py-2">
             <img src="@/assets/images/official_logo.png" alt="" class="h-15" srcset="">
           </div>
         </a>
 
         <a href="/">
-          <div class="official-logo block lg:hidden w-60">
+          <div class="official-logo block lg:hidden w-60 py-2">
             <img src="@/assets/images/logo_dge_benin.png" alt="" class="h-12" srcset="">
           </div>
         </a>
 
         <a href="/">
-          <div class="official-logo hidden lg:block w-60">
+          <div class="official-logo hidden lg:block w-60 py-2">
             <img src="@/assets/images/logo_dge_benin.png" class="h-15" alt="" srcset="">
           </div>
         </a>
@@ -52,6 +52,26 @@ const route = useRouter()
   <div class="hidden md:flex bg-finance-blue px-5">
     <div class="container mx-auto flex justify-between items-center text-white">
       <nav class="flex flex-1 items-center justify-start">
+
+        <div class="relative group">
+          <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-3">
+            <a href="/" class="font-medium">Accueil</a>
+            <!-- <div class="hidden absolute group-hover:block mt-3 -ml-2 py-2 w-72 bg-white shadow-lg z-10 transition-all">
+              <a href="/presentation/actualites" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                Actualités </a>
+              <a href="/presentation/mission" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> Mission
+              </a>
+              <a href="/presentation/organigramme" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                Organigramme </a>
+              <a href="/presentation/anciens-directeurs" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                Anciens Directeurs </a>
+              <a href="/presentation/directions" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                Directions </a>
+            </div> -->
+          </div>
+        </div>
+
+
         <div class="relative group">
           <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-2">
             <a href="" class="font-medium">Présentation</a>
@@ -75,13 +95,14 @@ const route = useRouter()
           <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-2">
             <a href="" class="font-medium">Publications</a>
             <div class="hidden absolute group-hover:block mt-3 -ml-2 py-2 w-72 bg-white shadow-lg z-10 transition-all">
-              <a href="/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> Documents budgétaires </a>
-              <a href="/articles-details" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> Documents
+              <a href="/publications/documents-budgetaires" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> Documents budgétaires </a>
+              <a href="/publications/documents-politiques-nationales" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> Documents
                 Politiques Nationales
-                (DPN) </a>
-              <a href="" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> Documents de travail </a>
-              <a href="" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> Infra annuels </a>
-              <a href="" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> RAPEF </a>
+                (DPN) 
+              </a>
+              <a href="/publications/documents-travail" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> Documents de travail </a>
+              <a href="/publications/infra-annuels" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> Infra annuels </a>
+              <a href="/publications/rapef" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> RAPEF </a>
             </div>
           </div>
         </div>
@@ -97,11 +118,11 @@ const route = useRouter()
 
         <div class="relative group">
           <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-2">
-            <a href="" class="font-medium">Opportunités</a>
+            <a href="#" class="font-medium">Opportunités</a>
             <div
               class="hidden absolute group-hover:block mt-3 -ml-2 py-2 w-72 bg-white shadow-lg z-10 transition-all opacity-0 group-hover:opacity-100">
               <a href="/opportunites/offre-de-stage" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> Offre de stage </a>
-              <a href="" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> Appel à candidature </a>
+              <a href="/opportunites/appel-candidature" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> Appel à candidature </a>
             </div>
           </div>
         </div>

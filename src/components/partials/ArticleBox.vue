@@ -7,10 +7,10 @@
 </script>
 
 <template>
-  <div class="max-w-md rounded-md shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+  <div class="max-w-md  rounded-md shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
     <img src="https://tourisme.gouv.bj/storage/media/posts/POST_633409789db3a633409789db3c.jpg" alt="Aperçu de l'article"
       class="w-full h-48 object-cover object-center">
-    <div class="px-4 py-4 mask">
+    <div class="px-4 py-4 mask h-full">
       <h2 class="text-xl font-bold text-white line-clamp-2" v-text="article.title"></h2>
       <p class="text-white text-sm leading-6 line-clamp-3 mt-2"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ut
         inventore facilis iste incidunt culpa amet molestias non dolores quam. </p>

@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from 'vue';
-import OcticonGoal16 from '../components/icons/OcticonGoal16.vue';
 import PageBanner from '../components/partials/PageBanner.vue';
 import OcticonQuote from '../components/icons/OcticonQuote.vue';
 
