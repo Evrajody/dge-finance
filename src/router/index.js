@@ -5,6 +5,8 @@ import Mission from '../views/Mission.vue'
 import Accualite from '../views/Actualite.vue'
 import ComingSoon from '../views/ComingSoon.vue'
 import Organigramme from '../views/Organigramme.vue'
+import AnciensDirecteur from '../views/AnciensDirecteur.vue'
+import Direction from '../views/Direction.vue'
 
 
 const router = createRouter({
@@ -46,11 +48,17 @@ const router = createRouter({
           component: Organigramme
         },
 
-        // {
-        //   path: 'anciens-directeurs',
-        //   name: 'anciens-directeurs',
-        //   component: Mission
-        // },
+        {
+          path: 'anciens-directeurs',
+          name: 'anciens-directeurs',
+          component: AnciensDirecteur
+        },
+
+        {
+          path: 'directions',
+          name: 'directions',
+          component: Direction
+        },
       ]
     },
 

@@ -11,7 +11,8 @@ import PageBanner from '../components/partials/PageBanner.vue';
     <PageBanner title="Actualités"/>
 
     <div class="container mx-auto">
-      <div class="w-full gap-8 grid grid-cols-1 items-center place-items-center sm:grid-cols-2 md:grid-cols-3 mt-12 py-5">
+
+      <div class="w-full gap-8 grid grid-cols-1 items-center place-items-center md:grid-cols-2 lg:grid-cols-3 mt-12 py-5 px-8">
 
           <ArticleBox  v-for="i in 6" />
 

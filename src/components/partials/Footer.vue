@@ -5,7 +5,7 @@
 
 <template>
   <footer class="bg-[#F4F5F7] footer relative w-full">
-    <div class="mx-auto container px-4 py-8 sm:px-6 lg:px-5">
+    <div class="mx-auto lg:container px-4 py-8 sm:px-6 lg:px-5">
     
       <div class="w-full">
 

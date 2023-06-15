@@ -132,21 +132,30 @@ const orgData = ref({
 </script>
 
 <template>
-  <main class="overflow-hidden">
+  <main class="overflow-hidden ">
 
     <PageBanner title="Organigramme" />
 
-
-    <div class="row flex justify-center items-center py-32">
-      <div class="card">
-        <blocks-tree :data="orgData" :horizontal="true"></blocks-tree>
+    <div class="mx-auto container">
+      <div class="flex flex-col lg:flex-row py-28">
+        <div class="card w-full ">
+          <img src="@/assets/images/organigramme-dge.jpg" class="" alt="" srcset="">
+        </div>
+  
+        <div class="organigramme-legend h-full bg-finance-gray w-full mt-8 lg:mt-0 py-4 px-5 rounded">
+  
+          <h3 class="text-lg font-semibold text-finance-blue">  Légende </h3>
+  
+          <hr>
+  
+        </div>
+  
       </div>
-
-
-
     </div>
 
+
   </main>
+
 </template>
 
 <style>

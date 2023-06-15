@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="bg-white max-w-md rounded-md shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+  <div class="max-w-md rounded-md shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
     <img src="https://tourisme.gouv.bj/storage/media/posts/POST_633409789db3a633409789db3c.jpg" alt="Aperçu de l'article"
       class="w-full h-48 object-cover object-center">
     <div class="px-4 py-4 mask">
