@@ -15,7 +15,7 @@ import PageBanner from '../components/partials/PageBanner.vue';
     <div
       class="flex flex-col justify-center items-center lg:flex-row lg:items-start gap-12 my-20 lg:container mx-auto px-6 md:p-8 lg:px-12">
 
-      <div class="lg:w-1/2 grid place-items-center ">
+      <div class="">
         <DirecteurBox image="https://www.dge.finances.bj/storage/2021/05/DGAE.jpg" class="" />
       </div>
 

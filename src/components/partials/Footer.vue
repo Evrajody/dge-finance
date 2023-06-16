@@ -12,7 +12,7 @@
 
         <div class="flex flex-col space-y-7 lg:flex-row lg:space-y-0 w-full pb-8 justify-evenly">
 
-          <div class="col-span-2 sm:col-span-1">
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="col-span-2 sm:col-span-1">
 
             <p class="font-bold text-lg text-finance-blue">Présentations</p>
 
@@ -50,7 +50,7 @@
             </ul>
           </div>
 
-          <div class="col-span-2 sm:col-span-1">
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="col-span-2 sm:col-span-1">
 
             <p class="font-bold text-lg text-finance-blue">Publications</p>
 
@@ -81,7 +81,7 @@
             </ul>
           </div>
 
-          <div class="col-span-2 sm:col-span-1">
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="col-span-2 sm:col-span-1">
 
             <p class="font-bold text-lg text-finance-blue">Séminaires et Conférences</p>
 
@@ -94,7 +94,7 @@
             </ul>
           </div>
 
-          <div class="col-span-2 sm:col-span-1">
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="col-span-2 sm:col-span-1">
 
             <p class="font-bold text-lg text-finance-blue">Opportunités</p>
 

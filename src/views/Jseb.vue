@@ -9,7 +9,7 @@ const fakeArticle = ref([]);
 
 
 function loadFakeArticles() {
-  fetch('https://jsonplaceholder.typicode.com/photos?_start=6&_limit=12')
+  fetch('https://jsonplaceholder.typicode.com/photos?_start=6&_limit=6')
   .then((response) => response.json())
   .then((json) => fakeArticle.value = json);
 }
@@ -23,7 +23,7 @@ onMounted(() => {
 <template>
   <div class="overflow-hidden">
 
-    <PageBanner title="Publications Jseb" />
+    <PageBanner title="Publications JSEB" />
 
 
     <div class="py-5 bg-finance-gray mt-16">

@@ -272,9 +272,7 @@ const orgData = ref({
 
     <div class="mx-auto container">
       <div class="flex flex-col items-center justify-center py-28">
-
-
-
+        
         <div class="card w-full grid place-content-center ">
           <img src="@/assets/images/organigramme.png"  class="" alt="" srcset="">
         </div>
@@ -295,7 +293,7 @@ const orgData = ref({
 
           <div class="legends-item">
             <ol class="gradient-list" v-for="item in sigles">
-              <li class="flex items-center gap-3">
+              <li class="flex items-center gap-4 lg:gap-5">
                 <span class="w-36 text-xs items-stretch sm:text-sm md:text-lg font-medium text-white mask py-2 px-5"> {{ item.abbr }}
                 </span>
                 <span class="flex-1 font-medium text-xs sm:text-sm md:text-lg leading-normal text-finance-late"> {{ item.definition }} </span>

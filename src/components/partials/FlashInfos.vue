@@ -25,9 +25,9 @@ const services = ref([
 <template>
   <div class="container mx-auto pb-5">
 
-    <div class="flex">
+    <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="flex">
       <a href="#" class="group w-full relative block bg-black">
-        <img alt="Developer" src="https://cdn.pixabay.com/photo/2017/04/11/23/16/benin-2223164_1280.jpg"
+        <img alt="Developer" src="https://img.freepik.com/photos-gratuite/heureuse-jeune-femme-africaine-dans-marche-africain-local-tenant-masque-facial-maniere-ludique_181624-43795.jpg"
           class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50" />
 
         <div class="relative p-4 sm:p-6 lg:p-8">

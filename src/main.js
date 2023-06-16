@@ -10,11 +10,11 @@ import 'vue3-blocks-tree/dist/vue3-blocks-tree.css';
 import 'vue-multiselect/dist/vue-multiselect.css'
 
 
+
 const app = createApp(App)
 
 app.use(router)
 app.use(PrimeVue);
 app.use(VueBlocksTree)
-
 
 app.mount('#app')

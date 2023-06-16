@@ -127,6 +127,25 @@ const route = useRouter()
           </div>
         </div>
 
+        <div class="relative group">
+          <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-3">
+            <a href="/" class="font-medium">Contacts</a>
+            <!-- <div class="hidden absolute group-hover:block mt-3 -ml-2 py-2 w-72 bg-white shadow-lg z-10 transition-all">
+              <a href="/presentation/actualites" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                Actualités </a>
+              <a href="/presentation/mission" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> Mission
+              </a>
+              <a href="/presentation/organigramme" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                Organigramme </a>
+              <a href="/presentation/anciens-directeurs" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                Anciens Directeurs </a>
+              <a href="/presentation/directions" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                Directions </a>
+            </div> -->
+          </div>
+        </div>
+
+
       </nav>
       <span class="cursor-pointer">
         <ClaritySearchLine class="h-5 w-5" />

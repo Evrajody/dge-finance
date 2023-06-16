@@ -3,14 +3,23 @@ import SliderItem from '../partials/SliderItem.vue'
 import InfoBanner from './InfoBanner.vue';
 import { Navigation, Pagination, Autoplay, Mousewheel, Thumbs, Scrollbar, A11y } from 'swiper';
 
-import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Swiper, SwiperSlide, useSwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/autoplay'
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/thumbs';
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
+const anime = ref('')
+
+ // const swiperSlide = useSwiperSlide();
+
+ function handleSlide(params) {
+      console.log(params);
+ }
+
+ onMounted(() => { })
 
 const slidesContent = ref([
    {
@@ -43,7 +52,7 @@ const slidesContent = ref([
 </script>
 
 <template>
-   <swiper loop auto-height navigation a11y pagination thumbs  watch-slides-progress autoplay :modules="[Pagination, Thumbs, A11y, Autoplay, Navigation]"  set-wrapper-size :space-between="15">
+   <swiper  @slide-change-transition-end="handleSlide"  :speed="300" loop auto-height navigation a11y pagination watch-slides-progress autoplay :modules="[Pagination, A11y, Autoplay, Navigation]"  set-wrapper-size :space-between="15">
       <swiper-slide v-for="item, index in slidesContent" :key="index">
          <SliderItem :slide-image="item.image" :silde-text="item.text" />
       </swiper-slide>
@@ -52,7 +61,6 @@ const slidesContent = ref([
 </template> 
 
 <style>
-
 
    .swiper-button-prev, 
    .swiper-button-next {
@@ -63,5 +71,22 @@ const slidesContent = ref([
    .swiper-button-next::after {
       @apply text-xl
    }
+
+   /* .swiper-slide-active * {
+      opacity: 1;
+      transform: none;
+
+      @for $i from 0 to 15 {
+        &:nth-child(#{$i + 1}) {
+          transition-delay: $i * 0.1 + 0.3s;
+        }
+      }
+   }
+
+   .swiper {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all .4s;
+   } */
 
 </style>

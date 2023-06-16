@@ -7,7 +7,7 @@
 </script>
 
 <template>
-  <div class="w-[340px] h-[380px] mask max-w-md rounded shadow overflow-hidden hover:shadow-lg transition-shadow duration-300">
+  <div class=" mask max-w-md rounded shadow overflow-hidden hover:shadow-lg transition-shadow duration-300">
     <img :src="props.image" alt="Aperçu de l'article"
       class="w-full h-full hover:transform hover:scale-95 rounded transition duration-300">
     <!-- <div class="px-4 py-4 mask mx-3">

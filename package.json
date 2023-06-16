@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.3",
+    "aos": "^2.3.4",
     "primevue": "^3.29.2",
     "swiper": "^9.4.0",
     "vue": "^3.3.2",

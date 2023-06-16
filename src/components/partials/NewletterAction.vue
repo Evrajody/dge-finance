@@ -10,21 +10,20 @@ import MaterialSymbolsArrowUpward from '../icons/MaterialSymbolsArrowUpward.vue'
 
     <div class="w-full 2xl:container mx-auto">
 
-      <div
-        class="text-white w-full px-5 2xl:px-0 py-8 flex flex-col md:flex-row space-between items-center justify-between relative overflow-hidden">
+      <div class="text-white w-full px-5 2xl:px-0 py-8 flex flex-col md:flex-row space-between items-center justify-between relative overflow-hidden">
 
-        <div class="flex flex-col space-y-4 lg:max-w-xl z-10 pl-10 2xl:pl-0">
+        <div class="flex flex-col space-y-4 lg:max-w-xl z-10 md:pl-10 2xl:pl-0">
           <h4 class="text-4xl text-center md:text-left font-bold leading-normal text-white md:pb-2">
             Restez à l'afflut de l'information
           </h4>
           <p class="text-center md:text-left font-medium text-white opacity-70 md:pb-6">
-            Entrez votre address email vous etre au parfum des actualités de la Direction Générale de l'Economie
+            Entrez votre addresse email pour être au parfum des actualités de la Direction Générale de l'Economie
           </p>
 
         </div>
 
         <!-- RIGHT PART -->
-        <div class="pt-8 md:pt-0 justify-center lg:ml-auto z-10">
+        <div data-aos="fade-left" data-duration="2000" class="pt-8 md:pt-0 justify-center lg:ml-auto z-10">
           <!-- Contribuer -->
           <a href="#" target="_blank" download
             class="flex items-center px-8 py-4 text-center text-sm text-finance-blue uppercase bg-white font-display rounded-full transition duration-200 hover:bg-red-600 hover:text-white">
@@ -47,7 +46,7 @@ import MaterialSymbolsArrowUpward from '../icons/MaterialSymbolsArrowUpward.vue'
                 fill="currentColor" />
             </svg>
             <span>
-              S'abonner à la newletter
+              S'abonner à la newsletter
             </span>
           </a>
         </div>
@@ -58,14 +57,7 @@ import MaterialSymbolsArrowUpward from '../icons/MaterialSymbolsArrowUpward.vue'
 
       </div>
 
-      <div class="flex items-end justify-end fixed bottom-0 right-0 mb-4 mr-4 z-10">
-        <div>
-          <a title="Buy me a beer" href="https://www.buymeacoffee.com/tonyricher" target="_blank"
-            class="grid place-items-center text-white bg-bj-green   h-12 w-12 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110">
-            <MaterialSymbolsArrowUpward />
-          </a>
-        </div>
-      </div>
+  
 
     </div>
 
