@@ -4,7 +4,7 @@ import { ref } from 'vue';
 
 </script>
 <template>
-   <div class="form1">
+   <!-- <div class="form1">
       <div class="flex flex-wrap -mx-3 mb-6">
          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label class="block tracking-wide text-gray-700 text-sm mb-2" for="">
@@ -54,7 +54,53 @@ import { ref } from 'vue';
                Professionnelle</a>
          </div>
       </div>
-   </div>
+   </div> -->
+
+
+
+  <div class="w-full">
+    <form action="#" method="POST" class="">
+      <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+
+        <div class="col-span-2 md:col-span-1">
+          <label for="full-name" class="block text-sm font-semibold leading-6 text-gray-900"> Nom & Prénom </label>
+          <div class="mt-2.5">
+            <input type="text" name="first-name" class="block w-full border-0 px-3.5 py-2.5 text-gray-900  ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset bg-finance-gray focus:bg-transparent  focus:ring-finance-blue sm:text-sm sm:leading-6">
+          </div>
+        </div>
+
+        <div class="col-span-2 md:col-span-1">
+          <label for="email" class="block text-sm font-semibold leading-6 text-gray-900">Adresse Email</label>
+          <div class="mt-2.5">
+            <input type="text" name="first-name" class="block w-full border-0 px-3.5 py-2.5 text-gray-900  ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset bg-finance-gray focus:bg-transparent focus:ring-finance-blue sm:text-sm sm:leading-6">
+          </div>
+        </div>
+
+        <div class="col-span-2">
+          <label for="subject" class="block text-sm font-semibold leading-6 text-gray-900"> Sujet </label>
+          <div class="mt-2.5">
+            <input type="text" name="first-name" class="block w-full border-0 px-3.5 py-2.5 text-gray-900  ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset bg-finance-gray focus:bg-transparent focus:ring-finance-blue sm:text-sm sm:leading-6">
+          </div>
+        </div>
+
+ 
+        <div class="col-span-2">
+          <label for="message" class="block text-sm font-semibold leading-6 text-gray-900">Message</label>
+          <div class="mt-2.5">
+            <textarea name="message" id="message" rows="4" class="block w-full border-0 px-3.5 py-2.5 text-gray-900  ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset bg-finance-gray focus:bg-transparent focus:ring-finance-blue sm:text-sm sm:leading-6"></textarea>
+          </div>
+        </div>
+
+      </div>
+      <div class="mt-10">
+        <button type="submit" class="block w-32 bg-transparent border-2 border-finance-blue px-3.5 py-2.5 text-center text-sm font-semibold hover:bg-finance-blue hover:text-white transition-all text-finance-blue"> Envoyer </button>
+      </div>
+    </form>
+  </div>
+
+
+
+
 </template>
 
 <style>

@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref } from 'vue';
+import { onBeforeMount, onMounted, ref } from 'vue';
 import ArticleBox from '../components/partials/ArticleBox.vue';
 import PageBanner from '../components/partials/PageBanner.vue';
 
@@ -15,22 +15,25 @@ const imagesActicle =  ref([
 
 ])
 
-
 function loadFakeArticles(params) {
-  fetch('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=6')
+  fetch('https://newsapi.org/v2/everything?q=benin&language=fr&pageSize=12&apiKey=2fb187a3a7a24d0c8deee2df8f83bb23')
   .then((response) => response.json())
-  .then((json) => fakeArticle.value = json);
+  .then((json) =>{
+    fakeArticle.value = json.articles
+  });
 }
 
-onMounted(() => {
+onBeforeMount(() => {
   loadFakeArticles()
 })
+
+onMounted(() => { })
 
 
 </script>
 
 <template>
-  <div class="min-h-screen">
+  <div class="">
 
     <PageBanner title="Actualités"/>
 
@@ -38,7 +41,7 @@ onMounted(() => {
 
       <div class="w-full gap-8 grid grid-cols-1 items-center place-items-center md:grid-cols-2 lg:grid-cols-3 mt-12 py-5 px-4">
 
-          <ArticleBox :article="item" :image="imagesActicle[index].url" v-for="item, index in fakeArticle" />
+          <ArticleBox :article="item" v-for="item, index in fakeArticle" />
 
       </div>
 

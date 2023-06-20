@@ -6,7 +6,7 @@ import PageBanner from '../components/partials/PageBanner.vue';
 
 <template>
 
-  <PageBanner title="Appel à candidature"/>
+  <PageBanner title="Documents Budgetaires"/>
 
   <div class="flex flex-col justify-center items-center gap-12 my-20 lg:container mx-auto">
 

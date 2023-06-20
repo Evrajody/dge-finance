@@ -56,7 +56,7 @@ function toogleMenu() {
           </div>
 
           <div class="text-xs hover:underline font-medium text-white">
-            <a href=""> Contact </a>
+            <a href=""> Contactez-nous </a>
           </div>
 
           <div class="text-xs hover:underline font-medium text-white">
@@ -65,13 +65,13 @@ function toogleMenu() {
 
         </div>
 
-        <a href="/" class="hidden lg:block">
-          <div class="official-logo  w-60 py-2">
+        <a href="/" class="hidden md:block">
+          <div class="official-logo w-60 py-2">
             <img src="@/assets/images/logo_dge_benin.png" class="h-15" alt="" srcset="">
           </div>
         </a>
 
-        <div class="mobile-toogle flex lg:hidden items-center gap-5">
+        <div class="mobile-toogle flex md:hidden items-center gap-5">
 
           <div class="official-logo cursor-pointer flex items-center justify-center">
             <ClaritySearchLine width="1.5em" height="1.5em" class="h-full" />
@@ -128,7 +128,7 @@ function toogleMenu() {
                 Politiques Nationales
                 (DPN)
               </a>
-              <a href="/publications/documents-travail" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+              <a href="/publications/documents-de-travail" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                 Documents de travail </a>
               <a href="/publications/infra-annuels" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> Infra
                 annuels </a>
@@ -138,7 +138,7 @@ function toogleMenu() {
         </div>
 
         <div class="relative group">
-          <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-2">
+          <div class="group-hover:bg-bj-yellow text-white text-center md:text-left transition-all hover:text-black cursor-pointer py-3 px-2">
             <a href="" class="font-medium">Séminaires et Conférences</a>
             <div
               class="hidden absolute group-hover:block mt-3 -ml-2 py-2 w-72 bg-white shadow-lg z-10 transition-all opacity-0 group-hover:opacity-100">
@@ -157,6 +157,18 @@ function toogleMenu() {
                 Offre de stage </a>
               <a href="/opportunites/appel-candidature" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                 Appel à candidature </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-2">
+            <a href="/contact" class="font-medium">Contact</a>
+            <div
+              class="hidden absolute group-hover:block mt-3 -ml-2 py-2 w-72 -translate-x-[72%] bg-white shadow-lg z-10 transition-all opacity-0 group-hover:opacity-100">
+              <a href="/contact/ecrire-dg" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                Ecrire au DG
+              </a>
             </div>
           </div>
         </div>

@@ -8,7 +8,7 @@ import FlashInfos from '../components/partials/FlashInfos.vue';
 import NewletterAction from '../components/partials/NewletterAction.vue';
 import ArticleBox from '../components/partials/ArticleBox.vue';
 import Partenaire from '../components/partials/Partenaire.vue';
-import { onMounted, ref } from 'vue';
+import { onBeforeMount, onMounted, ref } from 'vue';
 
 const fakeArticle = ref([])
 
@@ -23,12 +23,15 @@ const imagesActicle =  ref([
 ])
 
 function loadFakeArticles(params) {
-  fetch('https://jsonplaceholder.typicode.com/photos?_start=13&_limit=3')
-    .then((response) => response.json())
-    .then((json) => fakeArticle.value = json);
+  fetch('https://newsapi.org/v2/everything?q=benin&language=fr&pageSize=3&apiKey=2fb187a3a7a24d0c8deee2df8f83bb23')
+  .then((response) => response.json())
+  .then((json) =>{
+    fakeArticle.value = json.articles
+    console.log(fakeArticle.value);
+  });
 }
 
-onMounted(() => {
+onBeforeMount(() => {
   loadFakeArticles()
 })
 
@@ -50,7 +53,7 @@ onMounted(() => {
   <div class="fin-actualites bg-finance-gray">
     <div
       class="sm:container mx-auto w-full gap-8 grid grid-cols-1 items-center place-items-center md:grid-cols-2 lg:grid-cols-3 py-5 px-4">
-      <ArticleBox :article="item" :image="imagesActicle[index].url" v-for="item, index  in fakeArticle" />
+      <ArticleBox :article="item" v-for="item, index  in fakeArticle" />
     </div>
   </div>
 

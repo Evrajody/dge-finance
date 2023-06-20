@@ -7,8 +7,8 @@ const props = defineProps({
 </script>
 
 <template>
-  <figure class="snip1165 h-full">
-    <img :src="directeur.image" class="w-full" alt="directeur-image" />
+  <figure class="snip1165 w-full">
+    <img :src="directeur.image" class="w-full h-[450px]" alt="directeur-image" />
     <figcaption class="flex flex-col items-center">
       <h3 class="flex gap-2"> 
         <span v-text="directeur.prenom"></span> 

@@ -136,7 +136,7 @@ const anciensDirecteur = ref([
     <div class="container mx-auto">
 
       <div
-        class="w-full gap-8 grid grid-cols-1 items-center place-items-center md:grid-cols-2 lg:grid-cols-3 mt-12 py-5 px-8">
+        class="w-full gap-8 grid grid-cols-1 items-center place-items-center md:grid-cols-2 lg:grid-cols-3 mt-12 py-5 px-8 md:px-2">
 
         <DirecteurBox class="self-stretch" data-aos="fade-up" data-aos-anchor-placement="top-bottom" :directeur="item"
           v-for="item in anciensDirecteur" />

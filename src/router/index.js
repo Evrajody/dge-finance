@@ -9,6 +9,13 @@ import AnciensDirecteur from '../views/AnciensDirecteur.vue'
 import Directions from '../views/Directions.vue'
 import Jseb from '../views/Jseb.vue'
 import OffreStage from "../views/OffreStage.vue";
+import DocumentsBudgetaires from "../views/DocumentsBudgetaires.vue";
+import DocumentsPolitiques from "../views/DocumentsPolitiques.vue";
+import DocumentsTravail from "../views/DocumentsTravail.vue";
+import Rapef from "../views/Rapef.vue";
+import InfraAnnuel from "../views/InfraAnnuel.vue"
+import Contact from '../views/Contact.vue';
+import ContactDirecteur from '../views/ContactDirecteur.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -62,37 +69,37 @@ const router = createRouter({
     },
 
     {
-      path: "/publication",
-      name: "publication",
+      path: "/publications",
+      name: "publications",
       children: [
         {
           path: "documents-budgetaires",
           name: "documents-budgetaires",
-          component: Accualite,
+          component: DocumentsBudgetaires,
         },
 
         {
-          path: "documents-politique-nationale",
+          path: "documents-politiques-nationales",
           name: "dpn",
-          component: Mission,
+          component: DocumentsPolitiques,
         },
 
         {
-          path: "documents-travails",
-          name: "documents-travails",
-          component: Mission,
+          path: "documents-de-travail",
+          name: "documents-de-travail",
+          component: DocumentsTravail,
         },
 
         {
           path: "infra-annuels",
           name: "infra-annuel",
-          component: Mission,
+          component: InfraAnnuel,
         },
 
         {
           path: "rapef",
           name: "rapef",
-          component: Mission,
+          component: Rapef,
         },
       ],
     },
@@ -147,6 +154,19 @@ const router = createRouter({
           path: "appel-a-candidature",
           name: "appel-a-candidature",
           component: Mission,
+        },
+      ],
+    },
+
+    {
+      path: "/contact",
+      name: "contact",
+      component: ContactDirecteur,
+      children: [
+        {
+          path: "ecrire-dg",
+          name: "contact-directeur",
+          component: ContactDirecteur,
         },
       ],
     },
