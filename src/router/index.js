@@ -6,7 +6,7 @@ import Accualite from '../views/Actualite.vue'
 import ComingSoon from '../views/ComingSoon.vue'
 import Organigramme from '../views/Organigramme.vue'
 import AnciensDirecteur from '../views/AnciensDirecteur.vue'
-import Direction from '../views/Direction.vue'
+import Directions from '../views/Directions.vue'
 import Jseb from '../views/Jseb.vue'
 import OffreStage from "../views/OffreStage.vue";
 
@@ -56,7 +56,7 @@ const router = createRouter({
         {
           path: "directions",
           name: "directions",
-          component: Direction,
+          component: Directions,
         },
       ],
     },

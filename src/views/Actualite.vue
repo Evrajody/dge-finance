@@ -36,7 +36,7 @@ onMounted(() => {
 
     <div class="container mx-auto">
 
-      <div class="w-full gap-8 grid grid-cols-1 items-center place-items-center md:grid-cols-2 lg:grid-cols-3 mt-12 py-5 px-8">
+      <div class="w-full gap-8 grid grid-cols-1 items-center place-items-center md:grid-cols-2 lg:grid-cols-3 mt-12 py-5 px-4">
 
           <ArticleBox :article="item" :image="imagesActicle[index].url" v-for="item, index in fakeArticle" />
 

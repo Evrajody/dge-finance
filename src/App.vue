@@ -6,6 +6,7 @@ import MaterialSymbolsArrowUpward from './components/icons/MaterialSymbolsArrowU
 import { computed, onMounted, ref, watch } from 'vue';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import ResponsiveMenu from './components/partials/ResponsiveMenu.vue';
 
 
 const showTopBtn = ref(false)

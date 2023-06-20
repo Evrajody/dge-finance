@@ -19,15 +19,13 @@ const services = ref([
   { title: "Documents qualités" },
 ])
 
-
 </script>
-
 <template>
-  <div class="container mx-auto pb-5">
+  <div class="container mx-auto pb-5" id="services">
 
     <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="flex">
       <a href="#" class="group w-full relative block bg-black">
-        <img alt="Developer" src="https://img.freepik.com/photos-gratuite/heureuse-jeune-femme-africaine-dans-marche-africain-local-tenant-masque-facial-maniere-ludique_181624-43795.jpg"
+        <img alt="Developer" src="https://img.freepik.com/photos-gratuite/deux-femmes-visionnant-du-contenu-telephone-dans-marche-africain-local_181624-35124.jpg"
           class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50" />
 
         <div class="relative p-4 sm:p-6 lg:p-8">
@@ -39,9 +37,9 @@ const services = ref([
 
           <div class="mt-32 sm:mt-48 lg:mt-64">
             <!-- translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 :breakpoints="[{ width: '1380' }]" -->
-            <div class="h-full">
+            <div class="h-full relative">
 
-              <swiper loop auto-height a11y autoplay :breakpoints="[{ width:640, slidesPerView: 1 }, { width: 1024, slidesPerView:2 }, { slidesPerView: 3, width: 1280 }]" :modules="[A11y, Autoplay, Navigation]" set-wrapper-size
+              <swiper loop auto-height navigation a11y autoplay :breakpoints="[]" :modules="[A11y, Autoplay, Navigation]" set-wrapper-size
                 :slides-per-view="3" :space-between="15">
                 <swiper-slide v-for="item, index in services" :key="index">
                   <div class="c-services__item">
@@ -53,7 +51,6 @@ const services = ref([
                   </div>
                 </swiper-slide>
               </swiper>
-              
 
             </div>
           </div>
@@ -109,4 +106,11 @@ const services = ref([
   margin-top: 1.25rem;
   font-weight: 400;
 }
+
+#services .swiper-button-prev,  
+#services .swiper-button-next {
+  @apply px-6 py-5 bg-finance-blue rounded-full
+  
+}
+
 </style>

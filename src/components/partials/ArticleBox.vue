@@ -12,7 +12,6 @@ onMounted(() => {
 })
 
 </script>
-
 <template>
   <div data-aos="fade-up" data-aos-anchor-placement="top-bottom"
     class="max-w-md self-stretch card-finance rounded-md object-fill object-bottom shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">

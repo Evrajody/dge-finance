@@ -9,8 +9,8 @@
 
 <template>
 
-   <div class="w-full relative py-16 section container mx-auto">
-      <span class=" fill-text hidden md:block absolute left-12 sm:text-8xl top-5 text-finance-blue">  {{props.title }}   </span>
+   <div class="w-full relative py-10 section container mx-auto">
+      <!-- <span class=" fill-text hidden md:block absolute left-12 sm:text-8xl top-5 text-finance-blue">  {{props.title }}   </span> -->
       <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="">
          <div class="w-full flex flex-col justify-center px-5">
             <span class="text-3xl sm:text-4xl font-semibold text-finance-blue">

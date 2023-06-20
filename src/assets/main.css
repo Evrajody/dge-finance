@@ -6,7 +6,10 @@
 
 html{
   font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+  position: relative;
 }
+
 
 .footer::after {
   content: "";
@@ -16,4 +19,15 @@ html{
   bottom: -8px;
   left: 0px;
   background: linear-gradient(to right, rgba(0,104,40,1) 0%, rgba(0,104,40,1) 33.3332%, rgba(0,104,40,1), rgba(255,190,0,1) 33.3333%, rgba(255,190,0,1) 66.6666%, rgba(255,190,0,1), rgba(235,0,0,1) 66.6667%);
+}
+
+.nested-enter-active .inner,
+.nested-leave-active .inner {
+  transition: all 0.3s ease-in-out;
+}
+
+.nested-enter-from .inner,
+.nested-leave-to .inner {
+  transform: translateX(30px);
+  opacity: 0;
 }

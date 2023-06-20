@@ -29,7 +29,6 @@ function loadFakeArticles(params) {
 }
 
 onMounted(() => {
-
   loadFakeArticles()
 })
 
@@ -37,6 +36,9 @@ onMounted(() => {
 
 
 <template>
+
+  <!-- ENVISAGER UN RETRAIT DU SLIDER -->
+
   <div class="fin-slider">
     <Sliders />
   </div>
@@ -47,7 +49,7 @@ onMounted(() => {
 
   <div class="fin-actualites bg-finance-gray">
     <div
-      class="sm:container mx-auto w-full gap-8 grid grid-cols-1 items-center place-items-center md:grid-cols-2 lg:grid-cols-3 mt-12 py-5 px-8">
+      class="sm:container mx-auto w-full gap-8 grid grid-cols-1 items-center place-items-center md:grid-cols-2 lg:grid-cols-3 py-5 px-4">
       <ArticleBox :article="item" :image="imagesActicle[index].url" v-for="item, index  in fakeArticle" />
     </div>
   </div>

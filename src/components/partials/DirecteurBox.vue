@@ -1,25 +1,77 @@
 <script setup>
 
-  const props = defineProps({
-    image: String,
-  })
+const props = defineProps({
+  directeur: Object,
+})
 
 </script>
 
 <template>
-  <div class=" mask max-w-md rounded shadow overflow-hidden hover:shadow-lg transition-shadow duration-300">
-    <img :src="props.image" alt="Aperçu de l'article"
-      class="w-full h-full hover:transform hover:scale-95 rounded transition duration-300">
-    <!-- <div class="px-4 py-4 mask mx-3">
-      <h2 class="text-xl font-bold text-white">Titre de l'article</h2>
-    </div> -->
-    <!-- <div class="mask h-1 w-full transition-all duration-300"></div> -->
-  </div>
+  <figure class="snip1165 h-full">
+    <img :src="directeur.image" class="w-full" alt="directeur-image" />
+    <figcaption class="flex flex-col items-center">
+      <h3 class="flex gap-2"> 
+        <span v-text="directeur.prenom"></span> 
+        <span class="uppercase" v-text="directeur.nom"></span>
+      </h3>
+
+      <div class="">
+        <p class="text-center text-lg font-semibold leading-8" v-text="directeur.titre"> </p>
+      </div>
+
+      <div class="">
+        <p class="text-xl text-finance-blue text-center font-extrabold" v-text="directeur.periode"> </p>
+      </div>
+
+    </figcaption>
+  </figure>
 </template>
 
 <style>
- .mask {
-    background-image: linear-gradient(91.18deg, #023E79 0%, #0E6258 100%);
-    opacity: 0.8667689732142857;
-  }
+
+figure.snip1165 {
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  text-align: left;
+  box-shadow: 2px 3px 5px rgba(0,0,0, 0.1);
+}
+
+figure.snip1165 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+  transition: all 0.35s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+}
+
+figure.snip1165 figcaption {
+  position: relative;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+figure.snip1165 h3 {
+  position: absolute;
+  bottom: 100%;
+  padding: 10px 25px;
+  border-radius: 0 5px 0 0;
+  margin: 0;
+  left: 0;
+  font-weight: 400;
+  background-color: #0E406E;
+  color: #ffffff;
+}
+
+figure.snip1165 h3 span {
+  font-weight: 800;
+}
+
+figure.snip1165:hover img,
+figure.snip1165.hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+
 </style>

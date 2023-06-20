@@ -1,7 +1,15 @@
 <script setup>
+import { ref } from 'vue';
 import DirecteurBox from '../components/partials/DirecteurBox.vue';
 import PageBanner from '../components/partials/PageBanner.vue';
 
+
+const directeur = ref({
+  nom: 'DJOSSOU',
+  prenom: 'Justin',
+  titre: 'Directeur Général l\'Economie',
+  image: "https://www.dge.finances.bj/storage/2021/05/DGAE.jpg"
+})
 
 
 </script>
@@ -11,12 +19,10 @@ import PageBanner from '../components/partials/PageBanner.vue';
 
     <PageBanner title="Direction des Ressources humaines" />
 
-
-    <div
-      class="flex flex-col justify-center items-center lg:flex-row lg:items-start gap-12 my-20 lg:container mx-auto px-6 md:p-8 lg:px-12">
+    <div class="flex flex-col justify-center items-center lg:flex-row lg:items-start gap-12 my-20 lg:container mx-auto">
 
       <div class="">
-        <DirecteurBox image="https://www.dge.finances.bj/storage/2021/05/DGAE.jpg" class="" />
+        <DirecteurBox :directeur="directeur" />
       </div>
 
 
@@ -65,7 +71,6 @@ import PageBanner from '../components/partials/PageBanner.vue';
     </div>
 
 
-</main>
-
+  </main>
 </template>
 

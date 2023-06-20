@@ -1,37 +1,177 @@
 
 <script setup>
 
-import { ref } from "vue";
-import PageBanner from "../components/partials/PageBanner.vue";
+import $ from 'jquery'
+import tippy from 'tippy.js'
+import 'tippy.js/dist/tippy.css'; 
+import orgchart from 'orgchart'
+import 'orgchart/dist/css/jquery.orgchart.min.css'
 import IcOutlineFileDownload from "../assets/images/IcOutlineFileDownload.vue";
-import organigramme from "../assets/images/organigramme.pdf";
+import { onMounted, ref } from "vue";
+import PageBanner from "../components/partials/PageBanner.vue";
+
+
+
+var nodeTemplate = function (data) {
+  return `
+        <div class="content" id="${data.sigle}">${data.sigle}</div>
+      `;
+};
+
+
+const organigrammeDge = ref({
+  sigle: 'DGE',
+  definition: 'Directeur Général de l’Économie;',
+  children: [
+
+    {
+      sigle: 'DGAE',
+      definition: 'Directeur Général Adjoint de l’Économie;',
+      children: [
+        // {
+        //   sigle: 'Conseillers/DGE',
+        //   definition: 'Conseiller du Directeur Général de l’Économie;',
+        // },
+
+        // {
+        //   sigle: 'SP/DGE',
+        //   definition: 'Secrétariat Particulier du Directeur Général de l’Économie;',
+        // },
+
+        {
+          sigle: "DPC",
+          definition: "Direction de la Prévision et de la Conjoncture;",
+          children: [
+            {
+              sigle: 'SPEC',
+              key: '2_1',
+
+            },
+            {
+              sigle: 'SSBAC',
+              key: '2_2',
+            },
+            {
+              sigle: 'SSSSM',
+              key: '2_2',
+            }
+          ]
+        },
+        {
+          sigle: "DRES",
+          definition: "Direction de la Recherche et des Études Stratégiques;",
+          children: [
+            {
+              sigle: 'SIEAR',
+              key: '2_1',
+            },
+            {
+              sigle: 'SES',
+              key: '2_2',
+            },
+            {
+              sigle: 'SMR',
+              key: '2_2',
+            }
+          ]
+        },
+
+        {
+          sigle: "DSPSSEL",
+          definition: "Direction du Suivi des Politiques Sectorielles, Sociales et des Économies Locales;",
+          children: [
+            {
+              sigle: 'SSAPS',
+              key: '2_1',
+            },
+            {
+              sigle: 'SSPS',
+              key: '2_2',
+            },
+            {
+              sigle: 'SSPEL',
+              key: '2_2',
+            }
+          ]
+        },
+        {
+          sigle: "DPCE",
+          definition: "Direction de la Promotion et de la Coopération Economiques;",
+          children: [
+            {
+              sigle: 'SSAPS',
+              key: '2_1',
+            },
+            {
+              sigle: 'SRSAI',
+              key: '2_2',
+            },
+            {
+              sigle: 'SAPE',
+              key: '2_2',
+            }
+          ]
+        },
+
+
+        {
+          sigle: "DIER",
+          definition: "Direction de l’Intégration Économique Régionale;",
+          children: [
+            {
+              sigle: 'SPSC',
+              key: '2_1',
+            },
+            {
+              sigle: 'SEC',
+              key: '2_2',
+            },
+            {
+              sigle: 'SSIC',
+              key: '2_2',
+            }
+          ]
+
+        },
+
+
+        {
+          sigle: "DGR",
+          definition: "Direction de la Gestion des Ressources;",
+          children: [
+            {
+              sigle: 'SRH',
+              key: '2_1',
+            },
+            {
+              sigle: 'SRFM',
+              key: '2_2',
+            },
+            {
+              sigle: 'SIA',
+              key: '2_2',
+            }
+          ]
+        },
+
+        // {
+        //   sigle: 'SA/DGE',
+        //   definition: 'Secrétariat Administratif du Directeur Général de l’Économie;',
+        // },
+
+
+        // {
+        //   sigle: 'Assistant/DGE',
+        //   definition: 'Assistant du Directeur Général de l’Économie;',
+        // },
+      ]
+    },
+  ]
+
+
+})
 
 const sigles = ref([
-  {
-    abbr: "DGE",
-    definition: "Directeur Général de l’Économie;"
-  },
-
-  {
-    abbr: "DGAE",
-    definition: "Directeur Général Adjoint de l’Économie;"
-  },
-
-
-  {
-    abbr: "SP/DGE",
-    definition: "Secrétariat Particulier du Directeur Général de l’Économie;"
-  },
-
-  {
-    abbr: "SA/DGE",
-    definition: "Secrétariat Administratif du Directeur Général de l’Économie;"
-  },
-
-  {
-    abbr: "DGAE",
-    definition: "Directeur Général Adjoint de l’Économie;"
-  },
 
   {
     abbr: "DIER",
@@ -138,216 +278,104 @@ const sigles = ref([
   }
 ])
 
-const orgData = ref({
-  label: 'DGE',
-  expand: false,
-  some_id: 1,
-  children: [
-    {
-      label: 'DGAE',
-      key: '1_1',
-      children: [
-        {
-          label: 'DPC',
-          key: 2,
-          children: [
-            {
-              label: 'SPEC',
-              key: '2_1',
-            },
-            {
-              label: 'SSBAC',
-              key: '2_2',
-            },
-            {
-              label: 'SSSSM',
-              key: '2_2',
-            }
-          ]
-        },
-        {
-          label: 'DRES',
-          key: 2,
-          children: [
-            {
-              label: 'SIEAR',
-              key: '2_1',
-            },
-            {
-              label: 'SES',
-              key: '2_2',
-            },
-            {
-              label: 'SMR',
-              key: '2_2',
-            }
-          ]
-        },
-        {
-          label: 'DSPSSEL',
-          key: 2,
-          children: [
-            {
-              label: 'SSAPS',
-              key: '2_1',
-            },
-            {
-              label: 'SSPS',
-              key: '2_2',
-            },
-            {
-              label: 'SSPEL',
-              key: '2_2',
-            }
-          ]
-        },
-        {
-          label: 'DPCE',
-          key: 2,
-          children: [
-            {
-              label: 'SSAPS',
-              key: '2_1',
-            },
-            {
-              label: 'SRSAI',
-              key: '2_2',
-            },
-            {
-              label: 'SAPE',
-              key: '2_2',
-            }
-          ]
-        },
-        {
-          label: 'DIER',
-          key: 2,
-          children: [
-            {
-              label: 'SPSC',
-              key: '2_1',
-            },
-            {
-              label: 'SEC',
-              key: '2_2',
-            },
-            {
-              label: 'SSIC',
-              key: '2_2',
-            }
-          ]
-        },
-        {
-          label: 'DGR',
-          key: 2,
-          children: [
-            {
-              label: 'SRH',
-              key: '2_1',
-            },
-            {
-              label: 'SRFM',
-              key: '2_2',
-            },
-            {
-              label: 'SIA',
-              key: '2_2',
-            }
-          ]
-        },
 
-      ]
+onMounted(() => {
+
+
+
+  $('#organigramme').orgchart({
+    'data': organigrammeDge.value,
+    'verticalLevel': 4,
+    'nodeTitle': 'sigle',
+    'exportButton': true,
+    'nodeTemplate': nodeTemplate,
+    'exportButtonName': 'Télécharger l\'organigramme',
+    'exportFilename' : 'organigramme-dge-finance',
+    // 'zoom': true,
+    'pan': true,
+    'createNode': function (node, data) {
+
+      if (data.levelOffset) {
+        node.css({
+          'margin-top': (data.levelOffset * 70) + 'px',
+          '--top': (-11 - data.levelOffset * 70) + 'px',
+          '--height': (9 + data.levelOffset * 70) + 'px',
+          '--top-cross-point': (-13 - data.levelOffset * 70) + 'px',
+          '--height-cross-point': (11 + data.levelOffset * 70) + 'px'
+        });
+      }
     }
-  ]
+  });
 })
-
 
 
 </script>
 
 <template>
-  <main class="overflow-hidden ">
-
+  <main class="overflow-scroll">
     <PageBanner title="Organigramme" />
 
-    <div class="mx-auto container">
+   
+    <div class="mx-auto container" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
       <div class="flex flex-col items-center justify-center py-28">
-        
-        <div class="card w-full grid place-content-center ">
-          <img src="@/assets/images/organigramme.png"  class="" alt="" srcset="">
-        </div>
-
-        <div class=" grid place-content-center pb-3 w-full rounded">
-           <a download :href="organigramme" class="bg-finance-blue items-center font-medium rounded flex gap-3 text-white p-3">
-              <IcOutlineFileDownload/>
-              <span class="text-sm">Télecharger l'organigramme</span>
-           </a>
-        </div>
-
-    
-        <div class="organigramme-legend h-full bg-finance-gray w-full mt-8 lg:mt-0 py-4 px-5 rounded">
-
-          <h3 class="text-lg lg:text-2xl font-semibold text-finance-blue "> Légendes </h3>
-
-          <div class="w-full h-0.5 my-3 bg-finance-blue"></div>
-
-          <div class="legends-item">
-            <ol class="gradient-list" v-for="item in sigles">
-              <li class="flex items-center gap-4 lg:gap-5">
-                <span class="w-36 text-xs items-stretch sm:text-sm md:text-lg font-medium text-white mask py-2 px-5"> {{ item.abbr }}
-                </span>
-                <span class="flex-1 font-medium text-xs sm:text-sm md:text-lg leading-normal text-finance-late"> {{ item.definition }} </span>
-              </li>
-            </ol>
-          </div>
-
-          <hr>
-
-        </div>
-
+        <div class="card w-full grid place-content-center" id="organigramme"></div>
       </div>
     </div>
-
 
   </main>
 </template>
 
 <style>
-ol.gradient-list {
-  list-style: none;
-  margin: 1rem 0;
-
+.nodes {
+  @apply text-center
 }
 
-ol.gradient-list>li {
-  background: white;
-  border-radius: 0 0.5rem 0.5rem 0.5rem;
-  /* margin-top: 1rem;
-  min-height: 3rem; */
-  /* padding: 1rem 1rem 1rem 3rem; */
+.orgchart .node {
+  box-sizing: border-box;
+  display: inline-block;
   position: relative;
+  margin: 0 0 20px 0;
+  padding: 5px;
+  border: 2px dashed transparent;
+  text-align: center;
 }
 
-/* ol.gradient-list > span {
-  background: linear-gradient(135deg, #83e4e2 0%, #a2ed56 100%);
-  border-radius: 1rem 1rem 0 1rem;
-  content: "";
-  height: 3rem;
-  left: -1rem;
-  overflow: hidden;
+.orgchart .node .toggleBtn::before {
+  background-color: rgba(68, 157, 68, 0.6);
   position: absolute;
-  top: -1rem;
-  width: 3rem;
+  left: 0;
+  bottom: 0;
 }
-ol.gradient-list > li::before {
-  align-items: flex-end;
-  content: "counter(gradient-counter)";
-  color: #1d1f20;
+
+.orgchart .node .toggleBtn:hover::before {
+  background-color: #449d44;
+}
+
+.oc-export-btn {
+  @apply bg-finance-blue items-center font-medium rounded mt-4 flex gap-3 text-sm text-white p-3 
+}
+
+.orgchart ul li .node:hover {
+  background-color: transparent;
+}
+
+
+.orgchart .node .content {
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
   display: flex;
-  font: 900 1.5em/1 "Montserrat";
-  justify-content: flex-end;
-  padding: 0.125em 0.25em;
-  z-index: 1;
-} */
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  height: 50px;
+  background-image: linear-gradient(91.18deg, #023E79 0%, #0E6258 100%);
+  color: #fff;
+  border-radius: 4px ;
+}
+
 </style>
 
