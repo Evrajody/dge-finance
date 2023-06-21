@@ -9,6 +9,7 @@ import NewletterAction from '../components/partials/NewletterAction.vue';
 import ArticleBox from '../components/partials/ArticleBox.vue';
 import Partenaire from '../components/partials/Partenaire.vue';
 import { onBeforeMount, onMounted, ref } from 'vue';
+import axios from 'axios'
 
 const fakeArticle = ref([])
 
@@ -22,13 +23,13 @@ const imagesActicle =  ref([
 
 ])
 
-function loadFakeArticles(params) {
-  fetch('https://newsapi.org/v2/everything?q=benin&language=fr&pageSize=3&apiKey=2fb187a3a7a24d0c8deee2df8f83bb23')
-  .then((response) => response.json())
-  .then((json) =>{
-    fakeArticle.value = json.articles
-    console.log(fakeArticle.value);
-  });
+function loadFakeArticles() {
+
+  axios.get('https://newsapi.org/v2/everything?q=benin&language=fr&pageSize=3&apiKey=2fb187a3a7a24d0c8deee2df8f83bb23')
+  .then((res) =>  {
+    fakeArticle.value = res.data.articles
+    console.log(res);
+  })
 }
 
 onBeforeMount(() => {

@@ -312,10 +312,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <main class="overflow-scroll">
+  <main class="">
     <PageBanner title="Organigramme" />
 
-   
     <div class="mx-auto container" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
       <div class="flex flex-col items-center justify-center py-28">
         <div class="card w-full grid place-content-center" id="organigramme"></div>

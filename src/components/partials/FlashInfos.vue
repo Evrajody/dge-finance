@@ -37,12 +37,12 @@ const services = ref([
 
           <div class="mt-32 sm:mt-48 lg:mt-64">
             <!-- translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 :breakpoints="[{ width: '1380' }]" -->
-            <div class="h-full relative">
+            <div class="">
 
-              <swiper loop auto-height navigation a11y autoplay :breakpoints="[]" :modules="[A11y, Autoplay, Navigation]" set-wrapper-size
+              <swiper loop navigation a11y autoplay set-wrapper-size :breakpoints="{ 200: { slidesPerView: 1  }, 750: { slidesPerView: 2  }, 1024: { slidesPerView: 3  }, 1380: { slidesPerView: 4  } }" :modules="[A11y, Autoplay, Navigation]"
                 :slides-per-view="3" :space-between="15">
                 <swiper-slide v-for="item, index in services" :key="index">
-                  <div class="c-services__item">
+                  <div class="c-services__item self-stretch h-full w-full">
                     <h3> {{ item.title }} </h3>
                     <p>To reach more customers and the goals of your business, a mobile application is necessary these
                       days.
@@ -72,7 +72,6 @@ const services = ref([
   position: relative;
   z-index: 1;
 }
-
 
 .c-services__item h3 {
   color: #0E406E;

@@ -24,7 +24,7 @@ function toogleMenu() {
 
         <a href="/" class="hidden lg:block">
           <div class="official-logo w-60 py-2">
-            <img src="@/assets/images/official_logo.png" alt="" class="h-15" srcset="">
+            <img src="@/assets/images/official_logo.png" alt="" class="h-12" srcset="">
           </div>
         </a>
 
@@ -67,7 +67,7 @@ function toogleMenu() {
 
         <a href="/" class="hidden md:block">
           <div class="official-logo w-60 py-2">
-            <img src="@/assets/images/logo_dge_benin.png" class="h-15" alt="" srcset="">
+            <img src="@/assets/images/logo_dge_benin.png" class="h-12" alt="" srcset="">
           </div>
         </a>
 

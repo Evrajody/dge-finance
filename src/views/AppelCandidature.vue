@@ -23,7 +23,7 @@ const directeur = ref({
   <div class="flex flex-col lg:flex-row gap-12 my-20 lg:container mx-auto md:px-3 lg:px-16">
 
 
-    <div class="filtre-form w-full lg:w-1/3">
+    <div class="filtre-form w-full lg:w-1/3 px-3 sm:px-0">
 
       <div class="py-4 grid place-items-center bg-finance-blue w-full">
         <span class="text-lg font-extrabold text-white"> Filtre </span>
@@ -71,13 +71,13 @@ const directeur = ref({
     </div>
 
 
-    <div class="appel-list w-full lg:w-2/3">
+    <div class="appel-list w-full lg:w-2/3 px-3 sm:px-0">
 
       <div class="px-4 py-4 mb-5 bg-finance-blue w-full">
         <span class="text-lg font-extrabold text-white"> Liste des appels à candidature </span>
       </div>
 
-      <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="pb-5 flex flex-col gap-3 mb-6 bg-finance-gray shadow" v-for="i in 5">
+      <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="pb-5 flex flex-col  gap-3 mb-6 bg-finance-gray shadow" v-for="i in 5">
 
         <div class="py-2 mask px-4 text-white text-sm font-semibold">
            <div class="flex items-center gap-2">
@@ -94,7 +94,7 @@ const directeur = ref({
 
         </div>
 
-      <div class=" flex gap-2 justify-end px-4">
+      <div class=" flex flex-col gap-2 space-y-1 justify-end px-4">
 
         <div class="infos flex flex-1">
 
@@ -110,21 +110,27 @@ const directeur = ref({
 
            </div>
 
-
         </div>
 
+        <div class="infos flex gap-2 justify-end flex-1">
 
-        <a href=""
-          class="bg-bj-yellow flex items-center gap-2 bg-opacity-5 text-sm font-medium py-2 px-3 rounded-md">
+          <a href=""
+          class="bg-bj-yellow flex w-fit items-center gap-2 bg-opacity-5 text-sm font-medium py-2 px-3 rounded-md">
           <FluentShare20Regular/>
           Partager
         </a>
 
         <a href="#"
-          class="bg-white flex items-center gap-2 text-black text-sm font-medium px-3 py-2 rounded-md hover:bg-gray-50 transition-colors duration-300">
+          class="bg-white flex items-center w-fit gap-2 text-black text-sm font-medium px-3 py-2 rounded-md hover:bg-gray-50 transition-colors duration-300">
           <MaterialSymbolsDownloadRounded />
           Télecharger
         </a>
+
+</div>
+
+
+
+     
 
       </div>
 

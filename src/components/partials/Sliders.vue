@@ -1,15 +1,12 @@
 <script setup>
 import SliderItem from '../partials/SliderItem.vue'
-import InfoBanner from './InfoBanner.vue';
-import { Navigation, Pagination, Autoplay, Mousewheel, EffectFade, Thumbs, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, Autoplay, EffectFade, A11y } from 'swiper';
 
-import { Swiper, SwiperSlide, useSwiperSlide } from 'swiper/vue';
+import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/effect-fade'
 import 'swiper/css/autoplay'
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/thumbs';
 
 import splitType from 'split-type'
 import gsap from 'gsap'
@@ -72,7 +69,7 @@ const slidesContent = ref([
 </script>
 
 <template>
-   <swiper @slide-next-transition-end="handleSlide" effect="fade" :speed="300" loop auto-height navigation a11y pagination autoplay :modules="[Pagination, EffectFade, A11y, Autoplay, Navigation]"  set-wrapper-size :space-between="15">
+   <swiper @slide-next-transition-end="handleSlide" effect="fade" :speed="300" loop navigation a11y pagination autoplay :modules="[Pagination, EffectFade, A11y, Autoplay, Navigation]"  set-wrapper-size :space-between="15">
       <swiper-slide v-for="item, index in slidesContent" :key="index">
          <SliderItem :slide-image="item.image" :silde-text="item.text" />
       </swiper-slide>
