@@ -31,9 +31,15 @@ const router = createRouter({
 
     {
       path: "/articles",
-      name: "detail",
+      name: "articles",
       component: ArticleDetail,
     },
+    {
+      path: "/contact",
+      name: "detail",
+      component: Contact,
+    },
+
 
     {
       path: "/direction-details",

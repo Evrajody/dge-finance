@@ -16,57 +16,46 @@ function toogleMenu() {
 
 
 <template>
-  <header class="navbar transition-all duration-150 w-full">
+  <header class="bg-white transition-all duration-150 w-full">
 
     <div class="xl:container mx-auto">
 
       <div class="flex items-center justify-between px-5">
 
         <a href="/" class="hidden lg:block">
-          <div class="official-logo w-60 py-2">
+          <div class="official-logo  py-2">
             <img src="@/assets/images/official_logo.png" alt="" class="h-12" srcset="">
           </div>
         </a>
 
         <a href="/" class="block lg:hidden">
-          <div class="official-logo w-60 py-2">
+          <div class="official-logo  py-2">
             <img src="@/assets/images/logo_dge_benin.png" alt="" class="h-12" srcset="">
           </div>
         </a>
 
-        <div class="simple-menu hidden lg:flex justify-center gap-3">
-          <div class="text-xs hover:underline font-medium text-white">
-            <a href=""> Services </a>
+        <div class="simple-menu hidden lg:flex justify-center flex-1 gap-3">
+
+          <div class="text-xs hover:underline font-medium">
+            <a href="/presentation/actualites"> A la une </a>
           </div>
 
-          <div class="text-xs hover:underline font-medium text-white">
-            <a href=""> Actions </a>
+          <div class="text-xs hover:underline font-medium">
+            <a href="/opportunites/appel-a-candidature"> Marchés Publics </a>
           </div>
 
-          <div class="text-xs hover:underline font-medium text-white">
-            <a href=""> Newletters </a>
+          <div class="text-xs hover:underline font-medium">
+            <a href="/contact/ecrire-dg"> Ecrire au DG </a>
           </div>
 
-          <div class="text-xs hover:underline font-medium text-white">
-            <a href=""> A la une </a>
-          </div>
-
-          <div class="text-xs hover:underline font-medium text-white">
-            <a href=""> Marchés Publics </a>
-          </div>
-
-          <div class="text-xs hover:underline font-medium text-white">
-            <a href=""> Contactez-nous </a>
-          </div>
-
-          <div class="text-xs hover:underline font-medium text-white">
-            <a href=""> Francais </a>
+          <div class="text-xs hover:underline font-medium">
+            <a href="https://finances.bj"> Ministère </a>
           </div>
 
         </div>
 
         <a href="/" class="hidden md:block">
-          <div class="official-logo w-60 py-2">
+          <div class="official-logo  py-2">
             <img src="@/assets/images/logo_dge_benin.png" class="h-12" alt="" srcset="">
           </div>
         </a>
@@ -91,7 +80,7 @@ function toogleMenu() {
 
   <div class="hidden md:flex bg-finance-blue px-5">
     <div class="container mx-auto flex justify-between gap-3 items-center text-white">
-      <nav class="flex flex-1 items-center justify-end">
+      <nav class="flex flex-1 items-center justify-center">
 
         <div class="relative group">
           <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-3">
@@ -163,13 +152,17 @@ function toogleMenu() {
 
         <div class="relative group">
           <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-2">
-            <a href="/contact" class="font-medium">Contact</a>
+            <a href="#" class="font-medium">Contact</a>
             <div
               class="hidden absolute group-hover:block mt-3 -ml-2 py-2 w-72 -translate-x-[72%] bg-white shadow-lg z-10 transition-all opacity-0 group-hover:opacity-100">
+              <a href="/contact" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                Contatez-nous
+              </a>
               <a href="/contact/ecrire-dg" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                 Ecrire au DG
               </a>
             </div>
+     
           </div>
         </div>
 
