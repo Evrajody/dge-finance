@@ -19,7 +19,7 @@ const props = defineProps({
 
         <div class="max-w-2xl h-full flex flex-col gap-8 items-start justify-center">
 
-          <h2  class="py-8 text-2xl sm:text-4xl text-white font-bold md:leading-[2.80rem]">
+          <h2  class="py-8 text-2xl sm:text-4xl slide-title text-white font-bold md:leading-[2.80rem]">
             {{ props.sildeText }}
           </h2>
 

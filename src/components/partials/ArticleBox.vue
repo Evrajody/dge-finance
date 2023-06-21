@@ -16,7 +16,7 @@ onMounted(() => {
   <div data-aos="fade-up" data-aos-anchor-placement="top-bottom"
     class="max-w-md self-stretch w-full card-finance rounded-md object-fill object-bottom shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
     <img :src="article.urlToImage" alt="Aperçu de l'article"
-      class="w-full h-48 object-cover object-top">
+      class="w-full h-48 object-cover">
     <div class="px-4 py-4 mask flex h-full flex-col">
       <h2 class="text-xl font-bold text-white line-clamp-2" v-text="article.title"></h2>
       <p class="text-white text-sm leading-6 line-clamp-3 mt-2" v-text="article.description"></p>

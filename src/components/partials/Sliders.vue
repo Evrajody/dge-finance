@@ -10,6 +10,10 @@ import 'swiper/css/autoplay'
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/thumbs';
+
+import splitType from 'split-type'
+import gsap from 'gsap'
+
 import { onMounted, ref } from 'vue';
 
 const anime = ref('')
@@ -17,10 +21,25 @@ const anime = ref('')
  // const swiperSlide = useSwiperSlide();
 
  function handleSlide(params) {
-      // console.log(params);
+
+   //  const gsapTween = gsap.fromTo('.swiper-slide-active .char', 
+   //    {
+   //       y: 500,
+   //    },
+   //    {
+   //      y: 0,
+   //      stagger: 0.02,
+ 
+   //    },
+
+
+   //   )
  }
 
- onMounted(() => { })
+ onMounted(() => {
+   // const splitedText = splitType.create('.slide-title')
+
+ })
 
 const slidesContent = ref([
    {
@@ -53,12 +72,11 @@ const slidesContent = ref([
 </script>
 
 <template>
-   <swiper  @slide-change-transition-end="handleSlide" effect="fade" :speed="300" loop auto-height navigation a11y pagination autoplay :modules="[Pagination, EffectFade, A11y, Autoplay, Navigation]"  set-wrapper-size :space-between="15">
+   <swiper @slide-next-transition-end="handleSlide" effect="fade" :speed="300" loop auto-height navigation a11y pagination autoplay :modules="[Pagination, EffectFade, A11y, Autoplay, Navigation]"  set-wrapper-size :space-between="15">
       <swiper-slide v-for="item, index in slidesContent" :key="index">
          <SliderItem :slide-image="item.image" :silde-text="item.text" />
       </swiper-slide>
    </swiper>
-
 </template> 
 
 <style>
@@ -71,6 +89,13 @@ const slidesContent = ref([
    .swiper-button-prev::after, 
    .swiper-button-next::after {
       @apply text-xl
+   }
+
+   .slide-title {
+      /* transform: translateY(115px);
+      transition: transform .2s; */
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+       clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
    }
 
    /* .swiper-slide-active * {

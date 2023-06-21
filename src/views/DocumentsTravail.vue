@@ -12,4 +12,5 @@ import PageBanner from '../components/partials/PageBanner.vue';
 
 
   </div>
+
 </template>

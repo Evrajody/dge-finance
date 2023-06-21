@@ -129,7 +129,7 @@ const anciensDirecteur = ref([
 </script>
 
 <template>
-  <main class="min-h-screen overflow-hidden">
+  <main class="">
 
     <PageBanner title="Anciens Directeurs" />
 

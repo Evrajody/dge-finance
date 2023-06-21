@@ -22,7 +22,7 @@ const directeur = ref({
 
     <ContactForm />
 
-    <div class="informations flex items-center justify-center w-full mx-auto sm:w-[50%] lg:w-[50%] xl:w-[30%]">
+    <div class="informations flex items-center justify-center w-full mx-auto px-6 sm:px-0 sm:w-[50%] lg:w-[50%] xl:w-[30%]">
 
       <DirecteurBox :directeur="directeur" />
 

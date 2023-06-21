@@ -16,7 +16,7 @@ const imagesActicle =  ref([
 ])
 
 function loadFakeArticles(params) {
-  fetch('https://newsapi.org/v2/everything?q=benin&language=fr&pageSize=12&apiKey=2fb187a3a7a24d0c8deee2df8f83bb23')
+  fetch('https://newsapi.org/v2/everything?q=economie&language=fr&pageSize=12&apiKey=2fb187a3a7a24d0c8deee2df8f83bb23')
   .then((response) => response.json())
   .then((json) =>{
     fakeArticle.value = json.articles

@@ -16,6 +16,9 @@ import Rapef from "../views/Rapef.vue";
 import InfraAnnuel from "../views/InfraAnnuel.vue"
 import Contact from '../views/Contact.vue';
 import ContactDirecteur from '../views/ContactDirecteur.vue';
+import DirectionDetails from '../views/DirectionDetails.vue'
+
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -31,6 +34,14 @@ const router = createRouter({
       name: "detail",
       component: ArticleDetail,
     },
+
+    {
+      path: "/direction-details",
+      name: "detail-direction",
+      component: DirectionDetails,
+    },
+
+
 
     {
       path: "/presentation",

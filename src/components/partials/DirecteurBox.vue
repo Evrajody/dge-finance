@@ -7,11 +7,11 @@ const props = defineProps({
 </script>
 
 <template>
-  <figure class="snip1165 w-full">
-    <img :src="directeur.image" class="w-full h-[450px]" alt="directeur-image" />
+  <figure class="snip1165 max-w-md">
+    <img :src="directeur.image" class="object-cover object-center w-full" alt="directeur-image" />
     <figcaption class="flex flex-col items-center">
-      <h3 class="flex gap-2"> 
-        <span v-text="directeur.prenom"></span> 
+      <h3 class="flex gap-2">
+        <span v-text="directeur.prenom"></span>
         <span class="uppercase" v-text="directeur.nom"></span>
       </h3>
 
@@ -28,14 +28,13 @@ const props = defineProps({
 </template>
 
 <style>
-
 figure.snip1165 {
   border-radius: 3px;
   position: relative;
   overflow: hidden;
   width: 100%;
   text-align: left;
-  box-shadow: 2px 3px 5px rgba(0,0,0, 0.1);
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 figure.snip1165 * {
@@ -72,6 +71,4 @@ figure.snip1165.hover img {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
-
-
 </style>

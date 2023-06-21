@@ -82,7 +82,7 @@ function setCurrentTab(index) {
             <h2 class="text-xl font-bold text-white"> {{item.nom }}</h2>
 
             <div class="mt-4 flex justify-end items-center">
-              <a href="#"
+              <a href="/direction-details"
                 class="bg-white flex items-center gap-2 text-black text-sm font-medium px-4 py-2 rounded-md hover:bg-gray-50 transition-colors duration-300">
                 <IcRoundRemoveRedEye />
                 Détails
@@ -99,6 +99,7 @@ function setCurrentTab(index) {
     </div>
 
   </div>
+
 </template>
 
 
