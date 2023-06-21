@@ -11,7 +11,7 @@ const props = defineProps({
 
 <template>
   <div class="bg-black bg-opacity-40 bg-blend-darken h-[80vh]"
-    :style="{ backgroundImage: `url(${props.slideImage})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }">
+    :style="{ backgroundImage: `url(${props.slideImage})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }">
 
     <div class="container mx-auto px-10 h-full flex flex-col items-center justify-center">
 

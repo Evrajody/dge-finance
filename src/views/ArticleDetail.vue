@@ -1,5 +1,6 @@
 <script setup>
-import PageBanner from '../components/partials/PageBanner.vue';
+  import PageBanner from '../components/partials/PageBanner.vue';
+  
 
 
 </script>
@@ -13,7 +14,7 @@ import PageBanner from '../components/partials/PageBanner.vue';
 
       <div class="flex justify-center w-full">
 
-        <div class=" px-5 lg:max-w-[65%]">
+        <div class="px-5 lg:max-w-[65%]">
 
           <h3> </h3>
 
