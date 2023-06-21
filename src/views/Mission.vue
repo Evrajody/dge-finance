@@ -22,7 +22,7 @@ const mission = ref([
 
 
 <template>
-  <main class="min-h-screen">
+  <main class="">
 
     <PageBanner title="Mission" />
 

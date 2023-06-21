@@ -17,7 +17,7 @@ import InfraAnnuel from "../views/InfraAnnuel.vue"
 import Contact from '../views/Contact.vue';
 import ContactDirecteur from '../views/ContactDirecteur.vue';
 import DirectionDetails from '../views/DirectionDetails.vue'
-
+import AppelCandidature from '../views/AppelCandidature.vue'
 
 
 const router = createRouter({
@@ -40,8 +40,6 @@ const router = createRouter({
       name: "detail-direction",
       component: DirectionDetails,
     },
-
-
 
     {
       path: "/presentation",
@@ -127,23 +125,6 @@ const router = createRouter({
       ],
     },
 
-    {
-      path: "/opportunites",
-      name: "opportunites",
-      children: [
-        {
-          path: "offre-stage",
-          name: "offre-stage",
-          component: Accualite,
-        },
-
-        {
-          path: "appel-candidature",
-          name: "appel-candidature",
-          component: Accualite,
-        },
-      ],
-    },
 
     {
       path: "/:pathMatch(.*)*",
@@ -164,7 +145,7 @@ const router = createRouter({
         {
           path: "appel-a-candidature",
           name: "appel-a-candidature",
-          component: Mission,
+          component: AppelCandidature,
         },
       ],
     },

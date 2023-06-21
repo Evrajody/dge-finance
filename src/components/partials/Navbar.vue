@@ -90,7 +90,7 @@ function toogleMenu() {
   </header>
 
   <div class="hidden md:flex bg-finance-blue px-5">
-    <div class="container mx-auto flex justify-between items-center text-white">
+    <div class="container mx-auto flex justify-between gap-3 items-center text-white">
       <nav class="flex flex-1 items-center justify-end">
 
         <div class="relative group">
@@ -155,7 +155,7 @@ function toogleMenu() {
               class="hidden absolute group-hover:block mt-3 -ml-2 py-2 w-72 -translate-x-[57%] bg-white shadow-lg z-10 transition-all opacity-0 group-hover:opacity-100">
               <a href="/opportunites/offre-de-stage" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                 Offre de stage </a>
-              <a href="/opportunites/appel-candidature" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+              <a href="/opportunites/appel-a-candidature" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                 Appel à candidature </a>
             </div>
           </div>
