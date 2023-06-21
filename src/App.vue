@@ -42,7 +42,7 @@ onMounted(() => {
       delay: 15, // values from 0 to 3000, with step 50ms
       duration: 700, // values from 0 to 3000, with step 50ms
       easing: 'ease', // default easing for AOS animations
-      once: false, // whether animation should happen only once - while scrolling down
+      once: true, // whether animation should happen only once - while scrolling down
       anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
    })
 })
@@ -54,7 +54,9 @@ onMounted(() => {
       <Navbar />
    </div>
 
+
    <main class="w-full">
+      <div class="py-8 md:py-16 lg:py-14"></div>
       <RouterView></RouterView>
    </main>
 
@@ -62,7 +64,7 @@ onMounted(() => {
       class="flex transition-all items-end justify-end fixed bottom-0 right-0 mb-4 mr-4 z-10">
       <div>
          <a @click.prevent="scrollToTop" href="#"
-            class="grid place-items-center text-white bg-bj-green   h-12 w-12 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110">
+            class="grid place-items-center text-white bg-bj-green y h-12 w-12 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110">
             <MaterialSymbolsArrowUpward />
          </a>
       </div>

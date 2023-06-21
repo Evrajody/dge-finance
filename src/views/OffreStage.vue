@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import PageBanner from '../components/partials/PageBanner.vue';
 import stageFormOne from '../components/partials/stageInscription/stageFormOne.vue';
-import ContactForm from '../components/partials/ContactForm.vue';
+
 
 const mission = ref([
 
@@ -70,7 +70,8 @@ const mission = ref([
 
          <div class="pb-5">
             <div class="container">
-               <div class="row text-center px-5 sm:px-6 py-4 rounded-none sm:rounded-lg bg-finance-blue text-white">
+               <div
+                  class="row text-center px-5 sm:px-6 py-4 md:text-lg font-semibold rounded-none sm:rounded-lg bg-finance-blue text-white">
                   <h3>Formulaire d'Inscription au Stage</h3>
                </div>
                <p class="text-red-600 text-xs mt-4">

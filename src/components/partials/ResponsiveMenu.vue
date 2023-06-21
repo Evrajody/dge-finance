@@ -9,7 +9,7 @@ const props = defineProps({
 
 <template>
   <Transition name="nested">
-    <div v-if="menuState" class="responsive-menu transition-all duration-300 w-full bg-white">
+    <div v-if="menuState" class="responsive-menu bg-white">
   
       <div class="border border-b border-b-gray-200 text-black transition-all py-3 px-5">
         <a href="/" class="font-medium">Acceuil</a>

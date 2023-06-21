@@ -1,6 +1,8 @@
 <script setup>
-  import PageBanner from '../components/partials/PageBanner.vue';
-  
+import ArticleBanner from '../components/partials/ArticleBanner.vue';
+import SolarRoundArrowRightOutline from '../components/icons/SolarRoundArrowRightOutline.vue';
+import { fakeArticle } from '../data/article';
+
 
 
 </script>
@@ -8,71 +10,117 @@
 <template>
   <div class="">
 
-    <PageBanner title="Economie : pourquoi la France tient bon (malgré tout) ?" />
+    <ArticleBanner :title="fakeArticle[9].title" :image="fakeArticle[5].media" />
 
-    <div class="container mx-auto my-20">
+    <div class="lg:container mx-auto my-20">
 
-      <div class="flex justify-center w-full">
+      <div class="flex flex-col gap-10 lg:gap-0 lg:flex-row">
 
-        <div class="px-5 lg:max-w-[65%]">
+        <div class="px-5 w-full lg:max-w-[60%]">
 
-          <h3> </h3>
+          <div class="py-3 flex flex-wrap gap-3 border-b-2 border-dashed border-b-gray-300">
+
+            <div class="pub flex gap-2">
+              <span class="text-sm font-semibold text-red-400"> Publié le : </span>
+              <span class="text-sm"> 12/05/2002 </span>
+
+            </div>
+
+            <div class="pub flex gap-2">
+              <span class="text-sm font-semibold text-red-400"> Catégorie : </span>
+              <span class="text-sm">Economie</span>
+            </div>
+
+            <div class="pub flex gap-2">
+              <span class="text-sm font-semibold text-red-400"> Auteur : </span>
+              <span class="text-sm">Ben Carter</span>
+            </div>
 
 
-          <div class="leading-7 text-finance-plot font-medium text-justify">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ipsam explicabo. Doloremque laudantium
-              natus
-              ab
-              voluptatem cum quo, animi culpa unde, minima iusto beatae molestiae nulla repellendus odio assumenda
-              molestias?
-              Delectus eius illo nam quo, quidem accusantium aperiam consequatur, expedita architecto ipsam, at a sunt
-              sit?
-              Consequatur officiis quisquam maxime. Amet nam, nemo hic cupiditate sed magnam ab sint repellat.
-              Fugit similique tempora deserunt debitis officia sed labore, tenetur delectus laboriosam voluptatibus
-              quibusdam
-              necessitatibus reiciendis velit, fuga amet voluptas commodi asperiores sit quaerat. Minima, quasi! Facilis
-              fugiat
-              nostrum nulla suscipit.
-            </p>
+          </div>
 
-            <p>
-              In cupiditate laudantium blanditiis natus dolorem sed ab laborum tenetur consectetur at ducimus,
-              necessitatibus
-              est maiores repellat, dolores adipisci facilis quisquam corporis rerum pariatur enim itaque non! Quam,
-              tenetur
-              quasi!
-              Vel suscipit consequuntur quaerat doloremque veniam quibusdam, in repellendus! Neque dolores facere nobis
-              officiis
-              aspernatur, distinctio minima quas quisquam, corporis quo tenetur harum suscipit culpa ullam pariatur
-              corrupti
-              fugiat magnam?
-              Eum doloremque esse accusantium quaerat enim assumenda, libero eligendi corrupti excepturi eaque eveniet
-              cumque
-              nesciunt est a temporibus ipsam, nihil ex omnis laboriosam consequatur dolorum delectus deserunt magni!
-              Saepe,
-              iure.
-              Obcaecati, sed. Impedit aspernatur blanditiis soluta provident quisquam voluptatibus similique dignissimos
-              molestiae veniam excepturi. Necessitatibus ea earum pariatur labore libero, hic perspiciatis iusto
-              dignissimos
-              corrupti! Nobis ea ab unde qui.
-              Pariatur doloribus facilis tempora ut enim reprehenderit ipsam iure a velit, ab deleniti quibusdam
-              praesentium
-              magni. Ratione saepe ipsa error pariatur, hic culpa nam labore repudiandae temporibus, excepturi soluta
-              cupiditate?
-            </p>
+          <div class="text-finance-plot mt-3 text-justify">
+            <div class="post-content cf entry-content content-spacious">
 
-            <p>
-              Voluptas totam temporibus incidunt obcaecati error nobis quod eveniet tempora maiores atque, ducimus at et
-              adipisci facilis sunt officia delectus aliquid nemo. Quae dolores tempora temporibus, magnam nobis corrupti
-              sed?
-              Laboriosam doloremque tempora, aperiam beatae impedit, voluptate animi similique consequatur, eos cum facere
-              nisi
-              soluta officia. Facilis fugit similique ea commodi a. Ad, consequuntur dolores corrupti beatae deleniti
-              temporibus
-              totam?
-            </p>
 
+
+
+              <p><strong><em>Point de départ de la success story Wave, le Sénégal occupe une position particulière dans la
+                    stratégie de développement de la fintech. Dans cet entretien exclusif, Mandoungou Guile Mbodj,
+                    Directeur Général de Wave Sénégal fait le point sur les dernières innovations sur le double canal Bank
+                    to Wallet et Wallet to bank. La qualité et la sécurité de la plateforme de mobile money revêtent&nbsp;
+                    une importance stratégique.</em></strong></p>
+
+
+
+              <hr class="wp-block-separator has-alpha-channel-opacity my-5">
+
+
+
+              <h2 class="wp-block-heading my-5"><strong>Wave est titulaire d’un agrément de monnaie électronique. Quels
+                  sont
+                  les principaux services que vous proposez?</strong></h2>
+
+
+
+              <p class="has-text-align-justify">Depuis le lancement de nos activités, au Sénégal en 2018, nous avons
+                progressivement mis à disposition de nos utilisateurs, les services Mobile money de première génération
+                que sont le dépôt, le retrait, le transfert P2P,&nbsp; l’achat de crédit téléphonique, le paiement de
+                factures, le paiement marchand. En parallèle, nous sommes dans une dynamique d’amélioration continue, donc
+                constamment à l’écoute du marché et des besoins exprimés par nos clients. Ceci nous a permis, par la
+                suite, d’introduire des produits dits de deuxième génération, en partenariat avec plusieurs institutions
+                financières. Ainsi, nos clients particuliers peuvent désormais recevoir des transferts d’argents
+                internationaux depuis la diaspora, directement sur leurs wallets Wave, effectuer des transferts
+                transfrontaliers au sein de la Zone UEMOA ou encore, via le Bank-to-Wallet/Wallet-to-Bank, envoyer de
+                l’argent de leurs comptes bancaires vers leur compte Wave et inversement.</p>
+
+
+
+              <p class="has-text-align-justify">Par ailleurs, nous avons également développé une offre de services B2B
+                permettant aux entreprises, ONGs et autres structures publiques de faire des paiements de masse ou de
+                digitaliser leur collecte de fonds.&nbsp;</p>
+
+
+
+              <p class="has-text-align-justify">Pour finir, nous travaillons activement sur plusieurs autres produits
+                financiers innovants qui devraient être lancés en collaboration avec des institutions financières dans le
+                court terme à partir de la validation par le régulateur.</p>
+
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+        <div class="order-articles flex flex-col space-y-6 flex-1 px-3">
+
+          <div class="">
+            <div class="py-3 flex px-4  justify-between items-center mask">
+              <h3 class="text-white font-extrabold text-2xl"> Autres Articles </h3>
+              <SolarRoundArrowRightOutline />
+            </div>
+          </div>
+
+
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class=" flex gap-3 w-full bg-finance-gray shadow border-b-4 border-b-finance-blue" v-for="i, index in 6">
+            <div class="image w-24 h-24">
+
+              <img :src="fakeArticle[index].media" class="w-full h-full" alt="">
+            </div>
+
+            <div class="title flex flex-col justify-center space-y-2 flex-1 ">
+              <span class="text-sm font-bold text-finance-late line-clamp-2"> {{ fakeArticle[index].title }} </span>
+
+              <div class=" w-full flex justify-between text-sm font-medium">
+                <a href="#" class="text-bj-green ">Lire l'article</a>
+
+                <span class="px-3 text-finance-late text-xs">12/03/2023</span>
+
+              </div>
+
+            </div>
 
 
           </div>
@@ -82,9 +130,11 @@
         </div>
 
 
+
       </div>
 
 
-  </div>
+    </div>
 
-</div></template>
+  </div>
+</template>
