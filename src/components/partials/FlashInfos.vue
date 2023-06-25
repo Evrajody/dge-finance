@@ -2,7 +2,7 @@
 
 import SliderItem from '../partials/SliderItem.vue'
 import InfoBanner from './InfoBanner.vue';
-import { Navigation, Pagination, Autoplay, Mousewheel, Thumbs, Scrollbar, A11y } from 'swiper';
+import { Navigation, Autoplay, A11y } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';

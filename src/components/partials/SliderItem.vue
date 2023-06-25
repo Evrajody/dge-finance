@@ -10,7 +10,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="bg-black bg-opacity-40 bg-blend-darken h-[80vh]"
+  <div class="bg-black bg-opacity-30 bg-blend-darken h-[80vh]"
     :style="{ backgroundImage: `url(${props.slideImage})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }">
 
     <div class="container mx-auto px-10 h-full flex flex-col items-center justify-center">
@@ -19,7 +19,7 @@ const props = defineProps({
 
         <div class="max-w-2xl h-full flex flex-col gap-8 items-start justify-center">
 
-          <h2  class="py-8 text-2xl sm:text-4xl slide-title text-white font-bold md:leading-[2.80rem]">
+          <h2  class="py-8 text-2xl sm:text-4xl slide-title text-white font-bold md:leading-[3rem]">
             {{ props.sildeText }}
           </h2>
 

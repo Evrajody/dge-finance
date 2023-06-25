@@ -27,7 +27,7 @@ onMounted(() => {
   <div class="flex flex-col lg:flex-row gap-12 my-20 lg:container mx-auto md:px-3 lg:px-16">
 
 
-    <div class="filtre-form w-full lg:w-1/3 px-4 sm:px-0">
+    <div class="filtre-form lg:max-w-xs w-full px-4 lg:px-0">
 
       <div class="py-4 px-4 bg-finance-blue w-full">
         <span class="text-lg font-extrabold text-white"> Filtre </span>
@@ -65,7 +65,7 @@ onMounted(() => {
     </div>
 
 
-    <div class="jseb-pub-list w-full lg:w-2/3 px-4 sm:px-0">
+    <div class="jseb-pub-list  px-4 lg:px-0">
 
       <div class="px-4 py-4 mb-5 bg-finance-blue w-full">
         <span class="text-lg font-extrabold text-white"> Liste des publications JSEB </span>

@@ -1,6 +1,6 @@
 <script setup>
 import SliderItem from '../partials/SliderItem.vue'
-import { Navigation, Pagination, Autoplay, EffectFade, A11y } from 'swiper';
+import { Navigation, Pagination, Autoplay, EffectCoverflow, A11y } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
@@ -41,7 +41,7 @@ const anime = ref('')
 const slidesContent = ref([
    {
       text: `Notes de politiques économiques: Les options inévitables d'un changement de paradigme économique en Afrique.`,
-      image: `https://www.gouv.bj/upload/images/articles/0360417001686672069.jpeg`
+      image: `https://www.dge.finances.bj/storage/2021/12/WhatsApp-Image-2021-12-15-at-18.23.07.jpeg`
    },
 
    {
@@ -51,17 +51,22 @@ const slidesContent = ref([
 
    {
       text: `La lettre de la DGE de avril 2020 : Comprendre la pression inflationniste post Covid 2019`,
-      image:  `https://img.freepik.com/photos-gratuite/vue-frontale-femme-masque-facial-dans-marche_23-2148777462.jpg`
+      image:  `https://www.dge.finances.bj/storage/2022/05/WhatsApp-Image-2022-05-23-at-17.38.43.jpeg`
    },
 
    {
-      text: "Sociale: L'action gouvernementale au services de la population", 
-      image: 'https://img.freepik.com/photos-gratuite/belles-femmes-africaines-allant-chercher-eau-exterieur_23-2149021944.jpg'
+      text: "Note de conjecture du premier trimestre 2022", 
+      image: 'https://www.dge.finances.bj/storage/2022/05/Image-1-1.jpg'
    }, 
 
    {
-      text: "Economie : Le Bénin révélé à travers le nouveau visage de nos amazones", 
-      image: 'https://img.freepik.com/photos-gratuite/coup-moyen-femme-souriante-exterieur_23-2149351946.jpg'
+      text: "Crise russo-ukrainienne: enjeux et effets potentiels sur l’économie béninoise", 
+      image: 'https://www.dge.finances.bj/storage/2022/04/UKRU.jpeg'
+   }, 
+
+   {
+      text: "Document de programmation budgétaire et économique pluriannuelle 2023-2025", 
+      image: 'https://www.dge.finances.bj/storage/2022/06/WhatsApp-Image-2022-06-30-at-11.20.28.jpeg'
    }, 
 
 ])
@@ -69,7 +74,7 @@ const slidesContent = ref([
 </script>
 
 <template>
-   <swiper @slide-next-transition-end="handleSlide" effect="fade" :speed="300" loop navigation a11y pagination autoplay :modules="[Pagination, EffectFade, A11y, Autoplay, Navigation]"  set-wrapper-size :space-between="15">
+   <swiper @slide-next-transition-end="handleSlide" :speed="300" loop navigation a11y pagination autoplay :modules="[Pagination, A11y, Autoplay, Navigation]"  set-wrapper-size :space-between="15">
       <swiper-slide v-for="item, index in slidesContent" :key="index">
          <SliderItem :slide-image="item.image" :silde-text="item.text" />
       </swiper-slide>

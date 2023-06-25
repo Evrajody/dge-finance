@@ -31,3 +31,7 @@ html{
   transform: translateX(30px);
   opacity: 0;
 }
+
+.treen {
+  background: linear-gradient(105.27deg, rgba(22, 34, 51, 1) 1.84%, #0E406E 110.21%);
+}

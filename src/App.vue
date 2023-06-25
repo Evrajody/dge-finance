@@ -55,7 +55,7 @@ onMounted(() => {
    </div>
 
 
-   <main class="w-full">
+   <main>
       <div class="py-8 md:py-16 lg:py-14"></div>
       <RouterView></RouterView>
    </main>

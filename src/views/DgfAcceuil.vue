@@ -7,6 +7,7 @@ import NewletterAction from '../components/partials/NewletterAction.vue';
 import ArticleBox from '../components/partials/ArticleBox.vue';
 import Partenaire from '../components/partials/Partenaire.vue';
 import { fakeArticle } from '../data/article'
+import Mesure from '../components/partials/Mesure.vue';
 
 
 </script>
@@ -19,6 +20,16 @@ import { fakeArticle } from '../data/article'
   <div class="fin-slider">
     <Sliders />
   </div>
+
+  <div class="fin-section">
+    <SectionTitle title="Les Mesures Covid 19" />
+  </div>
+
+
+  <div class="fin-mesure">
+    <Mesure/>
+  </div>
+
 
   <div class="fin-section">
     <SectionTitle title="Nos Actualités" />

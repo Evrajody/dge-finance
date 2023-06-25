@@ -39,4 +39,9 @@ onMounted(() => {
   .mask {
     background-image: linear-gradient(91.18deg, #023E79 0%, #0E6258 100%);
   }
+
+  .card-finance img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 </style>
