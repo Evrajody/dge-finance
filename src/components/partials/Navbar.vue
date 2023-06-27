@@ -108,15 +108,18 @@ function toogleMenu() {
               <div class="hidden absolute group-hover:block mt-3 -ml-2 w-72 bg-white shadow z-10 transition-all">
                 <!-- <a href="/presentation/actualites" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
                   Actualités </a> -->
-                <a href="/presentation/mission" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100"> Mission
+                <a href="/presentation/mission" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100"> 
+                  Mission
+                </a>
+                <a href="/presentation/directions" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+                  Directions 
                 </a>
                 <a href="/presentation/organigramme" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
-                  Organigramme </a>
+                  Organigramme 
+                </a>
                 <a href="/presentation/anciens-directeurs"
                   class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
                   Anciens Directeurs </a>
-                <a href="/presentation/directions" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
-                  Directions </a>
               </div>
             </div>
           </div>
@@ -124,7 +127,7 @@ function toogleMenu() {
           <div class="relative group">
             <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-2">
               <span class="font-medium">Publications</span>
-              <div class="hidden absolute group-hover:block mt-3 -ml-2 w-72 bg-white shadow z-10 transition-all">
+              <div class="hidden absolute group-hover:block mt-3 -ml-2 w-max bg-white shadow z-10 transition-all">
                 <a href="/publications/documents-budgetaires"
                   class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100"> Documents budgétaires </a>
                 <a href="/publications/documents-politiques-nationales"
@@ -177,9 +180,9 @@ function toogleMenu() {
                 <a href="/contact" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
                   Contatez-nous
                 </a>
-                <!-- <a href="/contact/ecrire-dg" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+                <a href="/contact/ecrire-dg" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
                   Ecrire au DG
-                </a> -->
+                </a>
               </div>
 
             </div>

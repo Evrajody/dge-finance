@@ -8,19 +8,19 @@ const currentTab = ref(0)
 
 const directions = ref([
   {
-    nom: "Direction Générales",
+    nom: "Direction Générale",
     directions: [
       {
-        nom: 'Direction Générale'
+        nom: 'Directeur Générale'
       },
 
       {
-        nom: 'Direction Générale Adjoint'
+        nom: 'Directeur Générale Adjoint'
       }
     ]
   },
   {
-    nom: "Direction Techniques",
+    nom: "Directions Techniques",
     directions: [
       {
         nom: "Direction de l’Intégration Économique Régionale (DIER)"

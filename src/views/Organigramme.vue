@@ -14,7 +14,12 @@ import PageBanner from "../components/partials/PageBanner.vue";
 
 var nodeTemplate = function (data) {
   return `
-        <div class="content" id="${data.sigle}">${data.sigle}</div>
+        <div class="content relative group" id="${data.sigle}">
+          ${data.sigle}
+          <div class="px-3 hidden detail absolute w-max bg-finance-gray z-30 -bottom-6 text-finance-blue"> 
+            ${data.definition}
+          </div>
+        </div>
       `;
 };
 
@@ -43,16 +48,19 @@ const organigrammeDge = ref({
           definition: "Direction de la Prévision et de la Conjoncture;",
           children: [
             {
-              sigle: 'SPEC',
+              sigle: 'SPEF',
+              definition: 'Service de la Programmation Économique et Financière ;',
               key: '2_1',
 
             },
             {
               sigle: 'SSBAC',
+              definition: "Service du Suivi Budgétaire et de l’Analyse Conjoncturelle;",
               key: '2_2',
             },
             {
               sigle: 'SSSSM',
+              definition: "Service des Statistiques et du Suivi de la Surveillance Multilatérale;",
               key: '2_2',
             }
           ]
@@ -63,14 +71,17 @@ const organigrammeDge = ref({
           children: [
             {
               sigle: 'SIEAR',
+              definition: 'Service de l’Intelligence Économique et de l’Analyse des Risques;',
               key: '2_1',
             },
             {
               sigle: 'SES',
+              definition: 'Service des Études Stratégiques;',
               key: '2_2',
             },
             {
               sigle: 'SMR',
+              definition: "Service de la Modélisation et de la Recherche;",
               key: '2_2',
             }
           ]
@@ -82,14 +93,17 @@ const organigrammeDge = ref({
           children: [
             {
               sigle: 'SSAPS',
+              definition: 'Service de Suivi et d’Analyse des Performances Sectorielles ;',
               key: '2_1',
             },
             {
               sigle: 'SSPS',
+              definition: 'Service de Suivi des Politiques Sociales ;',
               key: '2_2',
             },
             {
               sigle: 'SSPEL',
+              definition: 'Service de Suivi des Politiques Économiques Locales ;',
               key: '2_2',
             }
           ]
@@ -99,20 +113,22 @@ const organigrammeDge = ref({
           definition: "Direction de la Promotion et de la Coopération Economiques;",
           children: [
             {
-              sigle: 'SSAPS',
+              sigle: 'SSASP',
+              definition: 'Service du Suivi et d’Accompagnement du Secteur Privé ;',
               key: '2_1',
             },
             {
               sigle: 'SRSAI',
+              definition: 'Service de la Réglementation et du Suivi des Accords Internationaux ;',
               key: '2_2',
             },
             {
               sigle: 'SAPE',
+              definition: 'Service des Actions de Promotion Économique',
               key: '2_2',
             }
           ]
         },
-
 
         {
           sigle: "DIER",
@@ -120,14 +136,17 @@ const organigrammeDge = ref({
           children: [
             {
               sigle: 'SPSC',
+              definition: 'Service des Politiques Sectorielles Communautaires ;',
               key: '2_1',
             },
             {
               sigle: 'SEC',
+              definition: 'Service des Échanges Commerciaux ;',
               key: '2_2',
             },
             {
               sigle: 'SSIC',
+              definition: 'Service de Suivi des Institutions Communautaires ;',
               key: '2_2',
             }
           ]
@@ -141,14 +160,17 @@ const organigrammeDge = ref({
           children: [
             {
               sigle: 'SRH',
+              definition: 'Service des Ressources Humaines ;',
               key: '2_1',
             },
             {
               sigle: 'SRFM',
+              definition: 'Service des Ressources Financières et du Matériel ;',
               key: '2_2',
             },
             {
               sigle: 'SIA',
+              // definition: ''
               key: '2_2',
             }
           ]
@@ -292,7 +314,7 @@ onMounted(() => {
     'exportButtonName': 'Télécharger l\'organigramme',
     'exportFilename' : 'organigramme-dge-finance',
     // 'zoom': true,
-    'pan': true,
+     //'pan': true,
     'createNode': function (node, data) {
 
       if (data.levelOffset) {
@@ -333,8 +355,8 @@ onMounted(() => {
   box-sizing: border-box;
   display: inline-block;
   position: relative;
-  margin: 0 0 20px 0;
-  padding: 5px;
+
+
   border: 2px dashed transparent;
   text-align: center;
 }
@@ -376,5 +398,8 @@ onMounted(() => {
   border-radius: 4px ;
 }
 
-</style>
+.content:hover .detail  {
+  @apply block transition-all duration-75 !important
+}
 
+</style>

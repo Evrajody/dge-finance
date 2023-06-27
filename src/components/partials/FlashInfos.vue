@@ -10,13 +10,13 @@ import 'swiper/css/autoplay'
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/thumbs';
-import { ref } from 'vue';
+import { reactive, ref } from 'vue';
 
-const services = ref([
+const services = reactive([
   { title: "Offre de stage" },
   { title: "Appel à candidature" },
-  { title: "Cycle de formation en assurance" },
   { title: "Documents qualités" },
+  // { title: "Cycle de formation en assurance" },
 ])
 
 </script>
