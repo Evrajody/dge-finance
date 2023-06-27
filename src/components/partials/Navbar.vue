@@ -1,9 +1,8 @@
 <script setup>
+import { ref } from 'vue';
 import RiMenu3Line from '../icons/RiMenu3Line.vue'
 import ClaritySearchLine from '../icons/ClaritySearchLine.vue';
-import { ref } from 'vue';
 import ResponsiveMenu from './ResponsiveMenu.vue';
-
 const showMenu = ref(false)
 
 function toogleMenu() {
@@ -33,13 +32,14 @@ function toogleMenu() {
             </div>
           </a>
 
-          <div class="simple-menu hidden px-5 lg:flex flex-col justify-center gap-3 flex-1  self-stretch">
+          <div class="simple-menu hidden px-5 lg:flex flex-col justify-center space-y-3 flex-1 self-stretch">
 
-            <div class="flex gap-5 self-stretch justify-end items-center divide-x divide-finance-late">
+            <div class="flex space-x-3 self-stretch justify-end items-center divide-x divide-finance-late">
 
               <div class="text-xs hover:underline font-medium">
                 <a href="/presentation/actualites" class="uppercase"> Actualités </a>
               </div>
+
 
               <div class="text-xs hover:underline font-medium pl-3">
                 <a href="/contact/ecrire-dg" class="uppercase"> Ecrire au DG </a>
@@ -47,7 +47,7 @@ function toogleMenu() {
 
             </div>
 
-            <div class="flex gap-5 self-stretch justify-end divide-x divide-finance-late">
+            <div class="flex space-x-5 self-stretch justify-end divide-x divide-finance-late">
 
 
               <div class="text-xs font-medium">
@@ -80,7 +80,7 @@ function toogleMenu() {
             </div>
           </a>
 
-          <div class="mobile-toogle flex md:hidden items-center gap-5">
+          <div class="mobile-toogle flex md:hidden items-center space-x-5">
 
             <div class="official-logo cursor-pointer flex items-center justify-center">
               <ClaritySearchLine width="1.5em" height="1.5em" class="h-full" />
@@ -99,7 +99,7 @@ function toogleMenu() {
     </header>
 
     <div class="hidden md:flex bg-finance-blue px-5">
-      <div class="container mx-auto flex justify-between gap-3 items-center text-white">
+      <div class="container mx-auto flex justify-between items-center text-white">
         <nav class="flex flex-1 items-center justify-center">
 
           <div class="relative group">
@@ -160,14 +160,16 @@ function toogleMenu() {
 
           <div class="relative group">
             <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-2">
-              <span class="font-medium">Opportunités</span>
+              <span class="font-medium">Candidature</span>
               <div
                 class="hidden absolute group-hover:block mt-3 -ml-2 w-72 -translate-x-[57%] bg-white shadow z-10 transition-all opacity-0 group-hover:opacity-100">
-                <a href="/opportunites/offre-de-stage" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
-                  Offre de stage </a>
+                <a href="" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+                 Candidature JSEB 
+                </a>
                 <a href="/opportunites/appel-a-candidature"
                   class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
-                  Appel à candidature </a>
+                  Candidature RAPEF 
+                </a>
               </div>
             </div>
           </div>

@@ -347,6 +347,11 @@ onMounted(() => {
 </template>
 
 <style>
+
+.orgchart {
+  background-image: none;
+}
+
 .nodes {
   @apply text-center
 }

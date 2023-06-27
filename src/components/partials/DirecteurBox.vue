@@ -10,7 +10,7 @@ const props = defineProps({
   <figure class="snip1165 max-w-md">
     <img :src="directeur.image" class="object-cover object-center w-full" alt="directeur-image" />
     <figcaption class="flex flex-col items-center">
-      <h3 class="flex gap-2">
+      <h3 class="flex space-x-2">
         <span v-text="directeur.prenom"></span>
         <span class="uppercase" v-text="directeur.nom"></span>
       </h3>
@@ -27,7 +27,7 @@ const props = defineProps({
   </figure>
 </template>
 
-<style>
+<style scoped>
 figure.snip1165 {
   border-radius: 3px;
   position: relative;

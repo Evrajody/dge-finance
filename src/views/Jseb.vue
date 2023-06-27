@@ -1,9 +1,6 @@
 <script setup>
 import { onMounted, ref } from 'vue';
-import IcOutlineFileDownload from '../assets/images/IcOutlineFileDownload.vue';
-import ArticleBox from '../components/partials/ArticleBox.vue';
 import PageBanner from '../components/partials/PageBanner.vue';
-import VueMultiselect from 'vue-multiselect'
 import BiFileEarmarkArrowDownFill from '../components/icons/BiFileEarmarkArrowDownFill.vue';
 
 const fakeArticle = ref([]);
@@ -24,10 +21,9 @@ onMounted(() => {
 <template>
   <PageBanner title="Publications JSEB" />
 
-  <div class="flex flex-col lg:flex-row gap-12 my-20 lg:container mx-auto md:px-3 lg:px-16">
+  <div class="flex flex-col px-3 my-10 xl:container mx-auto lg:flex-row lg:space-x-10">
 
-
-    <div class="filtre-form lg:max-w-xs w-full px-4 lg:px-0">
+    <div class="w-full lg:w-4/12">
 
       <div class="py-4 px-4 bg-finance-blue w-full">
         <span class="text-lg font-extrabold text-white"> Filtre </span>
@@ -56,7 +52,7 @@ onMounted(() => {
           <!-- <label for="full-name" class="block text-sm font-semibold leading-6 text-gray-900"> Date de publication </label> -->
           <div class="mt-2">
             <input type="submit" value="Rechercher"
-              class="block w-fit md:w-full border-0 px-3.5 py-2.5 cursor-pointer text-white bg-bj-green font-extrabold text-sm sm:text-lg sm:leading-6">
+              class="block w-fit border-0 px-3.5 py-2.5 cursor-pointer text-white bg-bj-green font-extrabold text-sm sm:text-lg sm:leading-6">
           </div>
         </div>
 
@@ -64,8 +60,7 @@ onMounted(() => {
 
     </div>
 
-
-    <div class="jseb-pub-list  px-4 lg:px-0">
+    <div class="w-full lg:w-8/12">
 
       <div class="px-4 py-4 mb-5 bg-finance-blue w-full">
         <span class="text-lg font-extrabold text-white"> Liste des publications JSEB </span>
@@ -87,7 +82,6 @@ onMounted(() => {
               </p>
             </td>
             <td class=" text-left py-3 px-4">
-
               <a href="#"
                 class="bg-bj-green shadow flex items-center gap-2 text-white text-sm font-medium px-3 py-2 rounded-md">
                 <BiFileEarmarkArrowDownFill />
@@ -101,5 +95,6 @@ onMounted(() => {
     </div>
 
   </div>
+
 </template>
 

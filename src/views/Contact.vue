@@ -8,7 +8,7 @@ import PageBanner from '../components/partials/PageBanner.vue';
 <template>
   <PageBanner title="Contact" />
 
-  <div class="flex flex-col lg:flex-row gap-12 my-20 lg:container mx-auto lg:px-16">
+  <div class="flex flex-col lg:flex-row lg:space-x-12 my-20 lg:container mx-auto lg:px-16">
 
     <ContactForm />
 
@@ -44,7 +44,6 @@ import PageBanner from '../components/partials/PageBanner.vue';
           </div>
 
           <span class="font-medium text-finance-late"> Du Lundi au Vendredi à partir de 8h </span>
-
 
         </div>
     </div>

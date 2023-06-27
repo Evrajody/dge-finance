@@ -56,8 +56,6 @@ import { ref } from 'vue';
       </div>
    </div> -->
 
-
-
   <div class="w-full">
     <form action="#" method="POST" class="">
       <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -103,7 +101,7 @@ import { ref } from 'vue';
 
 </template>
 
-<style>
+<style scoped>
 label {
    @apply after:content-["*"] after:text-red-500 after:ml-1
 }

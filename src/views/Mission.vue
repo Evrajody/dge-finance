@@ -29,8 +29,7 @@ const mission = ref([
 
     <div class="row container mx-auto relative mt-20" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
 
-      <div
-        class="absolute md:-top-6 -top-12 -left-7 md:-left-5 grid place-items-center h-20 w-20 bg-finance-gray rounded-full">
+      <div class="absolute md:-top-6 -top-12 -left-7 md:-left-5 grid place-items-center h-20 w-20 bg-finance-gray rounded-full">
         <OcticonQuote />
       </div>
 
@@ -80,7 +79,7 @@ const mission = ref([
 
 </template>
 
-<style>
+<style scoped>
  .mission-item::before{
   content: "";
   width: 15px;

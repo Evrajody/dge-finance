@@ -17,14 +17,14 @@
 
             <ul class="mt-6 space-y-4 text-sm">
               <li>
-                <a href="#" class="text-finance-blue hover:underline transition hover:opacity-75">
-                  Actualités
+                <a href="#" class="text-finance-blue transition hover:opacity-75 hover:underline">
+                  Mission
                 </a>
               </li>
 
               <li>
                 <a href="#" class="text-finance-blue transition hover:opacity-75 hover:underline">
-                  Mission
+                  Directions
                 </a>
               </li>
 
@@ -40,12 +40,6 @@
                 </a>
               </li>
 
-              <li>
-                <a href="#" class="text-finance-blue transition hover:opacity-75 hover:underline">
-                  Directions
-                </a>
-              </li>
-              
             </ul>
           </div>
 
@@ -95,12 +89,12 @@
 
           <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="col-span-2 sm:col-span-1">
 
-            <p class="font-bold text-lg text-finance-blue">Opportunités</p>
+            <p class="font-bold text-lg text-finance-blue">Autres</p>
 
             <ul class="mt-6 space-y-4 text-sm">
               <li>
                 <a href="#" class="text-finance-blue transition hover:opacity-75 hover:underline">
-                  Offre de stage
+                  Actualités
                 </a>
               </li>
 

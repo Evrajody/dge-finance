@@ -8,13 +8,13 @@ import MaterialSymbolsDownloadRounded from '../components/icons/MaterialSymbolsD
 <template>
   <PageBanner title="Documents Budgetaires" />
 
-  <div class="py-5 px-5 md:px-8 bg-finance-gray border-y border-y-gray-300">
+  <div class="py-5 px-5 md:px-10 bg-finance-gray border-y border-y-gray-300">
 
     <div class="pb-3 lg:container mx-auto">
 
       <h3 class="text-xl font-extrabold text-bj-green py-3"> Rechercher un document budgétaire </h3>
 
-      <form action="" class="flex flex-col md:flex-row gap-5">
+      <form action="" class="flex flex-col space-y-3 md:space-y-0 md:flex-row md:space-x-5 space-x-0">
 
         <div class="w-full">
           <label for="full-name" class="block text-sm font-semibold leading-6 text-gray-900"> Mots clés </label>
@@ -40,24 +40,15 @@ import MaterialSymbolsDownloadRounded from '../components/icons/MaterialSymbolsD
           </div>
         </div>
 
-        <div class="w-full">
-          <label for="full-name" class="block text-sm font-semibold leading-6 text-gray-900"> Date de publication </label>
-          <div class="mt-2.5">
-            <input type="submit" value="Rechercher"
-              class="block w-fit md:w-full border-0 px-3.5 py-2.5 cursor-pointer text-white bg-bj-green font-extrabold text-sm sm:text-lg sm:leading-6">
-          </div>
-        </div>
-
-
       </form>
     </div>
 
 
   </div>
 
-  <div class="flex flex-col gap-5 px-5 lg:px-20 my-20 lg:container mx-auto">
+  <div class="space-y-5 px-5 lg:px-20 my-20 container mx-auto">
 
-    <aside class="flex flex-col lg:flex-row items-start lg:items-center justify-evenly gap-5 mask p-3 rounded-md"
+    <aside class="flex flex-col space-y-5 lg:space-y-0 lg:flex-row items-start lg:items-center justify-evenly mask p-3 rounded-md"
       v-for="i in 10">
 
       <div class="thumbs h-20 w-20 bg-white">
@@ -95,9 +86,9 @@ import MaterialSymbolsDownloadRounded from '../components/icons/MaterialSymbolsD
 
     </aside>
 
-
   </div>
 </template>
 
 
-<style></style>
+<style>
+</style>

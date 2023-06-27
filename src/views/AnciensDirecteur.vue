@@ -140,7 +140,7 @@ const anciensDirecteur = ref([
 
         <DirecteurBox class="self-stretch" data-aos="fade-up" data-aos-anchor-placement="top-bottom" :directeur="item"
           v-for="item in anciensDirecteur" />
-
+          
       </div>
 
     </div>
