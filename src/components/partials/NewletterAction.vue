@@ -1,8 +1,5 @@
 <script setup>
-import MaterialSymbolsArrowUpward from '../icons/MaterialSymbolsArrowUpward.vue';
 
-// background: #d9d9d9;
-    /* box-shadow: 0 4px 8px rgba(0,0,0,.25); */
 
 </script>
 

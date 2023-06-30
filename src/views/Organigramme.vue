@@ -45,43 +45,43 @@ const organigrammeDge = ref({
 
         {
           sigle: "DPC",
-          definition: "Direction de la Prévision et de la Conjoncture;",
+          definition: "Direction de la Prévision et de la Conjoncture",
           children: [
             {
               sigle: 'SPEF',
-              definition: 'Service de la Programmation Économique et Financière ;',
+              definition: 'Service de la Programmation Économique et Financière',
               key: '2_1',
 
             },
             {
               sigle: 'SSBAC',
-              definition: "Service du Suivi Budgétaire et de l’Analyse Conjoncturelle;",
+              definition: "Service du Suivi Budgétaire et de l’Analyse Conjoncturelle",
               key: '2_2',
             },
             {
               sigle: 'SSSSM',
-              definition: "Service des Statistiques et du Suivi de la Surveillance Multilatérale;",
+              definition: "Service des Statistiques et du Suivi de la Surveillance Multilatérale",
               key: '2_2',
             }
           ]
         },
         {
           sigle: "DRES",
-          definition: "Direction de la Recherche et des Études Stratégiques;",
+          definition: "Direction de la Recherche et des Études Stratégiques",
           children: [
             {
               sigle: 'SIEAR',
-              definition: 'Service de l’Intelligence Économique et de l’Analyse des Risques;',
+              definition: 'Service de l’Intelligence Économique et de l’Analyse des Risques',
               key: '2_1',
             },
             {
               sigle: 'SES',
-              definition: 'Service des Études Stratégiques;',
+              definition: 'Service des Études Stratégiques',
               key: '2_2',
             },
             {
               sigle: 'SMR',
-              definition: "Service de la Modélisation et de la Recherche;",
+              definition: "Service de la Modélisation et de la Recherche",
               key: '2_2',
             }
           ]
@@ -89,37 +89,37 @@ const organigrammeDge = ref({
 
         {
           sigle: "DSPSSEL",
-          definition: "Direction du Suivi des Politiques Sectorielles, Sociales et des Économies Locales;",
+          definition: "Direction du Suivi des Politiques Sectorielles, Sociales et des Économies Locales",
           children: [
             {
               sigle: 'SSAPS',
-              definition: 'Service de Suivi et d’Analyse des Performances Sectorielles ;',
+              definition: 'Service de Suivi et d’Analyse des Performances Sectorielles',
               key: '2_1',
             },
             {
               sigle: 'SSPS',
-              definition: 'Service de Suivi des Politiques Sociales ;',
+              definition: 'Service de Suivi des Politiques Sociales',
               key: '2_2',
             },
             {
               sigle: 'SSPEL',
-              definition: 'Service de Suivi des Politiques Économiques Locales ;',
+              definition: 'Service de Suivi des Politiques Économiques Locales',
               key: '2_2',
             }
           ]
         },
         {
           sigle: "DPCE",
-          definition: "Direction de la Promotion et de la Coopération Economiques;",
+          definition: "Direction de la Promotion et de la Coopération Economiques",
           children: [
             {
               sigle: 'SSASP',
-              definition: 'Service du Suivi et d’Accompagnement du Secteur Privé ;',
+              definition: 'Service du Suivi et d’Accompagnement du Secteur Privé',
               key: '2_1',
             },
             {
               sigle: 'SRSAI',
-              definition: 'Service de la Réglementation et du Suivi des Accords Internationaux ;',
+              definition: 'Service de la Réglementation et du Suivi des Accords Internationaux',
               key: '2_2',
             },
             {
@@ -132,21 +132,21 @@ const organigrammeDge = ref({
 
         {
           sigle: "DIER",
-          definition: "Direction de l’Intégration Économique Régionale;",
+          definition: "Direction de l’Intégration Économique Régionale",
           children: [
             {
               sigle: 'SPSC',
-              definition: 'Service des Politiques Sectorielles Communautaires ;',
+              definition: 'Service des Politiques Sectorielles Communautaires',
               key: '2_1',
             },
             {
               sigle: 'SEC',
-              definition: 'Service des Échanges Commerciaux ;',
+              definition: 'Service des Échanges Commerciaux',
               key: '2_2',
             },
             {
               sigle: 'SSIC',
-              definition: 'Service de Suivi des Institutions Communautaires ;',
+              definition: 'Service de Suivi des Institutions Communautaires',
               key: '2_2',
             }
           ]
@@ -156,21 +156,21 @@ const organigrammeDge = ref({
 
         {
           sigle: "DGR",
-          definition: "Direction de la Gestion des Ressources;",
+          definition: "Direction de la Gestion des Ressources",
           children: [
             {
               sigle: 'SRH',
-              definition: 'Service des Ressources Humaines ;',
+              definition: 'Service des Ressources Humaines',
               key: '2_1',
             },
             {
               sigle: 'SRFM',
-              definition: 'Service des Ressources Financières et du Matériel ;',
+              definition: 'Service des Ressources Financières et du Matériel',
               key: '2_2',
             },
             {
-              sigle: 'SIA',
-              // definition: ''
+              sigle: 'SSI',
+              definition: 'Service Systèmes d’Information',
               key: '2_2',
             }
           ]

@@ -11,11 +11,13 @@ const directions = ref([
     nom: "Direction Générale",
     directions: [
       {
-        nom: 'Directeur Générale'
+        nom: 'Directeur Général',
+        link: "/directeur-general"
       },
 
       {
-        nom: 'Directeur Générale Adjoint'
+        nom: 'Directeur Général Adjoint',
+        link: "/directeur-general-adjoint"
       }
     ]
   },
@@ -23,27 +25,32 @@ const directions = ref([
     nom: "Directions Techniques",
     directions: [
       {
-        nom: "Direction de l’Intégration Économique Régionale (DIER)"
+        nom: "Direction de l’Intégration Économique Régionale (DIER)",
+        link: "/direction-integration-economique-regional"
+      },
+      
+      {
+        nom: "Direction de la Prévision et de la Conjoncture (DPC)",
+        link: "/direction-prevision-conjoncture"
+      },
+      {
+        nom: "Direction du Suivi des Politiques Sectorielles, Sociales et des Économies Locales (DSPSSEL)",
+        link: "/direction-spssel"
       },
 
       {
-        nom: "Direction du Suivi des Politiques Sectorielles, Sociales et des Économies Locales (DSPSSEL)"
+        nom: "Direction de la Promotion et de la Coopération Economiques (DPCE)",
+        link: "/direction-promotion-coop-economique"
       },
 
       {
-        nom: "Direction de la Prévision et de la Conjoncture (DPC)"
+        nom: "Direction de la Recherche et des Études Stratégiques (DRES)",
+        link: "/direction-recherche-etudes-strategiques"
       },
 
       {
-        nom: "Direction de la Promotion et de la Coopération Economiques (DPCE)"
-      },
-
-      {
-        nom: "Direction de la Recherche et des Études Stratégiques (DRES)"
-      },
-
-      {
-        nom: "Direction de la Gestion des Ressources (DGR)"
+        nom: "Direction de la Gestion des Ressources (DGR)",
+        link: "/direction-gestion-ressources"
       },
     ]
   }
@@ -82,7 +89,7 @@ function setCurrentTab(index) {
             <h2 class="text-xl font-bold text-white"> {{item.nom }}</h2>
 
             <div class="mt-4 flex justify-end items-center">
-              <a href="/direction-details"
+              <a :href="item.link"
                 class="bg-white flex items-center gap-2 text-black text-sm font-medium px-4 py-2 rounded-md hover:bg-gray-50 transition-colors duration-300">
                 <IcRoundRemoveRedEye />
                 Détails

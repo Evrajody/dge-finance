@@ -9,7 +9,6 @@ import Partenaire from '../components/partials/Partenaire.vue';
 import { fakeArticle } from '../data/article'
 import Mesure from '../components/partials/Mesure.vue';
 
-
 </script>
 
 
@@ -24,7 +23,6 @@ import Mesure from '../components/partials/Mesure.vue';
   <div class="fin-section">
     <SectionTitle title="Les Mesures Covid 19" />
   </div>
-
 
   <div class="fin-mesure">
     <Mesure/>
@@ -43,7 +41,7 @@ import Mesure from '../components/partials/Mesure.vue';
   </div>
 
   <div class="fin-section">
-    <SectionTitle title="Nos Services en ligne" />
+    <SectionTitle title="Nos Publications" />
   </div>
 
   <div class="flash">

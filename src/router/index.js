@@ -42,8 +42,58 @@ const router = createRouter({
 
 
     {
-      path: "/direction-details",
+      path: "/directeur-general",
       name: "detail-direction",
+      meta: { directionIndex: 0 }, 
+      component: DirectionDetails,
+    },
+
+    {
+      path: "/directeur-general-adjoint",
+      name: "directeur-general-adjoint",
+      meta: { directionIndex: 1 },
+      component: DirectionDetails,
+    },
+
+    {
+      path: "/direction-integration-economique-regional",
+      name: "direction-integration-economique-regional",
+      meta: { directionIndex: 2 },
+      component: DirectionDetails,
+    },
+
+    {
+      path: "/direction-prevision-conjoncture",
+      name: "direction-prevision-conjoncture",
+      meta: { directionIndex: 3 },
+      component: DirectionDetails,
+    },
+
+    {
+      path: "/direction-spssel",
+      name: "direction-spssel",
+      meta: { directionIndex: 4 },
+      component: DirectionDetails,
+    },
+
+    {
+      path: "/direction-promotion-coop-economique",
+      name: "direction-promotion-coop-economique",
+      meta: { directionIndex: 5 },
+      component: DirectionDetails,
+    },
+
+    // {
+    //   path: "/direction-recherche-etudes-strategiques",
+    //   name: "direction-recherche-etudes-strategiques",
+    //   meta: { directionIndex: 6 },
+    //   component: DirectionDetails,
+    // },
+
+    {
+      path: "/direction-gestion-ressources",
+      name: "direction-gestion-ressources",
+      meta: { directionIndex: 7 },
       component: DirectionDetails,
     },
 

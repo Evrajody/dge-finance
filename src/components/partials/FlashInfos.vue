@@ -8,15 +8,13 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/autoplay'
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/thumbs';
-import { reactive, ref } from 'vue';
+import { reactive } from 'vue';
 
 const services = reactive([
-  { title: "Offre de stage" },
-  { title: "Appel à candidature" },
   { title: "Documents qualités" },
-  // { title: "Cycle de formation en assurance" },
+  { title: "Documents de travails" },
+  { title: "Documents budgétaires" },
+  { title: "RAPEF" },
 ])
 
 </script>
@@ -30,10 +28,10 @@ const services = reactive([
 
         <div class="relative p-4 sm:p-6 lg:p-8">
           <p class="text-sm font-medium uppercase tracking-widest text-white">
-            Services
+            Publications
           </p>
 
-          <p class="text-xl font-bold text-white sm:text-2xl"> Déterminant de la pérénité sociale </p>
+          <p class="text-xl font-bold text-white sm:text-2xl"> Retrouvez l'information </p>
 
           <div class="mt-32 sm:mt-48 lg:mt-64">
             <!-- translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 :breakpoints="[{ width: '1380' }]" -->

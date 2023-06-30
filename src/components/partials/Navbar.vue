@@ -20,21 +20,21 @@ function toogleMenu() {
 
         <div class="flex items-center justify-between px-5">
 
-          <a href="https://finances.bj" class="hidden lg:block">
-            <div class="official-logo  py-2">
+          <a href="https://finances.bj" class="hidden lg:block" rel="noreferrer" target="_blank">
+            <div class="official-logo py-2">
               <img src="@/assets/images/official_logo.png" alt="" class="h-16" srcset="">
             </div>
           </a>
 
           <a href="/" class="block lg:hidden">
-            <div class="official-logo  py-2">
+            <div class="official-logo py-2">
               <img src="@/assets/images/logo_dge_benin.png" alt="" class="h-16" srcset="">
             </div>
           </a>
 
           <div class="simple-menu hidden px-5 lg:flex flex-col justify-center space-y-3 flex-1 self-stretch">
 
-            <div class="flex space-x-3 self-stretch justify-end items-center divide-x divide-finance-late">
+            <!-- <div class="flex space-x-3 self-stretch justify-end items-center divide-x divide-finance-late">
 
               <div class="text-xs hover:underline font-medium">
                 <a href="/presentation/actualites" class="uppercase"> Actualités </a>
@@ -45,7 +45,7 @@ function toogleMenu() {
                 <a href="/contact/ecrire-dg" class="uppercase"> Ecrire au DG </a>
               </div>
 
-            </div>
+            </div> -->
 
             <div class="flex space-x-5 self-stretch justify-end divide-x divide-finance-late">
 
@@ -74,9 +74,9 @@ function toogleMenu() {
 
           </div>
 
-          <a href="/" class="hidden md:block">
+          <a href="/" class="hidden md:block" rel="noreferrer" target="_blank">
             <div class="official-logo  py-2">
-              <img src="@/assets/images/logo_dge_benin.png" class="h-16" alt="" srcset="">
+              <img src="@/assets/images/logo_dge_benin.png"  class="h-16" alt="" srcset="">
             </div>
           </a>
 
@@ -103,9 +103,16 @@ function toogleMenu() {
         <nav class="flex flex-1 items-center justify-center">
 
           <div class="relative group">
-            <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-2">
+            <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-3">
+              <a href="/presentation/actualites" class="font-medium">Actualités</a>
+            </div>
+          </div>
+
+
+          <div class="relative group">
+            <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-3">
               <span class="font-medium">Présentation</span>
-              <div class="hidden absolute group-hover:block mt-3 -ml-2 w-72 bg-white shadow z-10 transition-all">
+              <div class="hidden absolute group-hover:block mt-3 -ml-3 w-72 bg-white shadow z-10 transition-all">
                 <!-- <a href="/presentation/actualites" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
                   Actualités </a> -->
                 <a href="/presentation/mission" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100"> 
@@ -125,9 +132,9 @@ function toogleMenu() {
           </div>
 
           <div class="relative group">
-            <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-2">
+            <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-3">
               <span class="font-medium">Publications</span>
-              <div class="hidden absolute group-hover:block mt-3 -ml-2 w-max bg-white shadow z-10 transition-all">
+              <div class="hidden absolute group-hover:block mt-3 -ml-3 w-max bg-white shadow z-10 transition-all">
                 <a href="/publications/documents-budgetaires"
                   class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100"> Documents budgétaires </a>
                 <a href="/publications/documents-politiques-nationales"
@@ -148,10 +155,10 @@ function toogleMenu() {
 
           <div class="relative group">
             <div
-              class="group-hover:bg-bj-yellow text-white text-center md:text-left transition-all hover:text-black cursor-pointer py-3 px-2">
+              class="group-hover:bg-bj-yellow text-white text-center md:text-left transition-all hover:text-black cursor-pointer py-3 px-3">
               <span class="font-medium">Séminaires et Conférences</span>
               <div
-                class="hidden absolute group-hover:block mt-3 -ml-2 w-72 bg-white shadow z-10 transition-all opacity-0 group-hover:opacity-100">
+                class="hidden absolute group-hover:block mt-3 -ml-3 w-72 bg-white shadow z-10 transition-all opacity-0 group-hover:opacity-100">
                 <a href="/seminaire-conference/jseb" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100"> JSEB
                 </a>
               </div>
@@ -159,10 +166,10 @@ function toogleMenu() {
           </div>
 
           <div class="relative group">
-            <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-2">
+            <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-3">
               <span class="font-medium">Candidature</span>
               <div
-                class="hidden absolute group-hover:block mt-3 -ml-2 w-72 -translate-x-[57%] bg-white shadow z-10 transition-all opacity-0 group-hover:opacity-100">
+                class="hidden absolute group-hover:block mt-3 -ml-2 w-72 -translate-x-[57.5%] bg-white shadow z-10 transition-all opacity-0 group-hover:opacity-100">
                 <a href="" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
                  Candidature JSEB 
                 </a>
@@ -175,10 +182,10 @@ function toogleMenu() {
           </div>
 
           <div class="relative group">
-            <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-2">
+            <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-3">
               <span class="font-medium">Contact</span>
               <div
-                class="hidden absolute group-hover:block mt-3 -ml-2 w-72 -translate-x-[72%] bg-white shadow z-10 transition-all opacity-0 group-hover:opacity-100">
+                class="hidden absolute group-hover:block mt-3 -ml-2 w-72 -translate-x-[70.5%] bg-white shadow z-10 transition-all opacity-0 group-hover:opacity-100">
                 <a href="/contact" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
                   Contatez-nous
                 </a>

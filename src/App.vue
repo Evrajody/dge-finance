@@ -3,11 +3,9 @@
 import Navbar from './components/partials/Navbar.vue';
 import Footer from './components/partials/Footer.vue';
 import MaterialSymbolsArrowUpward from './components/icons/MaterialSymbolsArrowUpward.vue';
-import { computed, onMounted, ref, watch } from 'vue';
+import {onMounted, ref } from 'vue';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import ResponsiveMenu from './components/partials/ResponsiveMenu.vue';
-
 
 const showTopBtn = ref(false)
 
@@ -17,8 +15,6 @@ function scrollToTop() {
       behavior: 'smooth'
    });
 }
-
-
 
 function handleBtn(e) {
    if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
