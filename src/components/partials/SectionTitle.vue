@@ -9,14 +9,14 @@
 
 <template>
 
-   <div class="w-full relative py-10 section container mx-auto">
-      <!-- <span class=" fill-text hidden md:block absolute left-12 sm:text-8xl top-5 text-finance-blue">  {{props.title }}   </span> -->
+   <div class="container relative py-10 mx-auto w-full section">
+      <!-- <span class="hidden absolute top-5 left-12 sm:text-8xl md:block fill-text text-finance-blue">  {{props.title }}   </span> -->
       <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="">
-         <div class="w-full flex flex-col justify-center px-5">
-            <span class="text-3xl sm:text-4xl font-semibold text-finance-blue">
+         <div class="flex flex-col justify-center px-5 w-full">
+            <span class="text-3xl font-semibold sm:text-4xl text-finance-blue">
               {{props.title }}
             </span>
-            <span class="h-1 mt-2 w-7 bg-finance-blue"></span>
+            <span class="mt-2 w-7 h-1 bg-finance-blue"></span>
          </div>
       </div>
    </div>

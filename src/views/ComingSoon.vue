@@ -5,12 +5,12 @@
 
 <template>
 
-  <div class="container w-full mx-auto h-[60vh]">
-    <div class="py-20 h-full flex flex-col justify-center space-y-5 items-center">
+  <div class="container mx-auto w-full h-[60vh]">
+    <div class="flex flex-col justify-center items-center py-20 space-y-5 h-full">
 
-      <h3 class="text-sm md:text-3xl text-center lg:text-4xl font-semibold text-finance-blue"> Cette page arrive bientôt </h3>
+      <h3 class="text-sm font-semibold text-center md:text-3xl lg:text-4xl text-finance-blue"> Cette page arrive bientôt </h3>
 
-      <span class="text-sm text-center md:text-lg font-medium"> Cette page sera prochainement disponible </span>
+      <span class="text-sm font-medium text-center md:text-lg"> Cette page sera prochainement disponible </span>
 
     </div>
   </div>

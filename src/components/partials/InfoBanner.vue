@@ -7,20 +7,20 @@ import ClaritySearchLine from '../icons/ClaritySearchLine.vue';
 
 <template>
 
-  <div class="content bg-finance-blue flex justify-end items-center gap-4 text-white w-full px-4 py-2">
+  <div class="flex gap-4 justify-end items-center py-2 px-4 w-full text-white content bg-finance-blue">
 
-    <div class="items flex gap-5">
-        <a href="" class="text-white hover:underline text-sm"> Services </a>
-        <a href="" class="text-white hover:underline text-sm"> A la une </a>
-        <a href="" class="text-white hover:underline text-sm"> Communiqués </a>
-        <a href="" class="text-white hover:underline text-sm"> Marchés publics </a>
-        <a href="" class="text-white hover:underline text-sm"> JSEB </a>
-        <a href="" class="text-white hover:underline text-sm"> Contactez-nous </a>
-        <a href="" class="text-white hover:underline text-sm"> Francais </a>
+    <div class="flex gap-5 items">
+        <a href="" class="text-sm text-white hover:underline"> Services </a>
+        <a href="" class="text-sm text-white hover:underline"> A la une </a>
+        <a href="" class="text-sm text-white hover:underline"> Communiqués </a>
+        <a href="" class="text-sm text-white hover:underline"> Marchés publics </a>
+        <a href="" class="text-sm text-white hover:underline"> JSEB </a>
+        <a href="" class="text-sm text-white hover:underline"> Contactez-nous </a>
+        <a href="" class="text-sm text-white hover:underline"> Francais </a>
     </div>
     
     <span class="cursor-pointer"> 
-      <ClaritySearchLine class="h-5 w-5"/>
+      <ClaritySearchLine class="w-5 h-5"/>
     </span>
 
   </div>

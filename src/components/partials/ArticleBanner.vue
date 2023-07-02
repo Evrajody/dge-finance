@@ -10,9 +10,9 @@ const props = defineProps({
 
 <template>
   <div
-    class="w-full bg-blend-overlay bg-black bg-opacity-60"  :style="{ backgroundImage: `url(${props.image})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }">
-    <div class="flex flex-col justify-center container mx-auto py-10 px-6 lg:px-0">
-      <h4 class="text-xl lg:text-3xl font-bold leading-2 text-white">
+    class="w-full bg-black bg-opacity-60 bg-blend-overlay"  :style="{ backgroundImage: `url(${props.image})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }">
+    <div class="container flex flex-col justify-center py-10 px-6 mx-auto lg:px-0">
+      <h4 class="text-xl font-bold text-white lg:text-3xl leading-2">
           {{ props.title }}
         </h4>
     </div>

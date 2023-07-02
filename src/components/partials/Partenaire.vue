@@ -24,12 +24,12 @@ const partenaires = ref([
 </script>
 
 <template>
-  <div class="partner bg-finance-gray py-20 lg:px-10 px-5" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+  <div class="py-20 px-5 lg:px-10 partner bg-finance-gray" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
 
     <swiper :loop="true" auto-height :speed="300" a11y autoplay :breakpoints="{ 200: { slidesPerView: 3  }, 600: { slidesPerView: 4  } }" :modules="[A11y, Autoplay]"
         :slides-per-view="4" :space-between="10">
         <swiper-slide v-for="item, index in partenaires" :key="index">
-            <img :src="item.image" alt="" class="h-20 mx-auto" srcset="">
+            <img :src="item.image" alt="" class="mx-auto h-20" srcset="">
         </swiper-slide>
       </swiper>
 

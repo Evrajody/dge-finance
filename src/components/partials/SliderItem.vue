@@ -13,13 +13,13 @@ const props = defineProps({
   <div class="bg-black bg-opacity-30 bg-blend-darken h-[80vh]"
     :style="{ backgroundImage: `url(${props.slideImage})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }">
 
-    <div class="container mx-auto px-10 h-full flex flex-col items-center justify-center">
+    <div class="container flex flex-col justify-center items-center px-10 mx-auto h-full">
 
-      <div class="w-full flex items-center h-full">
+      <div class="flex items-center w-full h-full">
 
-        <div class="max-w-2xl h-full flex flex-col gap-8 items-start justify-center">
+        <div class="flex flex-col gap-8 justify-center items-start max-w-2xl h-full">
 
-          <h2  class="py-8 text-2xl sm:text-4xl slide-title text-white font-bold md:leading-[3rem]">
+          <h2  class="py-8 text-2xl font-bold text-white sm:text-4xl slide-title md:leading-[3rem]">
             {{ props.sildeText }}
           </h2>
 

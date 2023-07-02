@@ -19,15 +19,15 @@ const services = reactive([
 
 </script>
 <template>
-  <div class="container mx-auto pb-5" id="services">
+  <div class="container pb-5 mx-auto" id="services">
 
     <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="flex">
-      <a href="#" class="group w-full relative block bg-black">
+      <a href="#" class="block relative w-full bg-black group">
         <img alt="Developer" src="https://img.freepik.com/photos-gratuite/deux-femmes-visionnant-du-contenu-telephone-dans-marche-africain-local_181624-35124.jpg"
-          class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50" />
+          class="object-cover absolute inset-0 w-full h-full opacity-75 transition-opacity group-hover:opacity-50" />
 
         <div class="relative p-4 sm:p-6 lg:p-8">
-          <p class="text-sm font-medium uppercase tracking-widest text-white">
+          <p class="text-sm font-medium tracking-widest text-white uppercase">
             Publications
           </p>
 
@@ -40,7 +40,7 @@ const services = reactive([
               <swiper loop navigation a11y autoplay set-wrapper-size :breakpoints="{ 200: { slidesPerView: 1  }, 750: { slidesPerView: 2  }, 1024: { slidesPerView: 3  }, 1380: { slidesPerView: 4  } }" :modules="[A11y, Autoplay, Navigation]"
                 :slides-per-view="3" :space-between="15">
                 <swiper-slide v-for="item, index in services" :key="index">
-                  <div class="c-services__item self-stretch h-full w-full">
+                  <div class="self-stretch w-full h-full c-services__item">
                     <h3> {{ item.title }} </h3>
                     <p>To reach more customers and the goals of your business, a mobile application is necessary these
                       days.

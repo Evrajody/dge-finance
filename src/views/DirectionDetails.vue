@@ -22,37 +22,37 @@
 
     <PageBanner :title="directions[directionIndex]?.nom" />
 
-    <div class="container mx-auto flex flex-col justify-evenly items-center gap-10 lg:items-start lg:flex-row my-20">
+    <div class="container flex flex-col gap-10 justify-evenly items-center my-20 mx-auto lg:flex-row lg:items-start">
 
       <DirecteurBox :directeur="directions[directionIndex]?.directeur" />
 
       <div class="w-full">
 
-        <div class="row relative py-4 intro" v-if="directions[directionIndex]?.intro">
+        <div class="relative py-4 row intro" v-if="directions[directionIndex]?.intro">
 
-          <div class="absolute md:-top-6 -top-12 -left-7 md:-left-5 grid place-items-center h-16 w-16 bg-finance-blue text-white rounded-full">
+          <div class="grid absolute -left-7 -top-12 place-items-center w-16 h-16 text-white rounded-full md:-left-5 md:-top-6 bg-finance-blue">
             <OcticonQuote />
           </div>
 
-          <div class="bg-finance-gray rounded-none sm:rounded-lg px-5 sm:px-12 py-10 w-full">
+          <div class="py-10 px-5 w-full rounded-none sm:px-12 sm:rounded-lg bg-finance-gray">
             <span class="text-base font-semibold leading-normal" v-html="directions[directionIndex]?.intro"></span>
           </div>
 
         </div>
 
         <div class="annonce-attributions">
-          <div class="bg-finance-blue rounded-none sm:rounded-lg px-5 sm:px-10 py-3 w-full">
-            <span class="text-base text-white font-semibold leading-normal" v-html="directions[directionIndex]?.annonce"></span>
+          <div class="py-3 px-5 w-full rounded-none sm:px-10 sm:rounded-lg bg-finance-blue">
+            <span class="text-base font-semibold leading-normal text-white" v-html="directions[directionIndex]?.annonce"></span>
           </div>
           <div class="flex justify-center">
 
             <section class="bg-white">
 
               <article class="" v-for="i in directions[directionIndex]?.attributions">
-                <div class="h-full transition relative mission-item">
+                <div class="relative h-full transition mission-item">
                   <header
-                    class="bg-white flex-col sm:flex-row sm:items-center p-5 px-8 cursor-pointer hover:bg-finance-gray transition">
-                    <span class="text-sm text-finance-plot text-justify font-medium text-md">
+                    class="flex-col p-5 px-8 bg-white transition cursor-pointer sm:flex-row sm:items-center hover:bg-finance-gray">
+                    <span class="text-sm font-medium text-justify text-finance-plot text-md">
                       {{ i.content }}
                     </span>
                   </header>
@@ -66,19 +66,19 @@
         </div>
 
         <div class="mt-5 annonce-services" v-if="directions[directionIndex]?.annonceServices">
-          <div class="bg-finance-blue rounded-none sm:rounded-lg px-5 sm:px-10 py-5 w-full">
-            <span class="text-base text-white font-semibold leading-normal" v-html="directions[directionIndex]?.annonceServices"></span>
+          <div class="py-5 px-5 w-full rounded-none sm:px-10 sm:rounded-lg bg-finance-blue">
+            <span class="text-base font-semibold leading-normal text-white" v-html="directions[directionIndex]?.annonceServices"></span>
           </div>
           <div class="">
 
             <section class="bg-white">
 
               <article class="" v-for="i in directions[directionIndex]?.services">
-                <div class="h-full transition relative mission-item">
+                <div class="relative h-full transition mission-item">
 
                   <header
-                    class="bg-white flex-col sm:flex-row sm:items-center p-5 px-8 cursor-pointer hover:bg-finance-gray transition">
-                    <span class="text-sm text-finance-plot text-justify font-medium">
+                    class="flex-col p-5 px-8 bg-white transition cursor-pointer sm:flex-row sm:items-center hover:bg-finance-gray">
+                    <span class="text-sm font-medium text-justify text-finance-plot">
                       {{ i.content }}
                     </span>
                   </header>
@@ -91,8 +91,8 @@
           </div>
         </div>
 
-        <div class="outro mt-5" v-if="directions[directionIndex]?.outro">
-          <p class="text-sm text-finance-plot text-justify font-medium leading-5" v-html="directions[directionIndex]?.outro"></p>
+        <div class="mt-5 outro" v-if="directions[directionIndex]?.outro">
+          <p class="text-sm font-medium leading-5 text-justify text-finance-plot" v-html="directions[directionIndex]?.outro"></p>
         </div>
 
       </div>

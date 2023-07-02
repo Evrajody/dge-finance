@@ -13,80 +13,80 @@ function toogleMenu() {
 
 
 <template>
-  <div class="fixed inset-x-0 shadow z-50">
-    <header class="bg-white transition-all duration-150 w-full">
+  <div class="fixed inset-x-0 z-50 shadow">
+    <header class="w-full bg-white transition-all duration-150">
 
-      <div class="xl:container mx-auto">
+      <div class="mx-auto xl:container">
 
-        <div class="flex items-center justify-between px-5">
+        <div class="flex justify-between items-center px-5">
 
           <a href="https://finances.bj" class="hidden lg:block" rel="noreferrer" target="_blank">
-            <div class="official-logo py-2">
+            <div class="py-2 official-logo">
               <img src="@/assets/images/official_logo.png" alt="" class="h-16" srcset="">
             </div>
           </a>
 
           <a href="/" class="block lg:hidden">
-            <div class="official-logo py-2">
+            <div class="py-2 official-logo">
               <img src="@/assets/images/logo_dge_benin.png" alt="" class="h-16" srcset="">
             </div>
           </a>
 
-          <div class="simple-menu hidden px-5 lg:flex flex-col justify-center space-y-3 flex-1 self-stretch">
+          <div class="hidden flex-col flex-1 justify-center self-stretch px-5 space-y-3 lg:flex simple-menu">
 
-            <!-- <div class="flex space-x-3 self-stretch justify-end items-center divide-x divide-finance-late">
+            <!-- <div class="flex justify-end items-center self-stretch space-x-3 divide-x divide-finance-late">
 
-              <div class="text-xs hover:underline font-medium">
+              <div class="text-xs font-medium hover:underline">
                 <a href="/presentation/actualites" class="uppercase"> Actualités </a>
               </div>
 
 
-              <div class="text-xs hover:underline font-medium pl-3">
+              <div class="pl-3 text-xs font-medium hover:underline">
                 <a href="/contact/ecrire-dg" class="uppercase"> Ecrire au DG </a>
               </div>
 
             </div> -->
 
-            <div class="flex space-x-5 self-stretch justify-end divide-x divide-finance-late">
+            <div class="flex justify-end self-stretch space-x-5 divide-x divide-finance-late">
 
 
               <div class="text-xs font-medium">
                 <span class=""> info@dgae.finances.bj </span>
               </div>
 
-              <div class="text-xs font-medium pl-3">
+              <div class="pl-3 text-xs font-medium">
                 <span class="uppercase"> T. (+229) 21 30 37 67 </span>
               </div>
 
-              <div class="text-xs font-medium pl-3">
-                <span class="text-red-400 font-semibold"> Certifiée ISO 9001-2015</span>
+              <div class="pl-3 text-xs font-medium">
+                <span class="font-semibold text-red-400"> Certifiée ISO 9001-2015</span>
               </div>
 
             </div>
 
-            <!-- <div class="text-xs hover:underline font-medium">
+            <!-- <div class="text-xs font-medium hover:underline">
               <a href="/opportunites/appel-a-candidature"> Marchés Publics </a>
             </div> -->
 
-            <!-- <div class="text-xs hover:underline font-medium">
+            <!-- <div class="text-xs font-medium hover:underline">
               <a href="https://finances.bj"> Ministère </a>
             </div> -->
 
           </div>
 
           <a href="/" class="hidden md:block" rel="noreferrer" target="_blank">
-            <div class="official-logo  py-2">
+            <div class="py-2 official-logo">
               <img src="@/assets/images/logo_dge_benin.png"  class="h-16" alt="" srcset="">
             </div>
           </a>
 
-          <div class="mobile-toogle flex md:hidden items-center space-x-5">
+          <div class="flex items-center space-x-5 md:hidden mobile-toogle">
 
-            <div class="official-logo cursor-pointer flex items-center justify-center">
+            <div class="flex justify-center items-center cursor-pointer official-logo">
               <ClaritySearchLine width="1.5em" height="1.5em" class="h-full" />
             </div>
 
-            <div @click="toogleMenu" class="official-logo cursor-pointer flex items-center justify-center">
+            <div @click="toogleMenu" class="flex justify-center items-center cursor-pointer official-logo">
               <RiMenu3Line width="1.5em" height="1.5em" class="h-full" />
             </div>
 
@@ -98,83 +98,83 @@ function toogleMenu() {
 
     </header>
 
-    <div class="hidden md:flex bg-finance-blue px-5">
-      <div class="container mx-auto flex justify-between items-center text-white">
-        <nav class="flex flex-1 items-center justify-center">
+    <div class="hidden px-5 md:flex bg-finance-blue">
+      <div class="container flex justify-between items-center mx-auto text-white">
+        <nav class="flex flex-1 justify-center items-center">
 
           <div class="relative group">
-            <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-3">
+            <div class="py-3 px-3 text-white transition-all cursor-pointer hover:text-black group-hover:bg-bj-yellow">
               <a href="/presentation/actualites" class="font-medium">Actualités</a>
             </div>
           </div>
 
 
           <div class="relative group">
-            <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-3">
+            <div class="py-3 px-3 text-white transition-all cursor-pointer hover:text-black group-hover:bg-bj-yellow">
               <span class="font-medium">Présentation</span>
-              <div class="hidden absolute group-hover:block mt-3 -ml-3 w-72 bg-white shadow z-10 transition-all">
-                <!-- <a href="/presentation/actualites" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+              <div class="hidden absolute z-10 mt-3 -ml-3 w-72 bg-white shadow transition-all group-hover:block">
+                <!-- <a href="/presentation/actualites" class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100">
                   Actualités </a> -->
-                <a href="/presentation/mission" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100"> 
+                <a href="/presentation/mission" class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100"> 
                   Mission
                 </a>
-                <a href="/presentation/directions" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+                <a href="/presentation/directions" class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100">
                   Directions 
                 </a>
-                <a href="/presentation/organigramme" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+                <a href="/presentation/organigramme" class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100">
                   Organigramme 
                 </a>
                 <a href="/presentation/anciens-directeurs"
-                  class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+                  class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100">
                   Anciens Directeurs </a>
               </div>
             </div>
           </div>
 
           <div class="relative group">
-            <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-3">
+            <div class="py-3 px-3 text-white transition-all cursor-pointer hover:text-black group-hover:bg-bj-yellow">
               <span class="font-medium">Publications</span>
-              <div class="hidden absolute group-hover:block mt-3 -ml-3 w-max bg-white shadow z-10 transition-all">
+              <div class="hidden absolute z-10 mt-3 -ml-3 w-max bg-white shadow transition-all group-hover:block">
                 <a href="/publications/documents-budgetaires"
-                  class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100"> Documents budgétaires </a>
+                  class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100"> Documents budgétaires </a>
                 <a href="/publications/documents-politiques-nationales"
-                  class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100"> Documents
+                  class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100"> Documents
                   Politiques Nationales
                   (DPN)
                 </a>
                 <a href="/publications/documents-de-travail"
-                  class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+                  class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100">
                   Documents de travail </a>
-                <a href="/publications/infra-annuels" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+                <a href="/publications/infra-annuels" class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100">
                   Infra
                   annuels </a>
-                <a href="/publications/rapef" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100"> RAPEF </a>
+                <a href="/publications/rapef" class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100"> RAPEF </a>
               </div>
             </div>
           </div>
 
           <div class="relative group">
             <div
-              class="group-hover:bg-bj-yellow text-white text-center md:text-left transition-all hover:text-black cursor-pointer py-3 px-3">
+              class="py-3 px-3 text-center text-white transition-all cursor-pointer md:text-left hover:text-black group-hover:bg-bj-yellow">
               <span class="font-medium">Séminaires et Conférences</span>
               <div
-                class="hidden absolute group-hover:block mt-3 -ml-3 w-72 bg-white shadow z-10 transition-all opacity-0 group-hover:opacity-100">
-                <a href="/seminaire-conference/jseb" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100"> JSEB
+                class="hidden absolute z-10 mt-3 -ml-3 w-72 bg-white shadow opacity-0 transition-all group-hover:block group-hover:opacity-100">
+                <a href="/seminaire-conference/jseb" class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100"> JSEB
                 </a>
               </div>
             </div>
           </div>
 
           <div class="relative group">
-            <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-3">
+            <div class="py-3 px-3 text-white transition-all cursor-pointer hover:text-black group-hover:bg-bj-yellow">
               <span class="font-medium">Candidature</span>
               <div
                 class="hidden absolute group-hover:block mt-3 -ml-2 w-72 -translate-x-[57.5%] bg-white shadow z-10 transition-all opacity-0 group-hover:opacity-100">
-                <a href="" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+                <a href="" class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100">
                  Candidature JSEB 
                 </a>
                 <a href="/opportunites/appel-a-candidature"
-                  class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+                  class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100">
                   Candidature RAPEF 
                 </a>
               </div>
@@ -182,14 +182,14 @@ function toogleMenu() {
           </div>
 
           <div class="relative group">
-            <div class="group-hover:bg-bj-yellow text-white transition-all hover:text-black cursor-pointer py-3 px-3">
+            <div class="py-3 px-3 text-white transition-all cursor-pointer hover:text-black group-hover:bg-bj-yellow">
               <span class="font-medium">Contact</span>
               <div
                 class="hidden absolute group-hover:block mt-3 -ml-2 w-72 -translate-x-[70.5%] bg-white shadow z-10 transition-all opacity-0 group-hover:opacity-100">
-                <a href="/contact" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+                <a href="/contact" class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100">
                   Contatez-nous
                 </a>
-                <a href="/contact/ecrire-dg" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+                <a href="/contact/ecrire-dg" class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100">
                   Ecrire au DG
                 </a>
               </div>
@@ -199,14 +199,14 @@ function toogleMenu() {
 
         </nav>
         <span class="cursor-pointer">
-          <ClaritySearchLine class="h-5 w-5" />
+          <ClaritySearchLine class="w-5 h-5" />
         </span>
       </div>
     </div>
 
   </div>
 
-  <div class="fixed pinset-y-0 max-h-screen z-[80]">
+  <div class="fixed max-h-screen pinset-y-0 z-[80]">
     <ResponsiveMenu :menu-state="showMenu" />
   </div>
 </template>

@@ -8,7 +8,7 @@
 
   <PageBanner title="RAPEF"/>
 
-  <div class="flex flex-col justify-center items-center gap-12 my-20 lg:container mx-auto">
+  <div class="flex flex-col gap-12 justify-center items-center my-20 mx-auto lg:container">
 
   </div>
 

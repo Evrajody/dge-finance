@@ -17,16 +17,8 @@ function scrollToTop() {
 }
 
 function handleBtn(e) {
-   if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-      showTopBtn.value = true
-   } else {
-      showTopBtn.value = false
-   }
+  showTopBtn.value = document.body.scrollTop > 800 || document.documentElement.scrollTop > 800;
 }
-
-
-
-
 
 onMounted(() => {
 
@@ -50,17 +42,16 @@ onMounted(() => {
       <Navbar />
    </div>
 
-
    <main>
       <div class="py-8 md:py-16 lg:py-14"></div>
       <RouterView></RouterView>
    </main>
 
    <div id="scrollbtn" v-if="showTopBtn"
-      class="flex transition-all items-end justify-end fixed bottom-0 right-0 mb-4 mr-4 z-10">
+      class="flex fixed right-0 bottom-0 z-10 justify-end items-end mr-4 mb-4 transition-all">
       <div>
          <a @click.prevent="scrollToTop" href="#"
-            class="grid place-items-center text-white bg-bj-green y h-12 w-12 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110">
+            class="grid place-items-center w-12 h-12 text-white rounded-full shadow transition-all transform hover:shadow-lg hover:scale-110 bg-bj-green y">
             <MaterialSymbolsArrowUpward />
          </a>
       </div>

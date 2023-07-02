@@ -27,14 +27,14 @@ const mission = ref([
     <PageBanner title="Mission" />
 
 
-    <div class="row container mx-auto relative mt-20" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+    <div class="container relative mx-auto mt-20 row" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
 
-      <div class="absolute md:-top-6 -top-12 -left-7 md:-left-5 grid place-items-center h-20 w-20 bg-finance-gray rounded-full">
+      <div class="grid absolute -left-7 -top-12 place-items-center w-20 h-20 rounded-full md:-left-5 md:-top-6 bg-finance-gray">
         <OcticonQuote />
       </div>
 
-      <div class="bg-finance-blue rounded-none sm:rounded-lg px-5 sm:px-12 py-10 w-full">
-        <span class=" text-sm md:text-lg text-white font-semibold leading-normal">
+      <div class="py-10 px-5 w-full rounded-none sm:px-12 sm:rounded-lg bg-finance-blue">
+        <span class="text-sm font-semibold leading-normal text-white md:text-lg">
           Conformément aux dispositions de l’article n°24 du décret n° 2021-757 du 09 juin 2021 portant attributions,
           organisation et fonctionnement du Ministère de l’Economie et des Finances , la Direction Générale de l’Economie
           (DGE) est chargée :
@@ -52,11 +52,11 @@ const mission = ref([
           <section class="bg-white w-full sm:w-[80%]">
   
             <article class="" v-for="item in mission">
-              <div class="h-full transition relative mission-item">
+              <div class="relative h-full transition mission-item">
   
                 <header
-                  class="bg-white flex-col sm:flex-row sm:items-center p-5 px-8 cursor-pointer hover:bg-finance-gray transition">
-                  <span class="text-indigo text-sm text-finance-plot text-justify font-medium text-md">
+                  class="flex-col p-5 px-8 bg-white transition cursor-pointer sm:flex-row sm:items-center hover:bg-finance-gray">
+                  <span class="text-sm font-medium text-justify text-indigo text-finance-plot text-md">
                     {{ item.content }}
                   </span>
                 </header>

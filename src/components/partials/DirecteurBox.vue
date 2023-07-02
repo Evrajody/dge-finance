@@ -7,7 +7,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <figure class="snip1165 max-w-md">
+  <figure class="max-w-md snip1165">
     <img :src="directeur.image" class="object-cover object-center w-full" alt="directeur-image" />
     <figcaption class="flex flex-col items-center">
       <h3 class="flex space-x-2">
@@ -16,11 +16,11 @@ const props = defineProps({
       </h3>
 
       <div class="">
-        <p class="text-center text-lg font-semibold leading-8" v-text="directeur.titre"> </p>
+        <p class="text-lg font-semibold leading-8 text-center" v-text="directeur.titre"> </p>
       </div>
 
       <div class="">
-        <p class="text-xl text-finance-blue text-center font-extrabold" v-text="directeur.periode"> </p>
+        <p class="text-xl font-extrabold text-center text-finance-blue" v-text="directeur.periode"> </p>
       </div>
 
     </figcaption>

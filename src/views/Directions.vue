@@ -68,12 +68,12 @@ function setCurrentTab(index) {
 <template>
   <PageBanner title="Directions" />
 
-  <div class="flex flex-col justify-center items-center gap-12 my-20 lg:container mx-auto">
+  <div class="flex flex-col gap-12 justify-center items-center my-20 mx-auto lg:container">
 
     <ul
       class="grid grid-flow-col items-center justify-center space-x-10 w-full lg:w-[90%] text-center border-b border-gray-200 text-finance-late">
       <li @click="setCurrentTab(index)" v-for="item, index in directions" :class="{'active': currentTab == index}" class="border-b-2 border-transparent hover:border-finance-blue">
-        <a href="#" class="flex  py-4">
+        <a href="#" class="flex py-4">
         {{ item.nom }}
         </a>
       </li>
@@ -81,16 +81,16 @@ function setCurrentTab(index) {
 
     <div class="tab-content w-full lg:w-[90%]">
 
-      <div class="w-full gap-8 grid grid-cols-1 items-center place-items-center md:grid-cols-2 px-5">
+      <div class="grid grid-cols-1 gap-8 items-center place-items-center px-5 w-full md:grid-cols-2">
 
         <div v-for="item in directions[currentTab].directions" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
-          class="self-stretch w-full card-finance rounded-md object-fill object-bottom shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-          <div class="px-4 py-4 flex flex-col justify-between h-full mask">
+          class="object-fill object-bottom overflow-hidden self-stretch w-full rounded-md shadow-md transition-shadow duration-300 hover:shadow-lg card-finance">
+          <div class="flex flex-col justify-between py-4 px-4 h-full mask">
             <h2 class="text-xl font-bold text-white"> {{item.nom }}</h2>
 
-            <div class="mt-4 flex justify-end items-center">
+            <div class="flex justify-end items-center mt-4">
               <a :href="item.link"
-                class="bg-white flex items-center gap-2 text-black text-sm font-medium px-4 py-2 rounded-md hover:bg-gray-50 transition-colors duration-300">
+                class="flex gap-2 items-center py-2 px-4 text-sm font-medium text-black bg-white rounded-md transition-colors duration-300 hover:bg-gray-50">
                 <IcRoundRemoveRedEye />
                 Détails
               </a>

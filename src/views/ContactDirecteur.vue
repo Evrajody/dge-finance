@@ -18,7 +18,7 @@ const directeur = ref({
 <template>
   <PageBanner title="Ecrire au DG" />
 
-  <div class="flex flex-col-reverse lg:flex-row items-start justify-center lg:space-y-12 my-20 lg:container mx-auto md:px-3 lg:px-16">
+  <div class="flex flex-col-reverse justify-center items-start my-20 mx-auto md:px-3 lg:container lg:flex-row lg:px-16 lg:space-y-12">
 
     <ContactForm />
 

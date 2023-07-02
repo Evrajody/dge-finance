@@ -14,16 +14,16 @@ onMounted(() => {
 </script>
 <template>
   <div data-aos="fade-up" data-aos-anchor-placement="top-bottom"
-    class="max-w-md self-stretch w-full card-finance rounded-md object-fill object-bottom shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+    class="object-fill object-bottom overflow-hidden self-stretch w-full max-w-md rounded-md shadow-md transition-shadow duration-300 hover:shadow-lg card-finance">
     <img :src="article.media" alt="Aperçu de l'article"
-      class="w-full h-48 object-cover">
-    <div class="px-4 py-4 mask flex h-full flex-col">
+      class="object-cover w-full h-48">
+    <div class="flex flex-col py-4 px-4 h-full mask">
       <h2 class="text-lg font-bold text-white line-clamp-2" v-text="article.title"></h2>
-      <p class="text-white text-sm leading-6 line-clamp-3 mt-2" v-text="article.summary"></p>
-      <p class="text-white text-sm italic mt-2"> 12 Juin 2023 </p>
-      <div class="mt-4 flex justify-between items-center">
+      <p class="mt-2 text-sm leading-6 text-white line-clamp-3" v-text="article.summary"></p>
+      <p class="mt-2 text-sm italic text-white"> 12 Juin 2023 </p>
+      <div class="flex justify-between items-center mt-4">
         <a href="/articles"
-          class="bg-bj-yellow text-black text-sm font-medium px-4 py-2 rounded-md hover:bg-yellow-600 transition-colors duration-300">Lire
+          class="py-2 px-4 text-sm font-medium text-black rounded-md transition-colors duration-300 hover:bg-yellow-600 bg-bj-yellow">Lire
           plus
         </a>
 
@@ -31,7 +31,7 @@ onMounted(() => {
 
       </div>
     </div>
-    <!-- <div class="mask h-1 w-full transition-all duration-300"></div> -->
+    <!-- <div class="w-full h-1 transition-all duration-300 mask"></div> -->
   </div>
 </template>
 

@@ -2,21 +2,19 @@
 <script setup>
 
 import $ from 'jquery'
-import tippy from 'tippy.js'
-import 'tippy.js/dist/tippy.css'; 
 import orgchart from 'orgchart'
 import 'orgchart/dist/css/jquery.orgchart.min.css'
-import IcOutlineFileDownload from "../assets/images/IcOutlineFileDownload.vue";
 import { onMounted, ref } from "vue";
 import PageBanner from "../components/partials/PageBanner.vue";
+import OrgTree from '../components/partials/OrgTree.vue';
 
 
 
 var nodeTemplate = function (data) {
   return `
-        <div class="content relative group" id="${data.sigle}">
+        <div class="relative content group" id="${data.sigle}">
           ${data.sigle}
-          <div class="px-3 hidden detail absolute w-max bg-finance-gray z-30 -bottom-6 text-finance-blue"> 
+          <div class="hidden absolute -bottom-6 z-30 px-3 w-max detail bg-finance-gray text-finance-blue"> 
             ${data.definition}
           </div>
         </div>
@@ -26,12 +24,12 @@ var nodeTemplate = function (data) {
 
 const organigrammeDge = ref({
   sigle: 'DGE',
-  definition: 'Directeur Général de l’Économie;',
+  definition: 'Directeur Général de l’Économie',
   children: [
 
     {
       sigle: 'DGAE',
-      definition: 'Directeur Général Adjoint de l’Économie;',
+      definition: 'Directeur Général Adjoint de l’Économie',
       children: [
         // {
         //   sigle: 'Conseillers/DGE',
@@ -42,7 +40,6 @@ const organigrammeDge = ref({
         //   sigle: 'SP/DGE',
         //   definition: 'Secrétariat Particulier du Directeur Général de l’Économie;',
         // },
-
         {
           sigle: "DPC",
           definition: "Direction de la Prévision et de la Conjoncture",
@@ -193,118 +190,9 @@ const organigrammeDge = ref({
 
 })
 
-const sigles = ref([
-
-  {
-    abbr: "DIER",
-    definition: "Direction de l’Intégration Économique Régionale;"
-  },
-
-  {
-    abbr: "DSPSSEL",
-    definition: "Direction du Suivi des Politiques Sectorielles, Sociales et des Économies Locales;"
-  },
-
-  {
-    abbr: "DPC",
-    definition: "Direction de la Prévision et de la Conjoncture;"
-  },
-
-  {
-    abbr: "DPCE",
-    definition: "Direction de la Promotion et de la Coopération Economiques;"
-  },
-
-  {
-    abbr: "DRES",
-    definition: "Direction de la Recherche et des Études Stratégiques;"
-  },
-
-  {
-    abbr: "DGR",
-    definition: "Direction de la Gestion des Ressources;"
-  },
-  {
-    abbr: "SES",
-    definition: "Service des Études Stratégiques;"
-  },
-  {
-    abbr: "SMR",
-    definition: "Service de la Modélisation et de la Recherche;"
-  },
-
-  {
-    abbr: "SSAPS",
-    definition: "Service de Suivi et d’Analyse des Performances Sectorielles;"
-  },
-
-  {
-    abbr: "SSPEL",
-    definition: "Service de Suivi des politiques Économiques Locales;"
-  },
-
-  {
-    abbr: "SSPS",
-    definition: "Service de Suivi des Politiques Sociales;"
-  },
-
-  {
-    abbr: "SPSC",
-    definition: "Service des Politiques Sectorielles Communautaires;"
-  },
-
-  {
-    abbr: "SEC",
-    definition: "Service des Échanges Commerciaux;"
-  },
-  {
-    abbr: "SSIC",
-    definition: "Service de Suivi des Institutions Communautaires;"
-  },
-
-  {
-    abbr: "SRH",
-    definition: "Service des Ressources Humaines"
-  },
-  {
-    abbr: "SRFM",
-    definition: "Service des Ressources Financières et du Matériel;"
-  },
-  {
-    abbr: "SSI",
-    definition: "Services des Systèmes de l’Information;"
-  },
-  {
-    abbr: "SPEF",
-    definition: "Service de la Programmation Économique et Financière;"
-  },
-  {
-    abbr: "SSBAC",
-    definition: "Service du Suivi Budgétaire et de l’Analyse Conjoncturelle;"
-  },
-  {
-    abbr: "SSSSM",
-    definition: "Service des Statistiques et du Suivi de la Surveillance Multilatérale;"
-  },
-  {
-    abbr: "SSASP",
-    definition: "Service du Suivi et d’Accompagnement du Secteur Privé;"
-  },
-  {
-    abbr: "SRSAI",
-    definition: "Service de la Réglementation et du Suivi des Accords Internationaux;"
-  },
-  {
-    abbr: "SAPE",
-    definition: "Service des Actions de Promotion Économique;"
-  }
-])
-
 
 onMounted(() => {
-
-
-
+  
   $('#organigramme').orgchart({
     'data': organigrammeDge.value,
     'verticalLevel': 4,
@@ -337,9 +225,11 @@ onMounted(() => {
   <main class="">
     <PageBanner title="Organigramme" />
 
-    <div class="mx-auto container" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-      <div class="flex flex-col items-center justify-center py-28">
-        <div class="card w-full grid place-content-center" id="organigramme"></div>
+    <div class="container mx-auto" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+      <div class="flex flex-col justify-center items-center py-28">
+        <div class="grid place-content-center w-full card" id="organigramme"></div>
+
+        
       </div>
     </div>
 

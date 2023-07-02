@@ -8,16 +8,16 @@ import PageBanner from '../components/partials/PageBanner.vue';
 <template>
   <PageBanner title="Contact" />
 
-  <div class="flex flex-col lg:flex-row lg:space-x-12 my-20 lg:container mx-auto lg:px-16">
+  <div class="flex flex-col my-20 mx-auto lg:container lg:flex-row lg:px-16 lg:space-x-12">
 
     <ContactForm />
 
-    <div class="informations px-5 md:px-0">
+    <div class="px-5 md:px-0 informations">
 
       <div class="addr">
-        <h3 class="text-lg font-semibold text-finance-late py-10"> Adresse : </h3>
+        <h3 class="py-10 text-lg font-semibold text-finance-late"> Adresse : </h3>
 
-        <p class="flex w-full flex-col space-y-6">
+        <p class="flex flex-col space-y-6 w-full">
 
           <span class="font-medium text-finance-late"> 302 Route de l’Aéroport </span>
 
@@ -29,18 +29,18 @@ import PageBanner from '../components/partials/PageBanner.vue';
 
       <div class="contact">
 
-        <h3 class="text-lg font-semibold text-finance-late py-10"> Contact : </h3>
+        <h3 class="py-10 text-lg font-semibold text-finance-late"> Contact : </h3>
 
-        <div class="flex w-full flex-col space-y-6">
+        <div class="flex flex-col space-y-6 w-full">
 
           <div class="font-medium text-finance-late">
             <span> Téléphone : </span>
-            <span class="text-red-500 font-medium"> (+229) 21 30 37 67 </span>
+            <span class="font-medium text-red-500"> (+229) 21 30 37 67 </span>
           </div>
 
           <div class="font-medium text-finance-late">
             <span > Email : </span>
-            <span class="text-red-500 font-medium"> info@dgae.finances.bj </span>
+            <span class="font-medium text-red-500"> info@dgae.finances.bj </span>
           </div>
 
           <span class="font-medium text-finance-late"> Du Lundi au Vendredi à partir de 8h </span>

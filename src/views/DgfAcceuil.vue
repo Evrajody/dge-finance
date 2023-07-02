@@ -35,7 +35,7 @@ import Mesure from '../components/partials/Mesure.vue';
 
   <div class="fin-actualites bg-finance-gray">
     <div
-      class="sm:container mx-auto w-full gap-8 grid grid-cols-1 items-center place-items-center md:grid-cols-2 lg:grid-cols-3 py-5 px-4">
+      class="grid grid-cols-1 gap-8 items-center place-items-center py-5 px-4 mx-auto w-full sm:container md:grid-cols-2 lg:grid-cols-3">
       <ArticleBox :article="item" v-for="item, index  in fakeArticle.filter((a) => a._score < 8 )" />
     </div>
   </div>

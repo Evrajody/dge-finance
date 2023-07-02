@@ -12,26 +12,26 @@ import { fakeArticle } from '../data/article';
 
     <ArticleBanner :title="fakeArticle[9].title" :image="fakeArticle[5].media" />
 
-    <div class="lg:container mx-auto my-20">
+    <div class="my-20 mx-auto lg:container">
 
-      <div class="flex flex-col gap-10 lg:gap-0 lg:flex-row">
+      <div class="flex flex-col gap-10 lg:flex-row lg:gap-0">
 
         <div class="px-5 w-full lg:max-w-[60%]">
 
-          <div class="py-3 flex flex-wrap gap-3 border-b-2 border-dashed border-b-gray-300">
+          <div class="flex flex-wrap gap-3 py-3 border-b-2 border-dashed border-b-gray-300">
 
-            <div class="pub flex gap-2">
+            <div class="flex gap-2 pub">
               <span class="text-sm font-semibold text-red-400"> Publié le : </span>
               <span class="text-sm"> 12/05/2002 </span>
 
             </div>
 
-            <div class="pub flex gap-2">
+            <div class="flex gap-2 pub">
               <span class="text-sm font-semibold text-red-400"> Catégorie : </span>
               <span class="text-sm">Economie</span>
             </div>
 
-            <div class="pub flex gap-2">
+            <div class="flex gap-2 pub">
               <span class="text-sm font-semibold text-red-400"> Auteur : </span>
               <span class="text-sm">Ben Carter</span>
             </div>
@@ -39,7 +39,7 @@ import { fakeArticle } from '../data/article';
 
           </div>
 
-          <div class="text-finance-plot mt-3 text-justify">
+          <div class="mt-3 text-justify text-finance-plot">
             <div class="post-content cf entry-content content-spacious">
 
 
@@ -53,11 +53,11 @@ import { fakeArticle } from '../data/article';
 
 
 
-              <hr class="wp-block-separator has-alpha-channel-opacity my-5">
+              <hr class="my-5 wp-block-separator has-alpha-channel-opacity">
 
 
 
-              <h2 class="wp-block-heading my-5"><strong>Wave est titulaire d’un agrément de monnaie électronique. Quels
+              <h2 class="my-5 wp-block-heading"><strong>Wave est titulaire d’un agrément de monnaie électronique. Quels
                   sont
                   les principaux services que vous proposez?</strong></h2>
 
@@ -94,29 +94,29 @@ import { fakeArticle } from '../data/article';
 
         </div>
 
-        <div class="order-articles flex flex-col space-y-6 flex-1 px-3">
+        <div class="flex flex-col flex-1 px-3 space-y-6 order-articles">
 
           <div class="">
-            <div class="py-3 flex px-4  justify-between items-center mask">
-              <h3 class="text-white font-extrabold text-2xl"> Autres Articles </h3>
+            <div class="flex justify-between items-center py-3 px-4 mask">
+              <h3 class="text-2xl font-extrabold text-white"> Autres Articles </h3>
               <SolarRoundArrowRightOutline />
             </div>
           </div>
 
 
-          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class=" flex gap-3 w-full bg-finance-gray shadow border-b-4 border-b-finance-blue" v-for="i, index in 6">
-            <div class="image w-24 h-24">
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="flex gap-3 w-full border-b-4 shadow bg-finance-gray border-b-finance-blue" v-for="i, index in 6">
+            <div class="w-24 h-24 image">
 
               <img :src="fakeArticle[index].media" class="w-full h-full" alt="">
             </div>
 
-            <div class="title flex flex-col justify-center space-y-2 flex-1 ">
+            <div class="flex flex-col flex-1 justify-center space-y-2 title">
               <span class="text-sm font-bold text-finance-late line-clamp-2"> {{ fakeArticle[index].title }} </span>
 
-              <div class=" w-full flex justify-between text-sm font-medium">
-                <a href="#" class="text-bj-green ">Lire l'article</a>
+              <div class="flex justify-between w-full text-sm font-medium">
+                <a href="#" class="text-bj-green">Lire l'article</a>
 
-                <span class="px-3 text-finance-late text-xs">12/03/2023</span>
+                <span class="px-3 text-xs text-finance-late">12/03/2023</span>
 
               </div>
 
