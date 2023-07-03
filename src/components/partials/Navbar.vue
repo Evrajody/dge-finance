@@ -102,12 +102,11 @@ function toogleMenu() {
       <div class="container flex justify-between items-center mx-auto text-white">
         <nav class="flex flex-1 justify-center items-center">
 
-          <div class="relative group">
+          <div class="relative items-stretch group">
             <div class="py-3 px-3 text-white transition-all cursor-pointer hover:text-black group-hover:bg-bj-yellow">
               <a href="/presentation/actualites" class="font-medium">Actualités</a>
             </div>
           </div>
-
 
           <div class="relative group">
             <div class="py-3 px-3 text-white transition-all cursor-pointer hover:text-black group-hover:bg-bj-yellow">

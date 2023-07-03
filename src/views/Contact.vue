@@ -43,7 +43,7 @@ import PageBanner from '../components/partials/PageBanner.vue';
             <span class="font-medium text-red-500"> info@dgae.finances.bj </span>
           </div>
 
-          <span class="font-medium text-finance-late"> Du Lundi au Vendredi à partir de 8h </span>
+          <span class="font-medium text-finance-late"> Du Lundi au Vendredi à partir de <br> 8h à 12h / 14h à 17h30 </span>
 
         </div>
     </div>

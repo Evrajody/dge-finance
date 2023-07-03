@@ -2,7 +2,7 @@
   import ArticleBox from '../components/partials/ArticleBox.vue';
   import PageBanner from '../components/partials/PageBanner.vue';
   import { fakeArticle } from '../data/article'
-
+  import Pagination from '../components/partials/Pagination.vue';
 
 </script>
 
@@ -17,6 +17,10 @@
 
           <ArticleBox :article="item" v-for="item, index in fakeArticle" />
 
+      </div>
+
+      <div class="px-4">
+        <Pagination/>
       </div>
 
     </div>

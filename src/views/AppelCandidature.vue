@@ -11,8 +11,6 @@ import TablerCalendarCheck from '../components/icons/TablerCalendarCheck.vue'
 <template>
   <PageBanner title="Appel à Candidature" />
 
-  <!-- -->
-
   <div class="flex flex-col px-3 my-10 mx-auto lg:flex-row lg:space-x-10 xl:container">
 
     <div class="w-full lg:w-4/12">
@@ -77,7 +75,7 @@ import TablerCalendarCheck from '../components/icons/TablerCalendarCheck.vue'
 
         <div class="px-4 content">
 
-          <span class="text-sm font-semibold leading-5 text-finance-late line-clamp-3">
+          <span class="text-sm font-semibold leading- text-finance-late line-clamp-3">
             Travaux de mise en œuvre des plans d'aménagement de gestion simplifiée (PAGS) ABOMEY PARAKOU
           </span>
 

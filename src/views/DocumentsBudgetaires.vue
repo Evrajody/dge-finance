@@ -1,6 +1,37 @@
 <script setup>
 import PageBanner from '../components/partials/PageBanner.vue';
 import MaterialSymbolsDownloadRounded from '../components/icons/MaterialSymbolsDownloadRounded.vue'
+import Pagination from '../components/partials/Pagination.vue'
+import { reactive } from 'vue';
+import IcRoundRemoveRedEye from '../components/icons/IcRoundRemoveRedEye.vue';
+
+const documents = reactive([
+  {
+    title: 'Transformation structurelle et emploi en ASS : une analyse par approche de seuil',
+    auteur: 'Yves ESSEHOU & Charlemagne B. IGUE'
+  },
+
+  {
+    title: 'Courbe environnementale de Kuznets : un réexamen des canaux de transmission dans les pays en développement',
+    auteur: 'Rock VODA & Jude EGGOH'
+  },
+
+  {
+    title: 'Effet des investissements directs étrangers sur les émissions du méthane dans les pays de l’Afrique de l’Ouest',
+    auteur: 'Roch Edgard GBINLO'
+  },
+
+  {
+    title: 'Efficacité énergétique et performance économique en Afrique : rôle des institutions',
+    auteur: 'Alastaire S. ALINSATO & Madeleine ALLAKONON'
+  },
+
+  {
+    title: 'L’accès au crédit explique-t-il l’adoption de la pluriactivité des agriculteurs au Bénin ?',
+    auteur: 'Kolotioloman SORO & Ogounoké Marcel IFECRO'
+  },
+
+])
 
 
 </script>
@@ -48,47 +79,60 @@ import MaterialSymbolsDownloadRounded from '../components/icons/MaterialSymbolsD
 
   <div class="container px-5 my-20 mx-auto space-y-5 lg:px-20">
 
-    <aside class="flex flex-col justify-evenly items-start p-3 space-y-5 rounded-md lg:flex-row lg:items-center lg:space-y-0 mask"
-      v-for="i in 10">
+    <aside data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="flex relative flex-col items-start space-y-5 space-x-4 rounded-md lg:flex-row lg:items-center lg:space-y-0 mask"
+      v-for="i in documents">
 
-      <div class="w-20 h-20 bg-white thumbs">
-        <img class="w-full h-full" src="https://api.iconify.design/mdi:file-download-outline.svg?color=%23888888" alt="">
+      <div class="grid place-content-center w-36 h-32 rounded-l-md bg-finance-late thumbs">
+         <span class="px-3 font-bold text-center text-white uppercase">
+           Document budgétaire
+         </span>
       </div>
 
-      <div class="flex justify-end">
-        <div class="flex flex-col gap-1 justify-end text-white">
-          <span class="text-xs">Publié le 17.01.2023</span>
-          <span class="block text-sm"><b class="">694 Ko</b></span>
-          <span class="block text-sm"><b class="text-sm semibold">330</b> Lectures</span>
-          <span class="block text-sm"><b class="text-sm semibold">2340</b> Téléchargements</span>
+      <div class="flex self-stretch divide-y-4 divide-red-300">
+        <div class="flex flex-col justify-center space-y-2 text-white">
+          <span class="block text-xs"><b class="text-sm">694</b> ko</span>
+          <span class="block text-xs"><b class="text-sm semibold">330</b> Lectures</span>
+          <span class="block text-xs"><b class="text-sm semibold">2340</b> Téléchargements</span>
         </div>
       </div>
 
-      <div class="tile">
-        <span class="max-w-md font-extrabold leading-6 text-white line-clamp-5">
-          Randis DEGBESSOU & Rose FIAMOHE – Déterminants de la volatilité des prix agricoles dans l’espace UEMOA
-        </span>
+      <div class="flex flex-col flex-1 justify-center self-stretch space-y-2 tile">
+
+        <div class="max-w-md font-extrabold leading-6 text-white line-clamp-4">
+         {{ i.title }}
+        </div>
+
+        <div class="text-sm text-white">
+          <span> Auteur: </span>
+          <span class="text-sm italic font-semibold"> {{ i.auteur }} </span>
+        </div>
+
       </div>
 
-      <div class="flex gap-5 justify-end leading">
-        <a href=""
-          class="grid place-items-center py-2 px-3 text-sm font-medium bg-opacity-5 rounded-md bg-bj-yellow">
-          Lire le document
+      <div class="flex justify-end self-end p-2 space-x-3">
+        <a href="" class="flex items-center py-2 px-3 space-x-2 text-sm font-medium bg-opacity-5 rounded-md bg-bj-yellow">
+          <IcRoundRemoveRedEye />
+          <span>Lire le document</span>
         </a>
 
         <a href="#"
-          class="flex gap-2 items-center py-2 px-4 text-sm font-medium text-black bg-white rounded-md transition-colors duration-300 hover:bg-gray-50">
+          class="flex items-center py-2 px-4 space-x-2 text-sm font-medium text-black bg-white rounded-md transition-colors duration-300 hover:bg-gray-50">
           <MaterialSymbolsDownloadRounded />
-          Télecharger
+         <span>Télecharger</span>
         </a>
 
       </div>
 
+      <span class="absolute top-3 right-3 px-3 text-sm font-medium rounded-md bg-finance-gray"> 12/12/2023 </span>
+
     </aside>
+
+    <div class=''>
+      <Pagination />
+    </div>
 
   </div>
 </template>
 
 
-<style>
-</style>
+<style></style>

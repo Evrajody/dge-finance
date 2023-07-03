@@ -14,9 +14,9 @@ import { fakeArticle } from '../data/article';
 
     <div class="my-20 mx-auto lg:container">
 
-      <div class="flex flex-col gap-10 lg:flex-row lg:gap-0">
+      <div class="flex flex-col space-y-6 lg:flex-row lg:gap-0 lg:space-x-6">
 
-        <div class="px-5 w-full lg:max-w-[60%]">
+        <div class="px-5 w-full lg:max-w-[68%]">
 
           <div class="flex flex-wrap gap-3 py-3 border-b-2 border-dashed border-b-gray-300">
 
@@ -128,8 +128,6 @@ import { fakeArticle } from '../data/article';
 
 
         </div>
-
-
 
       </div>
 

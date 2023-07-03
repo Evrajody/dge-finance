@@ -1,6 +1,6 @@
 <template>
   <div class="p-4 bg-white rounded-lg shadow-lg hover:shadow-xl">
-    <div class="flex items-center justify-between mb-4">
+    <div class="flex justify-between items-center mb-4">
       <div class="flex items-center">
         <div class="mr-2">
           <!-- Icone -->
@@ -42,11 +42,11 @@
       </div>
     </div>
     <!-- Date de publication -->
-    <p class="text-xs text-gray-500 mb-2">{{ publicationDate }}</p>
+    <p class="mb-2 text-xs text-gray-500">{{ publicationDate }}</p>
     <!-- Boutons de lecture et de téléchargement -->
     <div class="flex justify-end">
-      <button class="px-4 py-2 text-sm text-white bg-blue-500 hover:bg-blue-600 rounded-lg">Lire</button>
-      <button class="ml-2 px-4 py-2 text-sm text-white bg-green-500 hover:bg-green-600 rounded-lg">Télécharger</button>
+      <button class="py-2 px-4 text-sm text-white bg-blue-500 rounded-lg hover:bg-blue-600">Lire</button>
+      <button class="py-2 px-4 ml-2 text-sm text-white bg-green-500 rounded-lg hover:bg-green-600">Télécharger</button>
     </div>
   </div>
 </template>

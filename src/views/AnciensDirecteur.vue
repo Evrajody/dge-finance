@@ -121,7 +121,6 @@ const anciensDirecteur = ref([
     image: "https://www.dge.finances.bj/storage/2021/05/WhatsApp-Image-2019-02-25-at-09.51.48-300x300-1.jpeg"
   },
 
-
 ])
 
 
@@ -129,7 +128,7 @@ const anciensDirecteur = ref([
 </script>
 
 <template>
-  <main class="">
+
 
     <PageBanner title="Anciens Directeurs" />
 
@@ -146,5 +145,8 @@ const anciensDirecteur = ref([
 
     </div>
 
-  </main>
+    <div class="px-4">
+      <Pagination/>
+    </div>
+
 </template>
