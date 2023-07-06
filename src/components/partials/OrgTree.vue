@@ -82,15 +82,15 @@ export default {
 /* Ajoutez ici vos styles personnalisés si nécessaire */
 </style>
 
-<!-- <div class="fin-header flex">
+<!-- <div class="flex fin-header">
 
-  <div class="h-full w-1/4 pt-5 px-3">
-    <h3 class="font-semibold text-finance-blue text-xl py-3"> Nos indicateurs clés </h3>
+  <div class="px-3 pt-5 w-1/4 h-full">
+    <h3 class="py-3 text-xl font-semibold text-finance-blue"> Nos indicateurs clés </h3>
 
-    <div class="flex gap-3 flex-col">
-      <article class="flex items-center gap-4 rounded-lg bg-finance-blue p-4">
-        <span class="rounded-full bg-blue-100 p-3 ">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+    <div class="flex flex-col gap-3">
+      <article class="flex gap-4 items-center p-4 rounded-lg bg-finance-blue">
+        <span class="p-3 bg-blue-100 rounded-full">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"
             stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round"
               d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -104,9 +104,9 @@ export default {
         </div>
       </article>
 
-      <article class="flex items-center gap-4 rounded-lg bg-finance-blue p-4">
-        <span class="rounded-full bg-blue-100 p-3 ">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+      <article class="flex gap-4 items-center p-4 rounded-lg bg-finance-blue">
+        <span class="p-3 bg-blue-100 rounded-full">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"
             stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round"
               d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -121,9 +121,9 @@ export default {
       </article>
 
 
-      <article class="flex items-center gap-4 rounded-lg bg-finance-blue p-4">
-        <span class="rounded-full bg-blue-100 p-3 ">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+      <article class="flex gap-4 items-center p-4 rounded-lg bg-finance-blue">
+        <span class="p-3 bg-blue-100 rounded-full">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"
             stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round"
               d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -137,9 +137,9 @@ export default {
         </div>
       </article>
 
-      <article class="flex items-center gap-4 rounded-lg bg-finance-blue p-4">
-        <span class="rounded-full bg-blue-100 p-3 ">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+      <article class="flex gap-4 items-center p-4 rounded-lg bg-finance-blue">
+        <span class="p-3 bg-blue-100 rounded-full">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"
             stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round"
               d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -159,7 +159,7 @@ export default {
 
   </div>
 
-  <div class="h-full w-3/4 bg-finance-plot">
+  <div class="w-3/4 h-full bg-finance-plot">
     <Sliders />
   </div>
 

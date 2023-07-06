@@ -10,19 +10,19 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="bg-finance-blue bg-opacity-30 bg-blend-darken h-[500px]">
+  <div class="bg-opacity-30 bg-finance-blue bg-blend-darken h-[500px]">
 
-    <div class="container flex space-x-4 justify-center 2xl:mx-auto h-full">
+    <div class="container flex justify-center space-x-4 h-full 2xl:mx-auto">
 
       <div class="stat bg-red-400 pt-8 w-[45%]">
-        <h2 class="text-2xl font-bold text-white px-3">Nos indicateur clés</h2>
+        <h2 class="px-3 text-2xl font-bold text-white">Nos indicateur clés</h2>
 
       </div>
 
       <div class="flex items-center w-full h-full"
         :style="{ backgroundImage: `url(${props.slideImage})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }">
 
-        <div class="flex flex-col space-y-8 justify-center items-start max-w-2xl h-full">
+        <div class="flex flex-col justify-center items-start space-y-8 max-w-2xl h-full">
 
           <h2 class="py-8 text-2xl font-bold text-white sm:text-3xl slide-title md:leading-[3rem]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, hic.

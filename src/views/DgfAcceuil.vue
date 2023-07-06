@@ -47,22 +47,22 @@ const indicateursCle = reactive([
 <template>
   <!-- ENVISAGER UN RETRAIT DU SLIDER -->
 
-  <div class="fin-slider hidden">
+  <div class="hidden fin-slider">
     <Sliders />
   </div>
 
   <div class="fin-stats-sliders">
-    <div class="bg-finance-blue bg-opacity-80 bg-blend-darken h-[500px]">
+    <div class="h-full bg-opacity-80 bg-finance-blue bg-blend-darken xl:h-[500px]">
 
-      <div class="flex mx-auto">
+      <div class="flex flex-col-reverse mx-auto xl:flex-row">
 
-        <div class="stat bg-finance-blue bg-opacity-30 pt-4 w-full">
-          <h2 class="text-2xl font-bold text-white p-3">Nos indicateurs clés</h2>
+        <div class="pt-4 w-full bg-opacity-30 stat bg-finance-blue">
+          <h2 class="p-3 text-2xl font-bold text-white">Nos indicateurs clés</h2>
 
-          <div class="flex space-y-4 flex-col py-3 px-3">
+          <div class="flex flex-col py-3 px-3 space-y-4">
 
-            <article v-for="i, index in indicateursCle" class="flex items-center gap-4 px-2 py-4 bg-white">
-              <span class="rounded-full bg-blue-100 p-3 text-finance-blue font-semibold" v-html="i.icon"> 
+            <article v-for="i, index in indicateursCle" class="flex gap-4 items-center py-4 px-2 bg-white">
+              <span class="p-3 font-semibold bg-blue-100 rounded-full text-finance-blue" v-html="i.icon">
               </span>
 
               <div>
@@ -75,7 +75,7 @@ const indicateursCle = reactive([
 
         </div>
 
-        <div class="w-3/4 bg-green-800  h-full">
+        <div class="w-full h-full bg-green-800 xl:w-3/4">
           <Sliders />
         </div>
 
@@ -86,18 +86,18 @@ const indicateursCle = reactive([
 
   </div>
 
-  <div class="fin-stats hidden overflow-x-hidden">
+  <div class="hidden overflow-x-hidden fin-stats">
 
     <div class="flex -mx-3">
 
       <article v-for="i, index in indicateursCle" :class="`bg-opacity-${i.opacity}`"
-        class=" flex items-center justify-center bg-finance-blue -skew-x-12 flex-1 space-x-4 px-5 py-4">
-        <span class="rounded-full grid place-items-center skew-x-12 bg-white w-16 h-16 text-blue-600">
-          <p class="text-md font-semibold">{{ i.valeur }}</p>
+        class="flex flex-1 justify-center items-center py-4 px-5 space-x-4 -skew-x-12 bg-finance-blue">
+        <span class="grid place-items-center w-16 h-16 text-blue-600 bg-white rounded-full skew-x-12">
+          <p class="font-semibold text-md">{{ i.valeur }}</p>
         </span>
 
         <div class="skew-x-12">
-          <p class="text-sm text-white font-medium">{{ i.label }}</p>
+          <p class="text-sm font-medium text-white">{{ i.label }}</p>
         </div>
       </article>
 
