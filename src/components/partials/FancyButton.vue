@@ -33,7 +33,7 @@
  margin: 0;
  outline: none;
  overflow: visible;
- padding: 1.25em 2em;
+ padding: 1.2em;
  position: relative;
  text-align: center;
  text-decoration: none;
@@ -49,7 +49,7 @@
  height: 2px;
  background: #000;
  top: 50%;
- left: 1.5em;
+ left: 1em;
  position: absolute;
  transform: translateY(-50%);
  transform-origin: center;

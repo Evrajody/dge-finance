@@ -1,6 +1,6 @@
 <script setup>
 import SliderItem from '../partials/SliderItem.vue'
-import { Navigation, Pagination, Autoplay, EffectCoverflow, A11y } from 'swiper';
+import { Navigation, Pagination, Autoplay, A11y } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
@@ -8,35 +8,10 @@ import 'swiper/css/effect-fade'
 import 'swiper/css/autoplay'
 import 'swiper/css/navigation';
 
-import splitType from 'split-type'
-import gsap from 'gsap'
-
 import { onMounted, ref } from 'vue';
+import SliderItemMini from './SliderItemMini.vue';
 
-const anime = ref('')
-
- // const swiperSlide = useSwiperSlide();
-
- function handleSlide(params) {
-
-   //  const gsapTween = gsap.fromTo('.swiper-slide-active .char', 
-   //    {
-   //       y: 500,
-   //    },
-   //    {
-   //      y: 0,
-   //      stagger: 0.02,
- 
-   //    },
-
-
-   //   )
- }
-
- onMounted(() => {
-   // const splitedText = splitType.create('.slide-title')
-
- })
+ onMounted(() => { })
 
 const slidesContent = ref([
    {

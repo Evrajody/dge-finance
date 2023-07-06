@@ -18,7 +18,29 @@ const directions = ref([
       {
         nom: 'Directeur Général Adjoint',
         link: "/directeur-general-adjoint"
-      }
+      },
+
+      {
+        nom: 'Conseillers du Directeur Général de l\'Economie',
+        link: ""
+      },
+
+      {
+        nom: 'Assistant du Directeur Général de l\'Economie',
+        link: ""
+      },
+
+      {
+        nom: 'Sécretaire particulier du Directeur Général de l\'Economie',
+        link: ""
+      },
+
+      {
+        nom: 'Sécrétaire Administratif du Directeur Général de l\'Economie',
+        link: ""
+      },
+
+
     ]
   },
   {
@@ -28,7 +50,7 @@ const directions = ref([
         nom: "Direction de l’Intégration Économique Régionale (DIER)",
         link: "/direction-integration-economique-regional"
       },
-      
+
       {
         nom: "Direction de la Prévision et de la Conjoncture (DPC)",
         link: "/direction-prevision-conjoncture"
@@ -68,13 +90,51 @@ function setCurrentTab(index) {
 <template>
   <PageBanner title="Directions" />
 
-  <div class="flex flex-col gap-12 justify-center items-center my-20 mx-auto lg:container">
+
+  <div class="flex flex-col space-y-2 justify-center items-center my-20 mx-auto lg:container">
+
+    <div class="w-full lg:w-[90%] px-5" v-for="direction in directions">
+
+      <div class="directions-title text-center border-b border-gray-200 text-finance-late">
+        <span class="border-b-2 active text-lg border-transparent hover:border-finance-blue">
+          <a href="#" class="flex py-4">
+            {{ direction.nom }}
+          </a>
+        </span>
+      </div>
+
+      <div class="directions-content grid grid-cols-1 gap-8 items-center place-items-center py-5 w-full md:grid-cols-2">
+
+        <div v-for="item in direction.directions" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+          class="object-fill object-bottom overflow-hidden self-stretch w-full rounded-md shadow-md transition-shadow duration-300 hover:shadow-lg card-finance">
+          <div class="flex flex-col justify-between py-4 px-4 h-full mask">
+            <h2 class="text-xl font-bold text-white"> {{ item.nom }} </h2>
+
+            <div class="flex justify-end items-center mt-4">
+              <a :href="item.link"
+                class="flex space-x-2 items-center py-2 px-4 text-sm font-medium text-black bg-white rounded-md transition-colors duration-300 hover:bg-gray-50">
+                <IcRoundRemoveRedEye />
+                <span>Détails</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- <div class="flex flex-col gap-12 justify-center items-center my-20 mx-auto lg:container">
 
     <ul
       class="grid grid-flow-col items-center justify-center space-x-10 w-full lg:w-[90%] text-center border-b border-gray-200 text-finance-late">
-      <li @click="setCurrentTab(index)" v-for="item, index in directions" :class="{'active': currentTab == index}" class="border-b-2 border-transparent hover:border-finance-blue">
+      <li @click="setCurrentTab(index)" v-for="item, index in directions" :class="{ 'active': currentTab == index }"
+        class="border-b-2 border-transparent hover:border-finance-blue">
         <a href="#" class="flex py-4">
-        {{ item.nom }}
+          {{ item.nom }}
         </a>
       </li>
     </ul>
@@ -86,7 +146,7 @@ function setCurrentTab(index) {
         <div v-for="item in directions[currentTab].directions" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
           class="object-fill object-bottom overflow-hidden self-stretch w-full rounded-md shadow-md transition-shadow duration-300 hover:shadow-lg card-finance">
           <div class="flex flex-col justify-between py-4 px-4 h-full mask">
-            <h2 class="text-xl font-bold text-white"> {{item.nom }}</h2>
+            <h2 class="text-xl font-bold text-white"> {{ item.nom }}</h2>
 
             <div class="flex justify-end items-center mt-4">
               <a :href="item.link"
@@ -105,13 +165,12 @@ function setCurrentTab(index) {
 
     </div>
 
-  </div>
+  </div> -->
 
 </template>
 
 
 <style>
-
 .active {
   @apply border-b-2 border-finance-blue text-finance-blue font-extrabold
 }

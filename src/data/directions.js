@@ -301,7 +301,7 @@ export const directions = reactive([
       prenom: "M. Noukpo",
       nom: "HOMEGNON",
       image: "https://www.dge.finances.bj/storage/2022/07/IMG-20220721-WA0055.jpg",
-      titre: "Directeur de la Promotion et de la Coopération Economique (DPCE)",
+      titre: "Directeur de la Promotion et de la Coopération Economiques (DPCE)",
     },
     attributions: [
       {

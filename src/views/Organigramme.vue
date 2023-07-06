@@ -1,32 +1,29 @@
 
 <script setup>
 
-import $ from 'jquery'
-import orgchart from 'orgchart'
-import 'orgchart/dist/css/jquery.orgchart.min.css'
-import { onMounted, ref } from "vue";
-import PageBanner from "../components/partials/PageBanner.vue";
-import OrgTree from '../components/partials/OrgTree.vue';
+  import $ from 'jquery'
+  import orgchart from 'orgchart'
+  import 'orgchart/dist/css/jquery.orgchart.min.css'
+  import { computed, onMounted, ref } from "vue";
+  import PageBanner from "../components/partials/PageBanner.vue";
+  import OrgTree from '../components/partials/OrgTree.vue';
 
 
-
-var nodeTemplate = function (data) {
-  return `
-        <div class="relative content group" id="${data.sigle}">
-          ${data.sigle}
-          <div class="hidden absolute -bottom-6 z-30 px-3 w-max detail bg-finance-gray text-finance-blue"> 
-            ${data.definition}
+  var nodeTemplate = function (data) {
+    return `
+          <div class="relative content group" id="${data.sigle}">
+            ${data.sigle}
+            <div class="hidden absolute -bottom-6 z-30 px-3 w-max detail bg-finance-gray text-finance-blue"> 
+              ${data.definition}
+            </div>
           </div>
-        </div>
-      `;
-};
-
+        `;
+  };
 
 const organigrammeDge = ref({
   sigle: 'DGE',
   definition: 'Directeur Général de l’Économie',
   children: [
-
     {
       sigle: 'DGAE',
       definition: 'Directeur Général Adjoint de l’Économie',
@@ -192,7 +189,7 @@ const organigrammeDge = ref({
 
 
 onMounted(() => {
-  
+
   $('#organigramme').orgchart({
     'data': organigrammeDge.value,
     'verticalLevel': 4,
@@ -201,8 +198,11 @@ onMounted(() => {
     'nodeTemplate': nodeTemplate,
     'exportButtonName': 'Télécharger l\'organigramme',
     'exportFilename' : 'organigramme-dge-finance',
+    'toggleSiblingsResp': true,
     // 'zoom': true,
-     //'pan': true,
+    // 'zoomoutLimit': 0.1,
+    // 'zoominLimit': 1,
+    // 'pan': true,
     'createNode': function (node, data) {
 
       if (data.levelOffset) {
@@ -226,10 +226,8 @@ onMounted(() => {
     <PageBanner title="Organigramme" />
 
     <div class="container mx-auto" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-      <div class="flex flex-col justify-center items-center py-28">
-        <div class="grid place-content-center w-full card" id="organigramme"></div>
-
-        
+      <div class="flex flex-col justify-center items-center pb-14">
+        <div class="grid place-content-center mt-3" id="organigramme"></div>
       </div>
     </div>
 

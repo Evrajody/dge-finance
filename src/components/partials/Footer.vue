@@ -14,7 +14,7 @@
 
           <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="col-span-2 sm:col-span-1">
 
-            <p class="text-lg font-bold text-finance-blue">Présentations</p>
+            <p class="text-lg font-bold text-finance-blue">Présentation</p>
 
             <ul class="mt-6 space-y-4 text-sm">
               <li>

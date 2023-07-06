@@ -81,3 +81,127 @@ export default {
 <style>
 /* Ajoutez ici vos styles personnalisés si nécessaire */
 </style>
+
+<!-- <div class="fin-header flex">
+
+  <div class="h-full w-1/4 pt-5 px-3">
+    <h3 class="font-semibold text-finance-blue text-xl py-3"> Nos indicateurs clés </h3>
+
+    <div class="flex gap-3 flex-col">
+      <article class="flex items-center gap-4 rounded-lg bg-finance-blue p-4">
+        <span class="rounded-full bg-blue-100 p-3 ">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        </span>
+
+        <div>
+          <p class="text-sm text-white">Total Sales</p>
+          <p class="text-xl font-medium text-white">$240.94</p>
+
+        </div>
+      </article>
+
+      <article class="flex items-center gap-4 rounded-lg bg-finance-blue p-4">
+        <span class="rounded-full bg-blue-100 p-3 ">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        </span>
+
+        <div>
+          <p class="text-sm text-white">Total Sales</p>
+          <p class="text-xl font-medium text-white">$240.94</p>
+
+        </div>
+      </article>
+
+
+      <article class="flex items-center gap-4 rounded-lg bg-finance-blue p-4">
+        <span class="rounded-full bg-blue-100 p-3 ">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        </span>
+
+        <div>
+          <p class="text-sm text-white">Total Sales</p>
+          <p class="text-xl font-medium text-white">$240.94</p>
+
+        </div>
+      </article>
+
+      <article class="flex items-center gap-4 rounded-lg bg-finance-blue p-4">
+        <span class="rounded-full bg-blue-100 p-3 ">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        </span>
+
+        <div>
+          <p class="text-sm text-white">Total Sales</p>
+          <p class="text-xl font-medium text-white">$240.94</p>
+
+        </div>
+      </article>
+    </div>
+
+
+
+
+  </div>
+
+  <div class="h-full w-3/4 bg-finance-plot">
+    <Sliders />
+  </div>
+
+
+</div> -->
+
+
+<!-- <div class="flex flex-col gap-12 justify-center items-center my-20 mx-auto lg:container">
+
+  <ul
+    class="grid grid-flow-col items-center justify-center space-x-10 w-full lg:w-[90%] text-center border-b border-gray-200 text-finance-late">
+    <li @click="setCurrentTab(index)" v-for="item, index in directions" :class="{'active': currentTab == index}" class="border-b-2 border-transparent hover:border-finance-blue">
+      <a href="#" class="flex py-4">
+      {{ item.nom }}
+      </a>
+    </li>
+  </ul>
+
+  <div class="tab-content w-full lg:w-[90%]">
+
+    <div class="grid grid-cols-1 gap-8 items-center place-items-center px-5 w-full md:grid-cols-2">
+
+      <div v-for="item in directions[currentTab].directions" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+        class="object-fill object-bottom overflow-hidden self-stretch w-full rounded-md shadow-md transition-shadow duration-300 hover:shadow-lg card-finance">
+        <div class="flex flex-col justify-between py-4 px-4 h-full mask">
+          <h2 class="text-xl font-bold text-white"> {{item.nom }}</h2>
+
+          <div class="flex justify-end items-center mt-4">
+            <a :href="item.link"
+              class="flex gap-2 items-center py-2 px-4 text-sm font-medium text-black bg-white rounded-md transition-colors duration-300 hover:bg-gray-50">
+              <IcRoundRemoveRedEye />
+              Détails
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</div> -->

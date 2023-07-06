@@ -20,34 +20,15 @@ function toogleMenu() {
 
         <div class="flex justify-between items-center px-5">
 
-          <a href="https://finances.bj" class="hidden lg:block" rel="noreferrer" target="_blank">
+          <a href="/" class="hidden md:block">
             <div class="py-2 official-logo">
-              <img src="@/assets/images/official_logo.png" alt="" class="h-16" srcset="">
-            </div>
-          </a>
-
-          <a href="/" class="block lg:hidden">
-            <div class="py-2 official-logo">
-              <img src="@/assets/images/logo_dge_benin.png" alt="" class="h-16" srcset="">
+              <img src="@/assets/images/logo_dge_benin.png"  class="h-16" alt="" srcset="">
             </div>
           </a>
 
           <div class="hidden flex-col flex-1 justify-center self-stretch px-5 space-y-3 lg:flex simple-menu">
 
-            <!-- <div class="flex justify-end items-center self-stretch space-x-3 divide-x divide-finance-late">
-
-              <div class="text-xs font-medium hover:underline">
-                <a href="/presentation/actualites" class="uppercase"> Actualités </a>
-              </div>
-
-
-              <div class="pl-3 text-xs font-medium hover:underline">
-                <a href="/contact/ecrire-dg" class="uppercase"> Ecrire au DG </a>
-              </div>
-
-            </div> -->
-
-            <div class="flex justify-end self-stretch space-x-5 divide-x divide-finance-late">
+            <div class="flex justify-center self-stretch space-x-5 divide-x divide-finance-late">
 
 
               <div class="text-xs font-medium">
@@ -64,19 +45,17 @@ function toogleMenu() {
 
             </div>
 
-            <!-- <div class="text-xs font-medium hover:underline">
-              <a href="/opportunites/appel-a-candidature"> Marchés Publics </a>
-            </div> -->
-
-            <!-- <div class="text-xs font-medium hover:underline">
-              <a href="https://finances.bj"> Ministère </a>
-            </div> -->
-
           </div>
 
-          <a href="/" class="hidden md:block" rel="noreferrer" target="_blank">
+          <a href="https://finances.bj" class="hidden lg:block" rel="noreferrer" target="_blank">
             <div class="py-2 official-logo">
-              <img src="@/assets/images/logo_dge_benin.png"  class="h-16" alt="" srcset="">
+              <img src="@/assets/images/official_logo.png" alt="" class="h-16" srcset="">
+            </div>
+          </a>
+
+          <a href="/" class="block lg:hidden">
+            <div class="py-2 official-logo">
+              <img src="@/assets/images/logo_dge_benin.png" alt="" class="h-16" srcset="">
             </div>
           </a>
 
@@ -137,7 +116,7 @@ function toogleMenu() {
                 <a href="/publications/documents-budgetaires"
                   class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100"> Documents budgétaires </a>
                 <a href="/publications/documents-politiques-nationales"
-                  class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100"> Documents
+                  class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100"> Documents de
                   Politiques Nationales
                   (DPN)
                 </a>
@@ -147,7 +126,7 @@ function toogleMenu() {
                 <a href="/publications/infra-annuels" class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100">
                   Infra
                   annuels </a>
-                <a href="/publications/rapef" class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100"> RAPEF </a>
+                <!-- <a href="/publications/rapef" class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100"> RAPEF </a> -->
               </div>
             </div>
           </div>
@@ -166,8 +145,8 @@ function toogleMenu() {
 
           <div class="relative group">
             <div class="py-3 px-3 text-white transition-all cursor-pointer hover:text-black group-hover:bg-bj-yellow">
-              <span class="font-medium">Candidature</span>
-              <div
+              <span class="font-medium">RAPEF</span>
+              <!-- <div
                 class="hidden absolute group-hover:block mt-3 -ml-2 w-72 -translate-x-[57.5%] bg-white shadow z-10 transition-all opacity-0 group-hover:opacity-100">
                 <a href="" class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100">
                  Candidature JSEB 
@@ -176,7 +155,7 @@ function toogleMenu() {
                   class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100">
                   Candidature RAPEF 
                 </a>
-              </div>
+              </div> -->
             </div>
           </div>
 
