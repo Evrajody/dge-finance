@@ -19,6 +19,8 @@ import Contact from '../pages/Contact.vue';
 import ContactDirecteur from '../pages/ContactDirecteur.vue';
 import AppelCandidature from '../pages/AppelCandidature.vue';
 
+// LIST OF ROUTES
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
