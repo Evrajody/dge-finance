@@ -28,8 +28,7 @@ const title = useTitle("DGE | Accueil");
           <div class="flex flex-col py-3 px-3 space-y-4">
             <article
               v-for="(i, index) in store.getIndicateurCle"
-              class="flex gap-4 items-center py-4 px-2 bg-white"
-            >
+              class="flex gap-4 items-center py-4 px-2 bg-white">
               <span
                 class="p-3 font-semibold bg-blue-100 rounded-full text-finance-blue"
                 v-html="i.icon"
