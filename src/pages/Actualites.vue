@@ -1,10 +1,13 @@
 <script setup>
-  import ArticleBox from '../components/partials/ArticleBox.vue';
+  import { useTitle } from '@vueuse/core';
+import ArticleBox from '../components/partials/ArticleBox.vue';
   import PageBanner from '../components/partials/PageBanner.vue';
   import Pagination from '../components/partials/Pagination.vue';
-import { useArticlesStore } from '@/stores/articles';
+  import { useArticlesStore } from '@/stores/articles';
 
   const fakeArticle = useArticlesStore()
+  const title = useTitle("DGE | Actualités")
+
 
 </script>
 

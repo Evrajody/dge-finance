@@ -1,8 +1,13 @@
 <script setup>
-import ArticleBox from '../components/partials/ArticleBox.vue';
+
 import PageBanner from '../components/partials/PageBanner.vue';
 import DirecteurBox from '../components/partials/DirecteurBox.vue';
 import { ref } from 'vue';
+import { useTitle } from '@vueuse/core';
+import Pagination from '@/components/partials/Pagination.vue';
+
+const title = useTitle("DGE | Anciens Directeurs");
+
 
 const anciensDirecteur = ref([
   {

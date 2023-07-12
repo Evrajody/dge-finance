@@ -4,6 +4,9 @@ import PageBanner from '../components/partials/PageBanner.vue';
 
 import DirecteurBox from '../components/partials/DirecteurBox.vue';
 import { ref } from 'vue';
+import { useTitle } from '@vueuse/core';
+
+const title = useTitle("DGE | Ecrire au DG");
 
 
 const directeur = ref({

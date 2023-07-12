@@ -18,6 +18,7 @@ import Jseb from "../pages/Jseb.vue";
 import Contact from '../pages/Contact.vue';
 import ContactDirecteur from '../pages/ContactDirecteur.vue';
 import AppelCandidature from '../pages/AppelCandidature.vue';
+import Postulation from '../pages/Postulation.vue';
 
 // LIST OF ROUTES
 
@@ -35,6 +36,12 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: Index,
+    },
+
+    {
+      path: "/postuler",
+      name: "postuler",
+      component: Postulation,
     },
 
     {

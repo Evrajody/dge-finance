@@ -9,8 +9,11 @@ import NewletterAction from '@/components/partials/NewletterAction.vue'
 import { useIndicateurCle } from '@/stores/indicateurcle'
 import { useArticlesStore } from '@/stores/articles';
 import ArticleBox from '@/components/partials/ArticleBox.vue';
+import { useTitle } from '@vueuse/core'
 const store = useIndicateurCle()
 const articleStore = useArticlesStore()
+const title = useTitle("DGE | Accueil");
+
 </script>
 
 <template>
@@ -35,7 +38,9 @@ const articleStore = useArticlesStore()
 
               <div>
                 <p class="text-sm text-finance-plot">{{ i.label }}</p>
-                <p class="text-2xl font-semibold text-finance-plot">{{ i.valeur }}</p>
+               <p class="text-2xl font-semibold text-finance-plot">
+                 <vue3-autocounter ref='counter' :startAmount='0' :endAmount='i.valeur' :duration='5' suffix='%' decimalSeparator=',' :decimals='1' :autoinit='true'/>
+                </p>
               </div>
             </article>
           </div>

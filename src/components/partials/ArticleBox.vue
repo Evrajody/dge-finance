@@ -14,7 +14,7 @@ onMounted(() => { })
   <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="rounded self-stretch w-full sm:max-w-md overflow-hidden mask shadow-md flex flex-col">
     <a href="#"></a>
     <div class="relative"><a href="#">
-        <img :src="article.media" class="h-56 w-full" alt="Sunset in the mountains">
+        <img :src="article.media" class="h-56 bg-white w-full" alt="Sunset in the mountains">
         <div
           class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25">
         </div>

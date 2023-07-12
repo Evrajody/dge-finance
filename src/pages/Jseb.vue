@@ -2,8 +2,12 @@
 import { onMounted, ref } from 'vue';
 import PageBanner from '../components/partials/PageBanner.vue';
 import BiFileEarmarkArrowDownFill from '../components/icons/BiFileEarmarkArrowDownFill.vue';
+import { useTitle } from '@vueuse/core';
 
 const fakeArticle = ref([]);
+
+const title = useTitle("DGE | JSEB");
+
 
 
 function loadFakeArticles() {

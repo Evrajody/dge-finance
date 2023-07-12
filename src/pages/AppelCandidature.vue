@@ -4,6 +4,12 @@ import PageBanner from '../components/partials/PageBanner.vue';
 import MaterialSymbolsDownloadRounded from '../components/icons/MaterialSymbolsDownloadRounded.vue';
 import FluentShare20Regular from '../components/icons/FluentShare20Regular.vue'
 import TablerCalendarCheck from '../components/icons/TablerCalendarCheck.vue'
+import { useTitle } from '@vueuse/core';
+import IcRoundRemoveRedEye from '@/components/icons/IcRoundRemoveRedEye.vue';
+import Pagination from '@/components/partials/Pagination.vue';
+
+const title = useTitle("DGE | Appel Candidature");
+
 
 
 </script>
@@ -100,15 +106,20 @@ import TablerCalendarCheck from '../components/icons/TablerCalendarCheck.vue'
 
           <div class="flex flex-1 space-x-3 infos">
 
-            <a href="" class="flex gap-2 items-center py-2 px-3 text-sm font-medium bg-opacity-5 rounded-md bg-bj-yellow w-fit">
+            <a href="" class="flex gap-2 items-center py-2 px-3 text-sm font-medium bg-opacity-5 text-white rounded-md bg-bj-green w-fit">
+              <IcRoundRemoveRedEye />
+              <span>Détails</span>
+            </a>
+
+            <a href="/postuler" class="flex gap-2 items-center py-2 px-3 text-sm font-medium bg-opacity-5 rounded-md bg-bj-yellow w-fit">
               <FluentShare20Regular />
-              Postuler
+              <span>Postuler</span>
             </a>
 
             <a href="#"
               class="flex gap-2 items-center py-2 px-3 text-sm font-medium text-black bg-white rounded-md transition-colors duration-300 hover:bg-gray-50 w-fit">
               <MaterialSymbolsDownloadRounded />
-              Télecharger
+              <span>Télecharger</span>
             </a>
 
           </div>
@@ -116,6 +127,12 @@ import TablerCalendarCheck from '../components/icons/TablerCalendarCheck.vue'
         </div>
 
       </div>
+
+
+      <div class="">
+        <Pagination/>
+      </div>
+
     </div>
 
   </div>

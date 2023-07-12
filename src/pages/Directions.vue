@@ -2,8 +2,12 @@
 import { ref } from 'vue';
 import PageBanner from '../components/partials/PageBanner.vue';
 import IcRoundRemoveRedEye from '../components/icons/IcRoundRemoveRedEye.vue'
+import { useTitle } from '@vueuse/core';
 
 const currentTab = ref(0)
+
+const title = useTitle("DGE | Directions");
+
 
 const directions = ref([
   {

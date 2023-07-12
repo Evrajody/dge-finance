@@ -6,7 +6,7 @@
   import 'orgchart/dist/css/jquery.orgchart.min.css'
   import { computed, onMounted, ref } from "vue";
   import PageBanner from "../components/partials/PageBanner.vue";
-
+  import { useTitle } from '@vueuse/core';
 
   var nodeTemplate = function (data) {
     return `
@@ -18,6 +18,7 @@
           </div>
         `;
   };
+  const title = useTitle("DGE | Organigramme");
 
 const organigrammeDge = ref({
   sigle: 'DGE', 
@@ -172,6 +173,7 @@ const organigrammeDge = ref({
         // {
         //   sigle: 'SA/DGE',
         //   definition: 'Secrétariat Administratif du Directeur Général de l’Économie;',
+         
         // },
 
 
@@ -203,6 +205,7 @@ onMounted(() => {
     // 'zoominLimit': 1,
     // 'pan': true,
     'createNode': function (node, data) {
+
 
       if (data.levelOffset) {
         node.css({

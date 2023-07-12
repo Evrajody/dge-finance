@@ -1,6 +1,10 @@
 <script setup>
+import { useTitle } from '@vueuse/core';
 import ContactForm from '../components/partials/ContactForm.vue';
 import PageBanner from '../components/partials/PageBanner.vue';
+
+const title = useTitle("DGE | Contact");
+
 
 
 </script>

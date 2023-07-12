@@ -4,6 +4,10 @@ import MaterialSymbolsDownloadRounded from '../components/icons/MaterialSymbolsD
 import Pagination from '../components/partials/Pagination.vue'
 import { reactive } from 'vue';
 import IcRoundRemoveRedEye from '../components/icons/IcRoundRemoveRedEye.vue';
+import { useTitle } from '@vueuse/core';
+
+const title = useTitle("DGE | Documents de Politiques Nationales");
+
 
 const documents = reactive([
   {

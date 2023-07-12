@@ -4,6 +4,10 @@ import MaterialSymbolsDownloadRounded from '../components/icons/MaterialSymbolsD
 import Pagination from '../components/partials/Pagination.vue'
 import { reactive } from 'vue';
 import IcRoundRemoveRedEye from '../components/icons/IcRoundRemoveRedEye.vue';
+import { useTitle } from '@vueuse/core';
+
+const title = useTitle("DGE | Documents de Travail");
+
 
 const documents = reactive([
   {
@@ -84,7 +88,7 @@ const documents = reactive([
 
       <div class="grid place-content-center w-36 h-32 rounded-l-md bg-finance-late thumbs">
          <span class="px-3 font-bold text-center text-white uppercase">
-           Documents de travails
+           Documents de travail
          </span>
       </div>
 

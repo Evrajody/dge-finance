@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import PageBanner from '../components/partials/PageBanner.vue';
 import OcticonQuote from '../components/icons/OcticonQuote.vue';
+import { useTitle } from '@vueuse/core';
 
 const mission = ref([
 
@@ -17,6 +18,9 @@ const mission = ref([
   { content: `d’assurer la surveillance multilatérale des politiques économiques pour le compte des institutions régionales notamment de l’UEMOA et de la CEDEAO ;` },
 
 ])
+
+const title = useTitle("DGE | Mission");
+
 
 </script>
 

@@ -6,12 +6,16 @@
   import { onMounted } from 'vue';
   import { useRoute } from 'vue-router';
   import { useDirectionStore } from '@/stores/directions';
+import { useTitle } from '@vueuse/core';
 
   const currentRoute = useRoute()
 
   const directionIndex = currentRoute.meta.directionIndex;
 
   const directions = useDirectionStore().directions
+
+  const title = useTitle(`DGE | Detail ${directions[directionIndex]?.nom}`);
+
 
   onMounted(() => {  });
 
