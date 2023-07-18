@@ -84,7 +84,7 @@ const title = useTitle("DGE | Mission");
 </template>
 
 <style scoped>
- .mission-item::before{
+ .missions-item::before{
   content: "";
   width: 15px;
   height: 50%;
@@ -94,7 +94,7 @@ const title = useTitle("DGE | Mission");
   border-bottom-left-radius: 4px;
  }
 
- .mission-item::after{
+ .missions-item::after{
   content: "";
   position: absolute;
   left: 0;

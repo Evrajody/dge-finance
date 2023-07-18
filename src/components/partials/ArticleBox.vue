@@ -23,19 +23,19 @@ onMounted(() => { })
         v-text="article.topic">
       </span>
     </div>
-    <div class="px-6 py-4 mb-auto">
+    <div class="px-4 py-2 md:py-4 mb-auto">
 
-      <p class="text-lg font-bold text-white line-clamp-3" v-text="article.title"></p>
+      <p class="text-sm md:text-xl font-bold text-white line-clamp-3" v-text="article.title"></p>
 
     </div>
-    <div class="px-6 py-3 flex flex-row items-center justify-between">
+    <div class="px-4 py-2 flex flex-row items-center justify-between">
 
       <a href="/articles"
         class="py-2 px-4 text-sm w-fit font-medium text-black rounded-md transition-colors duration-300 hover:bg-yellow-600 bg-bj-yellow">
         Lire l'article
       </a>
 
-      <span class="text-sm italic text-white" v-text="`${moment(article.published_date).format('DD MMM YYYY')} à ${moment(
+      <span class="text-base italic text-white" v-text="`${moment(article.published_date).format('DD MMM YYYY')} à ${moment(
         article.published_date
       ).format('HH:mm')}`
         "></span>

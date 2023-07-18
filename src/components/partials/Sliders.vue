@@ -13,12 +13,12 @@ const store = useSliderContent()
 
 <template>
   <Swiper
-    :speed="300"
+    :speed="200"
     loop
     navigation
     a11y
     pagination
-    autoplay
+    :autoplay="{ delay: 8000 }"
     :modules="[Pagination, A11y, Autoplay, Navigation]"
     set-wrapper-size
     :space-between="15"

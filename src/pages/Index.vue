@@ -23,7 +23,7 @@ const title = useTitle("DGE | Accueil");
     <div class="h-full bg-opacity-80 bg-finance-gray bg-blend-darken xl:h-[500px]">
       <div class="flex flex-col-reverse 2xl:container mx-auto xl:flex-row">
         <div class="pt-4 w-full bg-opacity-80 stat bg-finance-blue">
-          <h2 class="p-3 text-2xl font-bold text-white">Nos indicateurs clés</h2>
+          <h2 class="p-3 text-xl md:text-2xl font-bold text-white">Nos indicateurs clés</h2>
 
           <div class="flex flex-col py-3 px-3 space-y-4">
             <article
@@ -31,13 +31,12 @@ const title = useTitle("DGE | Accueil");
               class="flex gap-4 items-center py-4 px-2 bg-white">
               <span
                 class="p-3 font-semibold bg-blue-100 rounded-full text-finance-blue"
-                v-html="i.icon"
-              >
+                v-html="i.icon">
               </span>
 
               <div>
                 <p class="text-sm text-finance-plot">{{ i.label }}</p>
-               <p class="text-2xl font-semibold text-finance-plot">
+               <p class="text-lg md:text-2xl font-semibold text-finance-plot">
                  <vue3-autocounter ref='counter' :startAmount='0' :endAmount='i.valeur' :duration='5' suffix='%' decimalSeparator=',' :decimals='1' :autoinit='true'/>
                 </p>
               </div>

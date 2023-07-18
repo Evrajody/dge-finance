@@ -10,9 +10,9 @@
 
   var nodeTemplate = function (data) {
     return `
-          <div class="relative content group" id="${data.sigle}">
+          <div class="relative content z-10  group" id="${data.sigle}">
             ${data.sigle}
-            <div class="hidden absolute -bottom-6 z-30 px-3 w-max detail bg-finance-gray text-finance-blue"> 
+            <div class="hidden absolute -bottom-6 z-50 px-3 w-max detail bg-finance-gray text-finance-blue"> 
               ${data.definition}
             </div>
           </div>
@@ -26,6 +26,7 @@ const organigrammeDge = ref({
   children: [
     {
       sigle: 'DGAE',
+      hasConseille: true,
       definition: 'Directeur Général Adjoint de l’Économie',
       children: [
         // {
@@ -62,6 +63,7 @@ const organigrammeDge = ref({
         {
           sigle: "DRES",
           definition: "Direction de la Recherche et des Études Stratégiques",
+
           children: [
             {
               sigle: 'SIEAR',
@@ -105,6 +107,7 @@ const organigrammeDge = ref({
         {
           sigle: "DPCE",
           definition: "Direction de la Promotion et de la Coopération Economiques",
+
           children: [
             {
               sigle: 'SSASP',
@@ -127,6 +130,7 @@ const organigrammeDge = ref({
         {
           sigle: "DIER",
           definition: "Direction de l’Intégration Économique Régionale",
+
           children: [
             {
               sigle: 'SPSC',
@@ -151,6 +155,7 @@ const organigrammeDge = ref({
         {
           sigle: "DGR",
           definition: "Direction de la Gestion des Ressources",
+
           children: [
             {
               sigle: 'SRH',
@@ -173,7 +178,6 @@ const organigrammeDge = ref({
         // {
         //   sigle: 'SA/DGE',
         //   definition: 'Secrétariat Administratif du Directeur Général de l’Économie;',
-         
         // },
 
 
@@ -191,6 +195,7 @@ const organigrammeDge = ref({
 
 onMounted(() => {
 
+
   $('#organigramme').orgchart({
     'data': organigrammeDge.value,
     'verticalLevel': 4,
@@ -199,17 +204,37 @@ onMounted(() => {
     'nodeTemplate': nodeTemplate,
     'exportButtonName': 'Télécharger l\'organigramme',
     'exportFilename' : 'organigramme-dge-finance',
-    'toggleSiblingsResp': true,
+    // 'toggleSiblingsResp': true,
     // 'zoom': true,
     // 'zoomoutLimit': 0.1,
     // 'zoominLimit': 1,
-    // 'pan': true,
+    'pan': true,
+    // 'initCompleted': function () {
+    //     $('.orgchart').css('transform','matrix(0.884736, 0, 0, 0.884736, -2, -2) scale(0.85)');
+    // },
     'createNode': function (node, data) {
 
+      var conseillerNode = `
+          <div class="conseillers-node z-30  relative left-44 content group" id="${data.sigle}">
+            Conseillers/DGE
+            <div class="hidden absolute -bottom-6 z-30 px-3 w-max detail bg-finance-gray text-finance-blue"> 
+              ${data.definition}
+            </div>
+          </div>
+        `;
+
+      if (data.hasConseille) {
+        node.css({ 
+
+         });
+
+        node.append(conseillerNode)
+
+      }
 
       if (data.levelOffset) {
         node.css({
-          'margin-top': (data.levelOffset * 70) + 'px',
+          'padding-top': (data.levelOffset * 70) + 'px',
           '--top': (-11 - data.levelOffset * 70) + 'px',
           '--height': (9 + data.levelOffset * 70) + 'px',
           '--top-cross-point': (-13 - data.levelOffset * 70) + 'px',
@@ -228,7 +253,7 @@ onMounted(() => {
     <PageBanner title="Organigramme" />
 
     <div class="container mx-auto" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-      <div class="flex flex-col justify-center items-center pb-14">
+      <div class="flex flex-col justify-center items-center  pb-14 overflow-hidden">
         <div class="grid place-content-center mt-3" id="organigramme"></div>
       </div>
     </div>
@@ -295,6 +320,19 @@ onMounted(() => {
 
 .content:hover .detail  {
   @apply block transition-all duration-75 !important
+}
+
+.conseillers-node::after { 
+  content: "";
+  position: absolute;
+  left: calc(-68% - 1px);
+  height: 2px;
+  width: 100px;
+  background-color: rgba(217,83,79,.8);
+}
+
+.orgchart .node:not(:only-child)::after {
+  height: 60px !important;
 }
 
 </style>

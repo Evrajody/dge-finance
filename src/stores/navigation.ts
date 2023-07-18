@@ -55,15 +55,29 @@ export const useNavigationStore = defineStore('navigation', {
         link: '',
         children: [
           {
-            label: 'Documents Budgétaires',
+            label: 'Documents d\'orientation budgétaires',
             name: 'documents-budgetaires',
             link: '',
             children: []
           },
 
           {
-            label: 'Documents de Politiques Nationales (DPN)',
-            name: 'documents-politiques-nationales',
+            label: 'Documents d\'analyses',
+            name: 'documents-analyses',
+            link: '',
+            children: []
+          },
+
+          {
+            label: 'Documents de politiques économiques',
+            name: 'documents-politiques-economique',
+            link: '',
+            children: []
+          },
+
+          {
+            label: 'Rapports et Etudes',
+            name: 'rapports-etudes',
             link: '',
             children: []
           },
@@ -76,8 +90,8 @@ export const useNavigationStore = defineStore('navigation', {
           },
 
           {
-            label: 'Infra Annuels',
-            name: 'infra-annuels',
+            label: 'Documents statistiques',
+            name: 'documents-statistiques',
             link: '',
             children: []
           }
@@ -85,13 +99,25 @@ export const useNavigationStore = defineStore('navigation', {
       },
 
       {
-        label: 'Séminaires & Conférences',
+        label: 'Conférences & Séminaires',
         name: 'seminaires-conferences',
         link: '',
         children: [
           {
             label: 'JSEB',
             name: 'jseb',
+            link: '',
+            children: []
+          },
+          {
+            label: 'Conférences périodiques',
+            name: 'conferences-periodiques',
+            link: '',
+            children: []
+          },
+          {
+            label: 'Séminaire de recherche',
+            name: 'seminaire-recherche',
             link: '',
             children: []
           }
