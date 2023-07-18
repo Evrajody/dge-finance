@@ -10,7 +10,7 @@
 
   var nodeTemplate = function (data) {
     return `
-          <div class="relative content z-10  group" id="${data.sigle}">
+          <div class="relative z-10 content group" id="${data.sigle}">
             ${data.sigle}
             <div class="hidden absolute -bottom-6 z-50 px-3 w-max detail bg-finance-gray text-finance-blue"> 
               ${data.definition}
@@ -215,10 +215,10 @@ onMounted(() => {
     'createNode': function (node, data) {
 
       var conseillerNode = `
-          <div class="conseillers-node z-30  relative left-44 content group" id="${data.sigle}">
+          <div class="relative left-44 z-30 conseillers-node content group" id="${data.sigle}">
             Conseillers/DGE
             <div class="hidden absolute -bottom-6 z-30 px-3 w-max detail bg-finance-gray text-finance-blue"> 
-              ${data.definition}
+              Conseillers du Directeur Général de l’Économie
             </div>
           </div>
         `;
@@ -253,7 +253,7 @@ onMounted(() => {
     <PageBanner title="Organigramme" />
 
     <div class="container mx-auto" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-      <div class="flex flex-col justify-center items-center  pb-14 overflow-hidden">
+      <div class="flex overflow-hidden flex-col justify-center items-center pb-14">
         <div class="grid place-content-center mt-3" id="organigramme"></div>
       </div>
     </div>

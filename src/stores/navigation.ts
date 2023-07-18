@@ -129,19 +129,19 @@ export const useNavigationStore = defineStore('navigation', {
         name: 'rapef',
         link: '',
         children: [
-          {
-            label: 'Candidature',
-            name: 'candidature',
-            link: '',
-            children: []
-          },
+          // {
+          //   label: 'Candidature',
+          //   name: 'candidature',
+          //   link: '',
+          //   children: []
+          // },
 
-          {
-            label: 'Documents',
-            name:  'documents',
-            link: '',
-            children: []
-          }
+          // {
+          //   label: 'Documents',
+          //   name:  'documents',
+          //   link: '',
+          //   children: []
+          // }
         ]
       },
 

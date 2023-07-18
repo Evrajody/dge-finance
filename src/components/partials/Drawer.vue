@@ -31,18 +31,18 @@ onClickOutside(drawer, (e) => {
 <template>
   <Transition name="slide-right" :duration="{ enter: 500, leave: 800 }">
     <!-- drawer container -->
-    <div v-if="props.drawerState" class="fixed h-full w-full z-50 left-0 top-0">
+    <div v-if="props.drawerState" class="fixed top-0 left-0 z-50 w-full h-full">
       <!-- overlay -->
-      <div class="fixed overlay h-full w-full left-0 top-0 bg-black bg-opacity-60 z-[-1]"></div>
+      <div class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 overlay z-[-1]"></div>
       <!-- end overlay -->
 
       <!-- side -->
-      <div ref="drawer" class="fixed h-full w-80 left-0 top-0 bg-white drawer overflow-y-auto">
+      <div ref="drawer" class="overflow-y-auto fixed top-0 left-0 w-80 h-full bg-white drawer">
 
-        <div class="h-20 px-5 flex sm:hidden items-center justify-end w-full">
+        <div class="flex justify-end items-center px-5 w-full h-20 sm:hidden">
 
           <button @click="toogleDrawer"
-            class="flex  font-semibold hover:bg-gray-100 transition-all justify-center items-center cursor-pointer official-logo">
+            class="flex justify-center items-center font-semibold transition-all cursor-pointer hover:bg-gray-100 official-logo">
             <LineMdRemove width="2em" height="2em" class="h-full" />
           </button>
 
@@ -50,7 +50,7 @@ onClickOutside(drawer, (e) => {
 
         <div class="w-full border-b-2" v-for="nav in navigation.getNavigation">
           <div class="py-3 text-black transition-all cursor-pointer hover:text-black">
-            <span class="font-medium px-3 py-4"> {{ nav.label }} </span>
+            <span class="py-4 px-3 font-medium"> {{ nav.label }} </span>
 
             <div v-if="nav.children.length > 0" class="z-10 mt-3 bg-white transition-all group-hover:block">
               <a v-for="child, index in nav.children" :key="index" :href="child.link"

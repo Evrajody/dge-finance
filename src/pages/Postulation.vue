@@ -7,9 +7,9 @@ import PageBanner from '@/components/partials/PageBanner.vue';
 <template>
   <PageBanner title="Formulaire de soumission" />
 
-  <div class="w-full mx-auto container my-10">
+  <div class="container my-10 mx-auto w-full">
     <div class="flex flex-col mx-auto px-5 space-y-10 w-full sm:w-[80%] lg:px-0 lg:w-[70%] xl:w-[60%]">
-      <div class="py-5 bg-finance-blue bg-opacity-10 px-3">
+      <div class="py-5 px-3 bg-opacity-10 bg-finance-blue">
         <h3 class="text-sm font-medium text-finance-plot"> Avez - vous une préoccupations ? Ecrivez-nous ! </h3>
       </div>
 

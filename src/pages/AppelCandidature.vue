@@ -106,7 +106,7 @@ const title = useTitle("DGE | Appel Candidature");
 
           <div class="flex flex-1 space-x-3 infos">
 
-            <a href="" class="flex gap-2 items-center py-2 px-3 text-sm font-medium bg-opacity-5 text-white rounded-md bg-bj-green w-fit">
+            <a href="" class="flex gap-2 items-center py-2 px-3 text-sm font-medium text-white bg-opacity-5 rounded-md bg-bj-green w-fit">
               <IcRoundRemoveRedEye />
               <span>Détails</span>
             </a>

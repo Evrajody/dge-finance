@@ -23,12 +23,12 @@ onMounted(() => { })
 </script>
 
 <template>
-  <header class="fixed bg-white inset-x-0 z-50 shadow">
-    <div class="h-20 w-full px-3 sm:px-5 xl:container xl:mx-auto">
-      <div class="header-top h-full flex items-center justify-between">
-        <a href="/" class="h-full w-auto">
+  <header class="fixed inset-x-0 z-50 bg-white shadow">
+    <div class="px-3 w-full h-20 sm:px-5 xl:container xl:mx-auto">
+      <div class="flex justify-between items-center h-full header-top">
+        <a href="/" class="w-auto h-full">
           <img src="@/assets/images/logo_dge_benin.png"
-            class="max-w-full min-w-[10rem] w-[12rem] sm:w-[14rem] h-full object-contain m-auto" alt="" srcset="" />
+            class="object-contain m-auto max-w-full h-full min-w-[10rem] w-[12rem] sm:w-[14rem]" alt="" srcset="" />
         </a>
 
         <div class="hidden flex-col flex-1 justify-center self-stretch px-5 space-y-3 lg:flex simple-menu">
@@ -47,9 +47,9 @@ onMounted(() => { })
           </div>
         </div>
 
-        <a href="/" class="hidden lg:block h-full w-auto">
+        <a href="/" class="hidden w-auto h-full lg:block">
           <img src="@/assets/images/official_logo.png"
-            class="max-w-full min-w-[10rem] w-[14rem] h-full object-contain m-auto" alt="" srcset="" />
+            class="object-contain m-auto max-w-full h-full min-w-[10rem] w-[14rem]" alt="" srcset="" />
         </a>
 
         <div class="flex items-center space-x-5 lg:hidden mobile-toogle">
@@ -58,7 +58,7 @@ onMounted(() => { })
             <ClaritySearchLine width="1.5em" height="1.5em" class="h-full" />
           </button>
 
-          <button @click="toogleDrawer" class="flex hover:bg-gray-100  transition-all justify-center items-center cursor-pointer official-logo">
+          <button @click="toogleDrawer" class="flex justify-center items-center transition-all cursor-pointer hover:bg-gray-100 official-logo">
             <RiMenu3Line width="1.5em" height="1.5em" class="h-full" />
           </button>
 
@@ -67,7 +67,7 @@ onMounted(() => { })
       </div>
     </div>
 
-    <div class="header-nav hidden lg:block h-12 bg-finance-blue w-full">
+    <div class="hidden w-full h-12 lg:block header-nav bg-finance-blue">
       <div class="container flex justify-between items-center mx-auto text-white">
         <nav class="flex flex-1 justify-center items-center">
           <div class="relative group" v-for="nav in navigation.getNavigation">
