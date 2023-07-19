@@ -19,6 +19,7 @@ import Contact from '../pages/Contact.vue';
 import ContactDirecteur from '../pages/ContactDirecteur.vue';
 import AppelCandidature from '../pages/AppelCandidature.vue';
 import Postulation from '../pages/Postulation.vue';
+import ArticleDetail from '../pages/ArticleDetail.vue';
 
 // LIST OF ROUTES
 
@@ -36,6 +37,13 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: Index,
+    },
+
+
+    {
+      path: "/articles",
+      name: "articles",
+      component: ArticleDetail,
     },
 
     {
@@ -127,6 +135,7 @@ const router = createRouter({
     {
       path: "/publications",
       name: "publications",
+      // component: ComingSoon,
       children: [
         {
           path: "documents-budgetaires",
@@ -146,17 +155,6 @@ const router = createRouter({
           component: DocumentsTravail,
         },
 
-        {
-          path: "infra-annuels",
-          name: "infra-annuels",
-          component: InfraAnnuel,
-        },
-
-        // {
-        //   path: "rapef",
-        //   name: "rapef",
-        //   component: Actualites,
-        // },
       ],
     },
 
@@ -167,7 +165,7 @@ const router = createRouter({
         {
           path: 'jseb',
           name: 'jseb',
-          component: Jseb,
+          component: AppelCandidature,
         },
       ],
     },
@@ -175,6 +173,7 @@ const router = createRouter({
     {
       path: "/rapef",
       name: "rapef",
+      component: ComingSoon,
       children: [
         {
           path: "candidature",

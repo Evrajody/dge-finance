@@ -25,7 +25,7 @@ onMounted(() => { })
     </div>
     <div class="py-2 px-4 mb-auto md:py-4">
 
-      <p class="text-sm font-bold text-white md:text-xl line-clamp-3" v-text="article.title"></p>
+      <p class="text-sm font-bold text-white md:text-lg line-clamp-3" v-text="article.title"></p>
 
     </div>
     <div class="flex flex-row justify-between items-center py-2 px-4">

@@ -83,25 +83,28 @@ const title = useTitle("DGE | Mission");
 
 </template>
 
-<style scoped>
- .missions-item::before{
+<style >
+ /* .mission-item::before{
   content: "";
   width: 15px;
   height: 50%;
   position: absolute;
   border-left: 2.5px solid #0E406E;
-  border-bottom: 2.5px solid #0E406E;
-  border-bottom-left-radius: 4px;
- }
 
- .missions-item::after{
+  border-bottom-left-radius: 4px;
+ } */
+ 
+ .mission-item::after{
   content: "";
+  background-image: url(https://api.iconify.design/octicon:goal-24.svg);
+  background-repeat: no-repeat;
   position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 15px;
-  height: 52%;
-  border-left: 2.5px solid #0E406E;
+  background-size: 25%;
+  left: -2px;
+  bottom: 2px;
+  width: 80px;
+  height: 60%;
+
  }
 
 </style>

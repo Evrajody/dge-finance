@@ -78,7 +78,7 @@ import { useTitle } from '@vueuse/core';
             <section class="bg-white">
 
               <article class="" v-for="i in directions[directionIndex]?.services">
-                <div class="relative h-full transition mission-item">
+                <div class="relative h-full transition service-item">
 
                   <header
                     class="flex-col p-5 px-8 bg-white transition cursor-pointer sm:flex-row sm:items-center hover:bg-finance-gray">
@@ -107,25 +107,19 @@ import { useTitle } from '@vueuse/core';
 </template>
 
 
-<style scoped>
-.mission-item::before {
+<style>
+
+.service-item::before {
   content: "";
-  width: 15px;
-  height: 50%;
+  background-image: url(https://api.iconify.design/ic:twotone-arrow-forward-ios.svg);
+  background-repeat: no-repeat;
   position: absolute;
-  border-left: 2.5px solid #0E406E;
-  border-bottom: 2.5px solid #0E406E;
-  border-bottom-left-radius: 4px;
+  background-size: 25%;
+  left: -2px;
+  bottom: 2px;
+  width: 80px;
+  height: 60%;
 }
 
-.mission-item::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 15px;
-  height: 52%;
-  border-left: 2.5px solid #0E406E;
-}
 
 </style>

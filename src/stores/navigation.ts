@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import { reactive } from 'vue'
 import router from '../router'
+import ComingSoonVue from '@/pages/ComingSoon.vue'
 
 export const useNavigationStore = defineStore('navigation', {
   state: () => ({
@@ -64,21 +65,21 @@ export const useNavigationStore = defineStore('navigation', {
           {
             label: 'Documents d\'analyses',
             name: 'documents-analyses',
-            link: '',
+            link: '/analyse',
             children: []
           },
 
           {
             label: 'Documents de politiques économiques',
             name: 'documents-politiques-economique',
-            link: '',
+            link: '/documents-politiques-economique',
             children: []
           },
 
           {
             label: 'Rapports et Etudes',
             name: 'rapports-etudes',
-            link: '',
+            link: '/rapports-etudes',
             children: []
           },
 
@@ -92,7 +93,7 @@ export const useNavigationStore = defineStore('navigation', {
           {
             label: 'Documents statistiques',
             name: 'documents-statistiques',
-            link: '',
+            link: '/documents-statistiques',
             children: []
           }
         ]
@@ -127,6 +128,7 @@ export const useNavigationStore = defineStore('navigation', {
       {
         label: 'RAPEF',
         name: 'rapef',
+        component: ComingSoonVue,
         link: '',
         children: [
           // {

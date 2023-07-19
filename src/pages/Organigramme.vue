@@ -204,11 +204,11 @@ onMounted(() => {
     'nodeTemplate': nodeTemplate,
     'exportButtonName': 'Télécharger l\'organigramme',
     'exportFilename' : 'organigramme-dge-finance',
+    'pan': true,
     // 'toggleSiblingsResp': true,
     // 'zoom': true,
     // 'zoomoutLimit': 0.1,
     // 'zoominLimit': 1,
-    'pan': true,
     // 'initCompleted': function () {
     //     $('.orgchart').css('transform','matrix(0.884736, 0, 0, 0.884736, -2, -2) scale(0.85)');
     // },
@@ -224,12 +224,7 @@ onMounted(() => {
         `;
 
       if (data.hasConseille) {
-        node.css({ 
-
-         });
-
         node.append(conseillerNode)
-
       }
 
       if (data.levelOffset) {
@@ -253,8 +248,8 @@ onMounted(() => {
     <PageBanner title="Organigramme" />
 
     <div class="container mx-auto" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-      <div class="flex overflow-hidden flex-col justify-center items-center pb-14">
-        <div class="grid place-content-center mt-3" id="organigramme"></div>
+      <div class="flex flex-col justify-center items-center pb-14">
+        <div class="grid place-content-center  mt-3" id="organigramme"></div>
       </div>
     </div>
 
@@ -333,6 +328,10 @@ onMounted(() => {
 
 .orgchart .node:not(:only-child)::after {
   height: 60px !important;
+}
+
+.edge {
+  display: none;
 }
 
 </style>
