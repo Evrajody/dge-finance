@@ -16,7 +16,7 @@ const imageBannerPage = ref('https://img.freepik.com/photos-gratuite/coup-moyen-
     class="w-full bg-black bg-opacity-20 bg-blend-overlay" :style="{ backgroundImage: `url(${imageBannerPage})`, backgroundPositionY: '30%', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }">
     <div class="container flex flex-col justify-center items-center py-5 px-6 mx-auto md:items-start lg:px-0">
       <div class="grid place-content-center text-center py-4 px-4">
-        <h4 class="text-lg font-bold leading-normal text-center text-white md:text-left lg:text-3xl">
+        <h4 class="text-xl font-bold leading-normal text-center text-white md:text-left lg:text-3xl">
           {{ props.title }}
         </h4>
       </div>

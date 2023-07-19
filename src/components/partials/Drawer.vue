@@ -50,7 +50,10 @@ onClickOutside(drawer, (e) => {
 
         <div class="w-full border-b-2" v-for="nav in navigation.getNavigation">
           <div class="py-3 text-black transition-all cursor-pointer hover:text-black">
-            <span class="py-4 px-3 font-medium"> {{ nav.label }} </span>
+            <!-- <a :href="nav.link" class="py-4 px-3 font-medium"> {{ nav.label }} </a> -->
+
+            <a v-if="nav.children.length == 0" :href="nav.link" class="py-4 px-3 font-medium"> {{ nav.label }} </a>
+            <span v-else class="py-4 px-3 font-medium"> {{ nav.label }} </span>
 
             <div v-if="nav.children.length > 0" class="z-10 mt-3 bg-white transition-all group-hover:block">
               <a v-for="child, index in nav.children" :key="index" :href="child.link"
