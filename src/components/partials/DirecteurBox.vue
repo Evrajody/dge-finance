@@ -16,11 +16,11 @@ const props = defineProps({
       </h3>
 
       <div class="">
-        <p class="text-lg font-semibold leading-8 text-center" v-text="directeur.titre"> </p>
+        <p class="text-base md:text-lg font-semibold  text-center" v-text="directeur.titre"> </p>
       </div>
 
-      <div class="">
-        <p class="text-xl font-extrabold text-center text-finance-blue" v-text="directeur.periode"> </p>
+      <div class="pt-3">
+        <p class="text-base md:text-lg font-extrabold text-center text-finance-blue" v-text="directeur.periode"> </p>
       </div>
 
     </figcaption>
